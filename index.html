@@ -1,48 +1,207 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Everyday Investor Academy</title>
-  <meta name="description" content="Practical education on housing, money, property, construction, investing, and rights." />
-  <style>
-    :root{--navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;--gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
-    a{color:inherit}.wrap{width:min(1080px,calc(100% - 32px));margin:auto}
-    header{padding:18px 0;border-bottom:1px solid rgba(183,170,150,.65);background:rgba(255,253,248,.92);position:sticky;top:0;z-index:10;backdrop-filter:blur(10px)}
-    .nav{display:flex;gap:20px;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;color:var(--navy)}
-    .compass{width:38px;height:38px;border:2px solid var(--navy);border-radius:50%;display:grid;place-items:center;font-size:21px}.navlinks{display:flex;gap:16px;flex-wrap:wrap}.navlinks a{text-decoration:none;font-size:.92rem;color:var(--navy);font-weight:700}
-    .hero{padding:72px 0 54px;border-bottom:1px solid var(--taupe)}.eyebrow{color:var(--olive);letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;font-weight:800}
-    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--navy)}h1{font-size:clamp(2.8rem,8vw,6.3rem);line-height:.95;margin:.18em 0 .25em;max-width:850px}
-    .hero p{font-family:Georgia,"Times New Roman",serif;color:var(--olive);font-size:clamp(1.15rem,2.5vw,1.55rem);max-width:720px;margin:0 0 28px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;padding:13px 18px;border-radius:8px;font-weight:800;border:2px solid var(--navy)}.btn.primary{background:var(--navy);color:white}.btn.secondary{color:var(--navy);background:transparent}
-    section{padding:54px 0}.section-title{font-size:2.15rem;margin:0 0 8px}.section-intro{color:var(--muted);max-width:720px;margin:0 0 28px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:var(--paper);border:1px solid var(--taupe);border-radius:14px;padding:22px;text-decoration:none;min-height:180px;box-shadow:0 10px 28px rgba(16,47,85,.06);transition:.18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(16,47,85,.10)}
-    .icon{font-size:2rem}.card h3{font-size:1.35rem;margin:12px 0 6px}.card p{margin:0;color:var(--muted);font-size:.95rem}.coming{opacity:.75}
-    .guide{background:var(--navy);color:white;border-radius:18px;padding:32px;display:grid;grid-template-columns:1.4fr .8fr;gap:22px;align-items:center}.guide h2{color:white;margin:0 0 8px;font-size:2rem}.guide p{margin:0;color:#e9eef4}.guide .btn{border-color:white;color:white;text-align:center}
-    .note{margin-top:26px;border-left:5px solid var(--gold);background:#fbf6eb;padding:14px 16px;border-radius:6px}footer{border-top:1px solid var(--taupe);padding:30px 0 44px;color:var(--muted);font-size:.9rem}
-    @media(max-width:800px){.grid{grid-template-columns:1fr 1fr}.guide{grid-template-columns:1fr}.navlinks{display:none}}@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}.wrap{width:min(100% - 24px,1080px)}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Everyday Investor Academy</title>
+<meta name="description" content="Practical education on housing, money, land, construction, investing, and rights.">
+<style>
+:root {
+  --navy:#102F55; --olive:#6D755B; --cream:#F7F1E7; --paper:#FFFDF8;
+  --gold:#C69A42; --taupe:#B7AA96; --ink:#2D302F; --muted:#6E716E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit}
+.wrap{width:min(1080px,calc(100% - 28px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.96);border-bottom:1px solid var(--taupe);backdrop-filter:blur(10px)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0}
+.brand{text-decoration:none;color:var(--navy);font-weight:800;display:flex;align-items:center;gap:10px}
+.brand-mark{width:38px;height:38px;border:2px solid var(--navy);border-radius:50%;display:grid;place-items:center}
+.navlinks{display:flex;gap:14px;flex-wrap:wrap}
+.navlinks a{text-decoration:none;color:var(--navy);font-weight:700;font-size:.9rem}
+.hero{padding:72px 0 58px;border-bottom:1px solid var(--taupe)}
+.eyebrow,.code{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;color:var(--olive);font-weight:800}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--navy)}
+h1{font-size:clamp(2.8rem,8vw,6rem);line-height:.96;margin:.18em 0 .25em}
+.hero p{font-family:Georgia,"Times New Roman",serif;color:var(--olive);font-size:clamp(1.1rem,2.5vw,1.45rem);max-width:760px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;padding:13px 18px;border-radius:9px;border:2px solid var(--navy);font-weight:800}
+.btn.primary{background:var(--navy);color:#fff}
+section{padding:56px 0}
+.section-title{font-size:2.3rem;margin:0 0 8px}
+.section-intro{color:var(--muted);max-width:760px;margin:0 0 26px}
+.district-grid,.lesson-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card,.lesson-card,.article-card{background:var(--paper);border:1px solid var(--taupe);border-radius:14px;padding:22px;box-shadow:0 10px 28px rgba(16,47,85,.05)}
+.card{text-decoration:none;min-height:180px}
+.card.live{border:2px solid var(--gold)}
+.card h3,.lesson-card h3{font-size:1.3rem;margin:8px 0}
+.card p,.lesson-card p{margin:0;color:var(--muted)}
+.icon{font-size:2rem}
+.status{display:inline-block;margin-top:12px;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--olive)}
+.band{background:var(--navy);color:#fff}
+.band h2{color:#fff}
+.band p{color:#e8edf2}
+.foundation-wrap{background:#fbf7ef;border-top:1px solid var(--taupe);border-bottom:1px solid var(--taupe)}
+.article-card{max-width:860px;margin:auto}
+.article-card h2{margin-top:28px}
+.callout{border-left:5px solid var(--gold);background:#fbf6eb;padding:14px 16px;border-radius:6px;margin:18px 0}
+.article-card li{margin-bottom:8px}
+.related{margin-top:24px;background:var(--navy);color:#fff;border-radius:14px;padding:22px}
+.related h3{color:#fff}
+footer{border-top:1px solid var(--taupe);padding:30px 0 44px;color:var(--muted);font-size:.9rem}
+@media(max-width:820px){.district-grid,.lesson-grid{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+@media(max-width:560px){.district-grid,.lesson-grid{grid-template-columns:1fr}.hero{padding-top:48px}}
+</style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top"><span class="compass">✦</span><span>The Everyday Investor Academy</span></a><nav class="navlinks"><a href="#explore">Explore</a><a href="#guides">Guides</a><a href="#about">About</a></nav></div></header>
-<main id="top">
-  <section class="hero"><div class="wrap"><div class="eyebrow">Real knowledge. Real options. Real freedom.</div><h1>Practical real estate education for everyday people.</h1><p>Learn housing, money, property, construction, investing, and your rights in simple terms—then follow the topics that matter to you.</p><div class="actions"><a class="btn primary" href="#explore">Start exploring</a><a class="btn secondary" href="#guides">See free guides</a></div></div></section>
-  <section id="explore"><div class="wrap"><h2 class="section-title">Choose where to begin.</h2><p class="section-intro">There is no single correct path. Start with the question in front of you, then keep following the connections.</p><div class="grid">
-    <a class="card" href="#guides"><div class="icon">🏠</div><h3>Housing</h3><p>Renting, buying, housing types, affordability, ADUs, and cottage clusters.</p></a>
-    <a class="card coming" href="#about"><div class="icon">💰</div><h3>Money</h3><p>Income, expenses, budgeting, saving, cash flow, and financial habits.</p></a>
-    <a class="card coming" href="#about"><div class="icon">💳</div><h3>Credit</h3><p>Credit scores, collections, repossessions, rebuilding, and readiness.</p></a>
-    <a class="card coming" href="#about"><div class="icon">🌲</div><h3>Land</h3><p>Zoning, wells, septic, utilities, easements, surveys, and due diligence.</p></a>
-    <a class="card coming" href="#about"><div class="icon">🛠️</div><h3>Construction</h3><p>Permits, contractors, remodeling, maintenance, inspections, and building.</p></a>
-    <a class="card coming" href="#about"><div class="icon">📈</div><h3>Investing</h3><p>Equity, cash flow, appreciation, rentals, risk, and long-term strategy.</p></a>
-    <a class="card coming" href="#about"><div class="icon">⚖️</div><h3>Know Your Rights</h3><p>Tenant rights, landlord duties, fair housing, notices, repairs, and resources.</p></a>
-    <a class="card coming" href="#about"><div class="icon">🧭</div><h3>Foundation</h3><p>How to ask better questions, understand options, and learn before signing.</p></a>
-    <a class="card coming" href="#about"><div class="icon">📚</div><h3>Resource Library</h3><p>Quick guides, checklists, glossaries, official links, and deeper field guides.</p></a>
-  </div></div></section>
-  <section id="guides"><div class="wrap"><h2 class="section-title">Free guides</h2><p class="section-intro">This library is just beginning. New guides will be added as the Atlas grows.</p><div class="guide"><div><div class="eyebrow" style="color:#d7c89e">Housing quick guide</div><h2>Housing 101: What Is Housing?</h2><p>A beginner-friendly guide to understanding what housing includes, what it affects, and why the best option can look different for every person.</p></div><a class="btn" href="#" aria-disabled="true">Guide coming next</a></div><div class="note"><strong>Living Atlas principle:</strong> Learn the concept here. Verify current laws, programs, rates, and local rules before making a decision.</div></div></section>
-  <section id="about"><div class="wrap"><h2 class="section-title">Why this exists</h2><p class="section-intro">The Everyday Investor Academy is being built as the practical resource many adults wish they had earlier: connected information, explained simply, without pretending there is only one right path.</p></div></section>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span><span>The Everyday Investor Academy</span></a>
+    <nav class="navlinks">
+      <a href="#foundation">Foundation</a>
+      <a href="#housing">Housing</a>
+      <a href="#housing-101">Housing 101</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Real knowledge. Real options. Real freedom.</div>
+      <h1>Practical real estate education for everyday people.</h1>
+      <p>Choose the topic that matters to you. Build your knowledge one question, one guide, and one decision at a time.</p>
+      <div class="actions">
+        <a class="btn primary" href="#foundation">Start with Foundation</a>
+        <a class="btn" href="#housing">Explore Housing</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">Choose where to begin.</h2>
+      <p class="section-intro">There is no single correct path. Start with what you need today, then follow the connections.</p>
+      <div class="district-grid">
+        <a class="card live" href="#foundation"><div class="icon">🧭</div><h3>Foundation</h3><p>All 18 Foundation topics in one collection.</p><span class="status">Open collection →</span></a>
+        <a class="card live" href="#housing"><div class="icon">🏠</div><h3>Housing</h3><p>Housing basics, renting, buying, housing types, ADUs, cottage clusters, and more.</p><span class="status">Open district →</span></a>
+        <div class="card"><div class="icon">💰</div><h3>Money</h3><p>Budgeting, saving, cash flow, and financial habits.</p><span class="status">Coming soon</span></div>
+        <div class="card"><div class="icon">💳</div><h3>Credit</h3><p>Scores, collections, rebuilding, and readiness.</p><span class="status">Coming soon</span></div>
+        <div class="card"><div class="icon">🌲</div><h3>Land</h3><p>Zoning, utilities, easements, surveys, and due diligence.</p><span class="status">Coming soon</span></div>
+        <div class="card"><div class="icon">🛠️</div><h3>Construction</h3><p>Permits, contractors, maintenance, inspections, and building.</p><span class="status">Coming soon</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="foundation" class="foundation-wrap">
+    <div class="wrap">
+      <div class="eyebrow">Foundation Collection</div>
+      <h2 class="section-title">Start where you are.</h2>
+      <p class="section-intro">You do not have to know everything. You need a place to begin, better questions to ask, and enough understanding to recognize your next step.</p>
+      <div class="lesson-grid">
+        <article class="lesson-card"><div class="code">F-001</div><h3>Welcome</h3><p>A practical place to learn housing, money, property, construction, investing, and rights in simple terms.</p></article>
+<article class="lesson-card"><div class="code">F-002</div><h3>Every Answer Leads Somewhere</h3><p>One answer usually creates the next useful question. That is how the Atlas grows.</p></article>
+<article class="lesson-card"><div class="code">F-003</div><h3>Your Path Will Not Look Like Anyone Else's</h3><p>Renting, buying, land, business, rebuilding, and investing can happen in many different orders.</p></article>
+<article class="lesson-card"><div class="code">F-004</div><h3>You Do Not Have to Know Everything</h3><p>You only need enough clarity to identify the next step in front of you.</p></article>
+<article class="lesson-card"><div class="code">F-005</div><h3>There Is Not a Perfect Answer</h3><p>There are informed decisions that fit different lives, resources, risks, and goals.</p></article>
+<article class="lesson-card"><div class="code">F-006</div><h3>Questions Change Everything</h3><p>A useful question can reveal a cost, rule, program, risk, or option you did not know existed.</p></article>
+<article class="lesson-card"><div class="code">F-007</div><h3>Read Before You Sign</h3><p>Leases, loans, bids, contracts, and purchase agreements can change your responsibilities for years.</p></article>
+<article class="lesson-card"><div class="code">F-008</div><h3>Learn Before You Leap</h3><p>Confidence often comes after you understand the basic process—not before.</p></article>
+<article class="lesson-card"><div class="code">F-009</div><h3>Small Decisions Compound</h3><p>Reading, asking, saving, checking, and planning may feel small until they begin stacking together.</p></article>
+<article class="lesson-card"><div class="code">F-010</div><h3>The Cost of Not Knowing</h3><p>Missing information can lead to unnecessary fees, bad contracts, lost programs, and avoidable mistakes.</p></article>
+<article class="lesson-card"><div class="code">F-011</div><h3>Curiosity Beats Confidence</h3><p>You do not need to pretend you know. You need to be willing to ask and verify.</p></article>
+<article class="lesson-card"><div class="code">F-012</div><h3>Knowledge Creates Options</h3><p>The more you understand, the more accurately you can compare paths instead of copying someone else's.</p></article>
+<article class="lesson-card"><div class="code">F-013</div><h3>You Do Not Need Permission to Learn</h3><p>You can begin understanding housing, money, land, and real estate before you have a degree, license, or perfect finances.</p></article>
+<article class="lesson-card"><div class="code">F-014</div><h3>Every Expert Was Once New</h3><p>Experience starts with a first question, a first mistake, a first project, and the decision to keep learning.</p></article>
+<article class="lesson-card"><div class="code">F-015</div><h3>Progress Beats Perfection</h3><p>A useful first version can teach you more than waiting forever for the perfect plan.</p></article>
+<article class="lesson-card"><div class="code">F-016</div><h3>Learning Is an Investment</h3><p>Knowledge can help you avoid costs, recognize opportunities, and make better decisions later.</p></article>
+<article class="lesson-card"><div class="code">F-017</div><h3>Information Ages</h3><p>Laws, programs, rates, codes, and eligibility rules change. Learn the concept, then verify the current details.</p></article>
+<article class="lesson-card"><div class="code">F-018</div><h3>Why the Atlas Exists</h3><p>Because connected information is easier to use than scattered answers hidden across dozens of systems.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="housing">
+    <div class="wrap">
+      <div class="eyebrow">Housing District</div>
+      <h2 class="section-title">Housing is more than a house.</h2>
+      <p class="section-intro">Explore the place you live, the agreement behind it, the cost, the location, the people involved, and the future plan connected to it.</p>
+      <div class="district-grid">
+        <a class="card live" href="#housing-101"><div class="code">H-001 · Live</div><h3>What Is Housing?</h3><p>Start with the big picture: what housing includes, what it affects, and why different options work for different lives.</p><span class="status">Read now →</span></a>
+        <div class="card"><div class="code">H-002</div><h3>Housing Looks Different for Everyone</h3><p>Apartments, houses, manufactured homes, ADUs, tiny homes, shared housing, and more.</p><span class="status">Coming next</span></div>
+        <div class="card"><div class="code">H-003</div><h3>Renting</h3><p>How renting works, what leases do, and what renters should understand before signing.</p><span class="status">Coming next</span></div>
+        <div class="card"><div class="code">Future Guide</div><h3>Cottage Clusters</h3><p>A Southern Oregon look at clustered housing, shared spaces, and development possibilities.</p><span class="status">In development</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="housing-101" class="band">
+    <div class="wrap">
+      <div class="eyebrow" style="color:#d8c994">Housing 101 · H-001</div>
+      <h2 class="section-title">What Is Housing?</h2>
+      <p>Housing is more than a building. It is where safety, money, family, work, location, and future plans meet.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <article class="article-card">
+        <h2>Housing is not just a house.</h2>
+        <p>When people hear the word <strong>housing</strong>, they often picture a detached house with a yard. That is one kind of housing, but it is not the whole picture.</p>
+        <p>Housing means the place you live and the arrangement that makes living there possible. It includes the building, the monthly cost, the legal agreement, the location, the people you live with, and the responsibilities connected to it.</p>
+
+        <div class="callout"><strong>The main idea:</strong> Housing is not one destination. It is a system of choices, costs, rules, and needs.</div>
+
+        <h2>Housing can include:</h2>
+        <ul>
+          <li>An apartment, room, house, condo, townhouse, duplex, manufactured home, RV, tiny home, or temporary shelter.</li>
+          <li>Renting, owning, sharing, living with family, receiving housing assistance, or exchanging work for a place to stay.</li>
+          <li>A short-term solution, a long-term home, or one step in a larger plan.</li>
+        </ul>
+
+        <h2>What housing affects</h2>
+        <p>A home affects far more than where you sleep. It can shape your health, stress, transportation, work schedule, school options, relationships, and ability to save money.</p>
+
+        <h2>Housing has layers</h2>
+        <ul>
+          <li><strong>The physical place:</strong> Is it safe, maintained, accessible, and large enough?</li>
+          <li><strong>The legal arrangement:</strong> Is it rented, owned, shared, inherited, subsidized, or informal?</li>
+          <li><strong>The total cost:</strong> Rent or mortgage is only one part. Utilities, insurance, transportation, repairs, fees, and deposits matter too.</li>
+          <li><strong>The people:</strong> Who lives there, who makes decisions, and who is responsible?</li>
+          <li><strong>The location:</strong> How close is it to work, school, childcare, healthcare, support, and transportation?</li>
+          <li><strong>The future plan:</strong> Is it temporary, long-term, or part of a plan to build, invest, or relocate?</li>
+        </ul>
+
+        <div class="callout">A strong housing decision does not have to impress anyone. It has to work.</div>
+
+        <h2>Start with your real life</h2>
+        <p>Before choosing a housing path, ask what your life needs now—not only what you hope it looks like years from now.</p>
+        <ul>
+          <li>What can I afford after every other necessary expense?</li>
+          <li>How stable is my income?</li>
+          <li>Do I need flexibility to move?</li>
+          <li>How much maintenance can I realistically handle?</li>
+          <li>What location keeps daily life workable?</li>
+          <li>What would make my housing feel safer or more stable six months from now?</li>
+        </ul>
+
+        <div class="callout"><strong>Living Atlas principle:</strong> Learn the concept here. Verify current laws, programs, rates, and local rules before making a decision.</div>
+
+        <div class="related">
+          <h3>Continue exploring</h3>
+          <p>Housing Looks Different for Everyone · Renting · Buying · Housing Types · ADUs · Cottage Clusters</p>
+        </div>
+      </article>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap">© 2026 The Everyday Investor Academy. Educational information only—not legal, financial, tax, lending, brokerage, construction, or investment advice.</div></footer>
+
+<footer>
+  <div class="wrap">© 2026 The Everyday Investor Academy. Educational information only.</div>
+</footer>
+
 </body>
 </html>
