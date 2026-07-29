@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Everyday Investor Academy</title>
+<style>
+:root{--navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;--gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;--soft:#EEF1E8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+a{color:inherit}.wrap{width:min(1120px,calc(100% - 28px));margin:auto}
+header{background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe);position:sticky;top:0;z-index:20}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:15px 0}.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:800}.links{display:flex;gap:14px}
+.hero{padding:68px 0 48px;background:linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}
+.eyebrow{color:var(--olive);font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}h1{font-size:clamp(3rem,8vw,6.2rem);line-height:.96;margin:.2em 0}.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.24rem;max-width:820px}
+.btn{display:inline-block;text-decoration:none;padding:12px 17px;border:2px solid var(--navy);border-radius:9px;font-weight:800;margin:10px 8px 0 0}.primary{background:var(--navy);color:#fff}
+section{padding:50px 0}.section-title{font-size:2.35rem;margin:0 0 8px}.section-copy{max-width:800px;color:var(--muted)}
+.search-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin:20px 0 26px}.search-row input,.search-row button{border:1px solid var(--taupe);background:var(--paper);border-radius:10px;padding:13px 14px;font:inherit}.search-row button{font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:22px;box-shadow:0 8px 22px rgba(16,47,85,.05)}.card.open{border:2px solid var(--olive)}
+.head{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}.icon{font-size:2rem}.code{color:var(--olive);font-size:.74rem;font-weight:800;letter-spacing:.12em}.card h3{margin:2px 0;font-size:1.45rem}.status{background:var(--soft);color:var(--olive);border-radius:999px;padding:7px 10px;font-size:.72rem;font-weight:800}
+.card p{color:var(--muted)}details{background:#F8FAFC;border:1px solid var(--taupe);border-radius:10px;padding:12px 14px;margin:14px 0}summary{cursor:pointer;font-weight:800;color:var(--navy)}details ul{columns:2;padding-left:20px}details li{margin:6px 0}
+.enter{display:block;text-align:center;text-decoration:none;background:var(--navy);color:#fff;border-radius:10px;padding:12px 14px;font-weight:800}.placeholder{background:#EEF1F5;color:#586476}
+.paths{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.path{background:var(--paper);border:1px solid var(--taupe);border-radius:14px;padding:20px}.path a{font-weight:800;color:var(--olive);text-decoration:none}
+.atlas{background:var(--navy);color:#fff;border-radius:18px;padding:26px}.atlas h2{color:#fff}.atlas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.atlas-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:14px}
+footer{border-top:1px solid var(--taupe);padding:28px 0 40px;color:var(--muted)}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.paths{grid-template-columns:1fr 1fr}.atlas-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.paths,.atlas-grid{grid-template-columns:1fr}.links{display:none}details ul{columns:1}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="links"><a href="#districts">Explore</a><a href="property-management.html">Property Management</a><a href="#living-atlas">Living Atlas</a></div></div></header>
+
+<section class="hero"><div class="wrap"><div class="eyebrow">The Living Atlas</div><h1>Pick a door. Follow the stairs. Build your own path.</h1><p class="lead">Start anywhere. Every district connects to the others, and every guide can lead you toward a different answer depending on what you need next.</p><a class="btn primary" href="#districts">Open the Atlas</a><a class="btn" href="property-management.html">Explore Property Management</a></div></section>
+
+<section id="districts"><div class="wrap"><div class="eyebrow">The Great Hall</div><h2 class="section-title">All ten district doors</h2><p class="section-copy">Every district is visible now. Open districts already contain information. The rest are mapped so the Academy can grow without losing the original structure.</p>
+<div class="search-row"><input id="search" type="search" placeholder="Search districts and topics..."><button id="clear">Clear</button></div>
+<div class="grid" id="grid">
+
+<article class="card open" data-search="foundations real estate wealth vocabulary property types people risk roadmap"><div class="head"><span class="icon">🧭</span><div><span class="code">F</span><h3>Foundations</h3></div><span class="status">Open now</span></div><p>Learn how the game works before you play.</p><details><summary>See what lives here</summary><ul><li>Why Real Estate Matters</li><li>What Is Real Estate?</li><li>The 7 Ways Real Estate Creates Wealth</li><li>Real Estate Vocabulary</li><li>Property Types</li><li>The People Involved</li><li>Risk vs. Reward</li><li>Building Your Roadmap</li></ul></details><a class="enter" href="foundation.html">Enter Foundations →</a></article>
+
+<article class="card open" data-search="housing renting buying selling mortgages first-time homebuyers affordable manufactured condos townhomes duplexes tiny homes adus cottage clusters co-housing senior housing"><div class="head"><span class="icon">🏠</span><div><span class="code">H</span><h3>Housing</h3></div><span class="status">Open now</span></div><p>Everything about places people live.</p><details><summary>See what lives here</summary><ul><li>Renting</li><li>Buying</li><li>Selling</li><li>Mortgages</li><li>First-Time Homebuyers</li><li>Affordable Housing</li><li>Manufactured Homes</li><li>Condos</li><li>Townhomes</li><li>Duplexes</li><li>Tiny Homes</li><li>ADUs</li><li>Cottage Clusters</li><li>Co-housing</li><li>Senior Housing</li></ul></details><a class="enter" href="housing.html">Enter Housing →</a></article>
+
+<article class="card" data-search="money budgeting down payments escrow closing costs insurance taxes equity appreciation cash flow roi inflation financial planning"><div class="head"><span class="icon">💵</span><div><span class="code">M</span><h3>Money</h3></div><span class="status">Mapped</span></div><p>How money flows through real estate.</p><details><summary>See what lives here</summary><ul><li>Budgeting</li><li>Down Payments</li><li>Escrow</li><li>Closing Costs</li><li>Insurance</li><li>Taxes</li><li>Equity</li><li>Appreciation</li><li>Cash Flow</li><li>ROI</li><li>Inflation</li><li>Financial Planning</li></ul></details><span class="enter placeholder">Mapped — lessons coming</span></article>
+
+<article class="card" data-search="credit scores reports debt loans improving credit lending underwriting myths"><div class="head"><span class="icon">📈</span><div><span class="code">CR</span><h3>Credit</h3></div><span class="status">Mapped</span></div><p>Understanding borrowing, lending, and credit.</p><details><summary>See what lives here</summary><ul><li>Credit Scores</li><li>Credit Reports</li><li>Debt</li><li>Loans</li><li>Improving Credit</li><li>Lending</li><li>Underwriting</li><li>Credit Myths</li></ul></details><span class="enter placeholder">Mapped — lessons coming</span></article>
+
+<article class="card" data-search="land vacant rural zoning easements septic wells timber agriculture development utilities lot splits"><div class="head"><span class="icon">🌲</span><div><span class="code">L</span><h3>Land</h3></div><span class="status">Mapped</span></div><p>Everything about land itself.</p><details><summary>See what lives here</summary><ul><li>Vacant Land</li><li>Rural Property</li><li>Zoning</li><li>Easements</li><li>Septic</li><li>Wells</li><li>Timber</li><li>Agriculture</li><li>Land Development</li><li>Utilities</li><li>Lot Splits</li></ul></details><span class="enter placeholder">Mapped — lessons coming</span></article>
+
+<article class="card" data-search="construction site planning surveys civil engineering grading drainage utilities fire access foundations framing roofing electrical plumbing hvac drywall remodeling permits maintenance repairs contractor basics"><div class="head"><span class="icon">🔨</span><div><span class="code">C</span><h3>Construction</h3></div><span class="status">Mapped</span></div><p>How properties are planned, built, repaired, and improved.</p><details><summary>See what lives here</summary><ul><li>Site Planning</li><li>Surveys</li><li>Civil Engineering</li><li>Grading</li><li>Drainage</li><li>Utilities</li><li>Fire Access</li><li>Foundations</li><li>Framing</li><li>Roofing</li><li>Electrical</li><li>Plumbing</li><li>HVAC</li><li>Drywall</li><li>Remodeling</li><li>Permits</li><li>Maintenance</li><li>Repairs</li><li>Contractor Basics</li></ul></details><span class="enter placeholder">Mapped — lessons coming</span></article>
+
+<article class="card open" data-search="property management daily operations rental property life cycle management agreements marketing screening leasing move-ins rent collection maintenance inspections vendor management turnovers deposits fair housing oregon licensing"><div class="head"><span class="icon">🏢</span><div><span class="code">PM</span><h3>Property Management</h3></div><span class="status">Open now</span></div><p>How rental properties are operated day to day.</p><details><summary>See what lives here</summary><ul><li>What Property Management Is</li><li>Daily Operations</li><li>Rental Property Life Cycle</li><li>Management Agreements</li><li>Marketing</li><li>Screening</li><li>Leasing</li><li>Move-Ins</li><li>Rent Collection</li><li>Maintenance</li><li>Inspections</li><li>Vendor Management</li><li>Turnovers</li><li>Deposits</li><li>Fair Housing</li><li>Oregon Licensing</li></ul></details><a class="enter" href="property-management.html">Enter Property Management →</a></article>
+
+<article class="card" data-search="business contracting company llcs insurance licensing bidding estimating marketing crm systems operations"><div class="head"><span class="icon">💼</span><div><span class="code">B</span><h3>Business</h3></div><span class="status">Mapped</span></div><p>How real estate and contracting businesses are built.</p><details><summary>See what lives here</summary><ul><li>Starting a Contracting Company</li><li>LLCs</li><li>Insurance</li><li>Licensing</li><li>Bidding</li><li>Estimating</li><li>Marketing</li><li>CRM Systems</li><li>Operations</li></ul></details><span class="enter placeholder">Mapped — lessons coming</span></article>
+
+<article class="card" data-search="investing buy hold flipping brrrr house hacking rentals multifamily commercial reits syndications short-term rentals exit strategies"><div class="head"><span class="icon">📊</span><div><span class="code">I</span><h3>Investing</h3></div><span class="status">Mapped</span></div><p>How people build wealth through property.</p><details><summary>See what lives here</summary><ul><li>Buy & Hold</li><li>Flipping</li><li>BRRRR</li><li>House Hacking</li><li>Rentals</li><li>Multifamily</li><li>Commercial</li><li>REITs</li><li>Syndications</li><li>Short-Term Rentals</li><li>Exit Strategies</li></ul></details><span class="enter placeholder">Mapped — lessons coming</span></article>
+
+<article class="card" data-search="rights tenant landlord fair housing ada leases evictions contracts property disputes consumer protection"><div class="head"><span class="icon">⚖️</span><div><span class="code">R</span><h3>Know Your Rights</h3></div><span class="status">Mapped</span></div><p>The legal and consumer-protection side of housing and property.</p><details><summary>See what lives here</summary><ul><li>Tenant Rights</li><li>Landlord Rights</li><li>Fair Housing</li><li>ADA</li><li>Leases</li><li>Evictions</li><li>Contracts</li><li>Property Disputes</li><li>Consumer Protection</li></ul></details><span class="enter placeholder">Mapped — lessons coming</span></article>
+
+</div></div></section>
+
+<section><div class="wrap"><div class="eyebrow">Pick your ending</div><h2 class="section-title">Start from the question you actually have</h2><div class="paths">
+<article class="path"><h3>I want to understand housing</h3><p>Begin with Housing, then branch into Money, Credit, Rights, Land, Construction, or Property Management.</p><a href="housing.html">Enter Housing →</a></article>
+<article class="path"><h3>I want to learn property management</h3><p>Follow the rental-property path from management basics through screening, leasing, maintenance, money, and Oregon practice.</p><a href="property-management.html">Enter Property Management →</a></article>
+<article class="path"><h3>I want to build or develop</h3><p>Move between Land, Construction, Housing, Business, Money, Credit, and Investing as those doors open.</p><a href="#districts">See every mapped door →</a></article>
+</div></div></section>
+
+<section id="living-atlas"><div class="wrap"><div class="atlas"><div class="eyebrow" style="color:#C9D0B9">Cross-reference engine</div><h2>Living Atlas</h2><p>Evergreen lessons stay steady while laws, programs, zoning, building codes, market information, local contacts, and official resources can be reviewed and updated separately.</p><div class="atlas-grid">
+<div class="atlas-card"><strong>Oregon</strong><span>State laws, licensing, agencies, programs, codes, and updates.</span></div>
+<div class="atlas-card"><strong>Jackson County</strong><span>Planning, building, housing, courts, GIS, wildfire, utilities, and resources.</span></div>
+<div class="atlas-card"><strong>Josephine County</strong><span>Planning, rural property, housing, courts, wildfire, utilities, and resources.</span></div>
+<div class="atlas-card"><strong>California</strong><span>Future state-specific branches without mixing Oregon rules.</span></div>
+<div class="atlas-card"><strong>Washington</strong><span>Future state-specific branches without mixing Oregon rules.</span></div>
+</div></div></div></section>
+
+<footer><div class="wrap">© 2026 The Everyday Investor Academy. Educational information only.</div></footer>
+
+<script>
+const input=document.getElementById('search');
+const cards=[...document.querySelectorAll('.card')];
+input.addEventListener('input',()=>{const q=input.value.trim().toLowerCase();cards.forEach(card=>{card.style.display=!q||card.dataset.search.includes(q)?'':'none';});});
+document.getElementById('clear').addEventListener('click',()=>{input.value='';cards.forEach(card=>card.style.display='');input.focus();});
+</script>
+</body>
+</html>
