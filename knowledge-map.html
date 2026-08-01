@@ -1,37 +1,100 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Knowledge Map</title><style>
-:root{--navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;--gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;--soft:#EEF1E8;--line:#D9DDCF}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.68}a{color:inherit}
-.wrap{width:min(1120px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe)}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102F55">
+<title>Knowledge Map | The Everyday Investor Academy</title>
+<style>
+:root{--navy:#102F55;--navy2:#173B67;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;--gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;--soft:#EEF1E8;--line:#D9DDCF}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit}
+.wrap{width:min(1180px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:60;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe);backdrop-filter:blur(12px)}
 .nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0}.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:900}.navlinks{display:flex;gap:14px;flex-wrap:wrap}
-.hero{padding:62px 0 42px;background:linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:.97;margin:.2em 0 .25em}.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.2rem;max-width:840px}
-section{padding:44px 0}.card,.panel,.lesson-shell,.node{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:22px;box-shadow:0 8px 22px rgba(16,47,85,.05)}
-.callout{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin:18px 0}.olivebox{background:var(--soft);border-left:5px solid var(--olive);padding:15px 17px;border-radius:8px;margin:18px 0}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.path-grid,.lens-grid,.atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:.78rem;font-weight:850}
-.breadcrumbs{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted)}.breadcrumbs a{text-decoration:none;color:var(--navy);font-weight:850}
-details.atlas{background:var(--navy);color:#fff;border-radius:16px;padding:18px 20px;margin:24px 0}details.atlas summary{cursor:pointer;font-weight:900}details.atlas h2,details.atlas h3{color:#fff}
-.atlas-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:14px}
-.lens,.path{background:#F8FAFC;border:1px solid var(--taupe);border-radius:12px;padding:16px}.quiz{background:var(--navy);color:#fff;border-radius:16px;padding:22px}.quiz h2{color:#fff}
-footer{border-top:1px solid var(--taupe);padding:28px 0 42px;color:var(--muted)}
-@media(max-width:800px){.grid-2,.path-grid,.lens-grid,.atlas-grid{grid-template-columns:1fr}.navlinks{display:none}}
+.hero{padding:64px 0 46px;background:radial-gradient(circle at 85% 15%,rgba(198,154,66,.18),transparent 30%),linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}
+.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}
+h1{font-size:clamp(3rem,8vw,6.4rem);line-height:.94;margin:.2em 0 .25em;max-width:950px}.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.22rem;max-width:850px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 17px;border:2px solid var(--navy);border-radius:11px;text-decoration:none;font-weight:900}.btn.primary{background:var(--navy);color:white}
+section{padding:46px 0}.searchbar{display:grid;grid-template-columns:1fr auto;gap:10px;margin:22px 0}.searchbar input,.searchbar button{padding:14px;border:1px solid var(--taupe);border-radius:11px;background:var(--paper);font:inherit}.searchbar button{font-weight:900;cursor:pointer}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric{background:var(--paper);border:1px solid var(--taupe);border-radius:15px;padding:18px}.metric strong{display:block;font-size:1.8rem;color:var(--navy)}.metric span{color:var(--muted)}
+.map-shell{position:relative;background:var(--navy);border-radius:24px;padding:26px;overflow:hidden}.map-head{position:relative;z-index:2;color:white;max-width:760px}.map-head h2{color:white;font-size:2.5rem;margin:.2em 0}
+.district-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:24px}.district{display:flex;flex-direction:column;min-height:225px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.24);border-radius:16px;padding:18px;text-decoration:none;transition:.18s ease}.district:hover{transform:translateY(-3px);background:rgba(255,255,255,.14)}.district h3{color:white;margin:.1em 0;font-size:1.45rem}.district p{color:#EEF2F5;flex:1}
+.status{display:inline-flex;width:max-content;border-radius:999px;padding:6px 9px;background:rgba(255,255,255,.12);font-size:.72rem;font-weight:900;text-transform:uppercase}.status.live{background:#D6DEC9;color:#304236}.status.mapped{color:#F2E4C5}
+.district.center{background:var(--paper);color:var(--ink);grid-column:3}.district.center h3{color:var(--navy)}.district.center p{color:var(--muted)}
+.path-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.path,.staircase{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:20px}.path h3{margin-top:0}.step{display:flex;align-items:flex-start;gap:10px;margin:12px 0}.step-num{display:grid;place-items:center;width:28px;height:28px;flex:0 0 28px;border-radius:50%;background:var(--soft);color:var(--navy);font-weight:900}.step a{font-weight:850;text-decoration:none;color:var(--navy)}
+.staircases{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.route{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.route a{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:8px 11px;text-decoration:none;font-weight:850;color:var(--navy)}.route .arrow{color:var(--olive);font-weight:900}
+.brain{background:linear-gradient(135deg,var(--navy),var(--navy2));color:white;border-radius:22px;padding:28px}.brain h2,.brain h3{color:white}.brain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.brain-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:17px}.brain-card a{font-weight:900;color:#DCE5D2;text-decoration:none}
+.notice{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin:20px 0}.hidden{display:none!important}footer{border-top:1px solid var(--taupe);padding:28px 0 42px;color:var(--muted)}
+@media(max-width:1000px){.district-grid{grid-template-columns:repeat(3,1fr)}.district.center{grid-column:auto}.path-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.summary,.brain-grid,.staircases{grid-template-columns:1fr 1fr}.district-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.navlinks{display:none}.summary,.district-grid,.path-grid,.brain-grid,.staircases{grid-template-columns:1fr}.searchbar{grid-template-columns:1fr}.map-shell{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="index.html#choose">Choose Your Path</a><a href="#districts">Explore the Map</a><a href="living-atlas.html">Live Atlas</a></div></div></header>
 
-.map{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.node{text-decoration:none;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}.node.center{background:var(--navy);color:#fff}.node.center h3{color:#fff}.node strong{color:var(--olive)}.route{margin:24px 0;background:var(--paper);border:1px dashed var(--taupe);border-radius:14px;padding:18px}@media(max-width:900px){.map{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.map{grid-template-columns:1fr}}
-</style></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="index.html#choose">Choose Your Path</a><a href="living-atlas.html">Live Atlas</a></div></div></header>
-<section class="hero"><div class="wrap"><div class="eyebrow">Revolving staircases</div><h1>Knowledge Map</h1><p class="lead">One topic can branch into several districts and the Living Atlas.</p></div></section>
-<section><div class="wrap"><div class="map">
-<a class="node" href="foundation.html"><h3>🧭 Foundation</h3><p>Core language and research.</p><strong>Enter →</strong></a>
-<a class="node" href="housing.html"><h3>🏠 Housing</h3><p>Renting, buying, and housing types.</p><strong>Enter →</strong></a>
-<a class="node" href="money.html"><h3>💵 Money</h3><p>Budgeting and cash flow.</p><strong>Enter →</strong></a>
-<a class="node" href="credit.html"><h3>📈 Credit</h3><p>Scores, reports, and borrowing.</p><strong>Enter →</strong></a>
-<a class="node" href="land.html"><h3>🌲 Land</h3><p>Zoning, utilities, and development.</p><strong>Enter →</strong></a>
-<a class="node" href="construction.html"><h3>🔨 Construction</h3><p>Building systems and estimating.</p><strong>Enter →</strong></a>
-<a class="node" href="property-management.html"><h3>🏢 Property Management</h3><p>Residents, maintenance, and operations.</p><strong>Enter →</strong></a>
-<a class="node center" href="living-atlas.html"><h3>🧠 Living Atlas</h3><p>The current-information brain connected to every district.</p><strong style="color:#D6DEC9">Open →</strong></a>
-<a class="node" href="business.html"><h3>💼 Business</h3><p>Systems, pricing, and growth.</p><strong>Enter →</strong></a>
-<a class="node" href="investing.html"><h3>📊 Investing</h3><p>Strategies, analysis, and risk.</p><strong>Enter →</strong></a>
-<a class="node" href="rights.html"><h3>⚖️ Know Your Rights</h3><p>Contracts, housing law, and disputes.</p><strong>Enter →</strong></a>
-</div>
-<div class="route"><h2>Example staircase</h2><p>Cottage Cluster → Land feasibility → Construction budgeting → Property Management → Investment analysis → Oregon current rules.</p></div>
-</div></section></body></html>
+<section class="hero"><div class="wrap"><div class="eyebrow">The connected knowledge app</div><h1>Start anywhere. Follow what connects.</h1><p class="lead">The Knowledge Map links every Academy district, guided path, revolving staircase, and current-information branch without forcing everyone through one order.</p><div class="actions"><a class="btn primary" href="#districts">Open the knowledge map</a><a class="btn" href="#paths">Choose a guided path</a><a class="btn" href="living-atlas.html">Open the Live Atlas brain</a></div></div></section>
+
+<section><div class="wrap">
+<div class="summary"><div class="metric"><strong>10</strong><span>Master Atlas districts</span></div><div class="metric"><strong id="liveCount">0</strong><span>District doors detected</span></div><div class="metric"><strong>24</strong><span>Main lesson doors per district</span></div><div class="metric"><strong>1</strong><span>Live Atlas brain</span></div></div>
+<div class="searchbar"><input id="mapSearch" type="search" placeholder="Search: renting, contractor, land, credit, investing…"><button id="clearSearch">Clear</button></div>
+</div></section>
+
+<section id="districts"><div class="wrap"><div class="map-shell">
+<div class="map-head"><div class="eyebrow">Master Atlas</div><h2>Ten districts. One connected world.</h2><p>Open doors are detected automatically. Mapped doors remain visible so the whole Academy stays understandable while it grows.</p></div>
+<div class="district-grid">
+<a class="district" data-file="foundation.html" data-search="foundation beginner vocabulary real estate research roadmap" href="foundation.html"><span class="status">Checking…</span><h3>🧭 Foundation</h3><p>Core concepts, people, vocabulary, research, and your roadmap.</p></a>
+<a class="district" data-file="housing.html" data-search="housing renting buying mortgages homes adu cottage cluster manufactured" href="housing.html"><span class="status">Checking…</span><h3>🏠 Housing</h3><p>Renting, buying, affordability, housing types, development, and rights.</p></a>
+<a class="district" data-file="money.html" data-search="money budgeting cash flow debt savings taxes insurance retirement" href="money.html"><span class="status">Checking…</span><h3>💵 Money</h3><p>Budgeting, cash flow, debt, savings, protection, and planning.</p></a>
+<a class="district" data-file="credit.html" data-search="credit score report loans debt underwriting mortgage disputes" href="credit.html"><span class="status">Checking…</span><h3>📈 Credit</h3><p>Scores, reports, rebuilding, loans, disputes, and borrowing wisely.</p></a>
+<a class="district" data-file="land.html" data-search="land zoning easement septic well rural utilities lot split timber" href="land.html"><span class="status">Checking…</span><h3>🌲 Land</h3><p>Parcels, zoning, access, utilities, septic, hazards, and development.</p></a>
+<a class="district" data-file="construction.html" data-search="construction framing roofing electrical plumbing permits estimating contractor" href="construction.html"><span class="status">Checking…</span><h3>🔨 Construction</h3><p>Site work, systems, permits, estimates, project management, and closeout.</p></a>
+<a class="district" data-file="property-management.html" data-search="property management leasing residents maintenance vendors rent inspections" href="property-management.html"><span class="status">Checking…</span><h3>🏢 Property Management</h3><p>Leasing, residents, maintenance, money, risk, and professional practice.</p></a>
+<a class="district center" data-file="living-atlas.html" data-search="live living atlas current rules oregon jackson josephine permits forms videos" href="living-atlas.html"><span class="status">Checking…</span><h3>🧠 Live Atlas</h3><p>Current rules, agencies, forms, local branches, videos, and tools.</p></a>
+<a class="district" data-file="business.html" data-search="business llc insurance licensing bidding estimating marketing crm operations contractor" href="business.html"><span class="status">Checking…</span><h3>💼 Business</h3><p>Setup, compliance, systems, pricing, sales, paperwork, hiring, and growth.</p></a>
+<a class="district" data-file="investing.html" data-search="investing rental flipping brrrr house hacking reit multifamily deal analysis" href="investing.html"><span class="status">Checking…</span><h3>📊 Investing</h3><p>Strategies, returns, analysis, financing, risk, and exits.</p></a>
+<a class="district" data-file="rights.html" data-search="rights tenant landlord fair housing leases contracts disputes consumer law" href="rights.html"><span class="status">Checking…</span><h3>⚖️ Know Your Rights</h3><p>Housing law, contracts, fair housing, evidence, and disputes.</p></a>
+</div></div></div></section>
+
+<section id="paths"><div class="wrap"><div class="eyebrow">Choose your entrance</div><h2>Start with the path that sounds like you.</h2><div class="path-grid">
+<article class="path" data-search="build contractor construction business property management land"><h3>🛠 I build or repair things</h3><div class="step"><span class="step-num">1</span><a href="construction.html">Construction</a></div><div class="step"><span class="step-num">2</span><a href="business.html">Business</a></div><div class="step"><span class="step-num">3</span><a href="property-management.html">Property Management</a></div><div class="step"><span class="step-num">4</span><a href="land.html">Land</a></div></article>
+<article class="path" data-search="rent buy home housing money credit rights"><h3>🏠 I need housing or want a home</h3><div class="step"><span class="step-num">1</span><a href="housing.html">Housing</a></div><div class="step"><span class="step-num">2</span><a href="money.html">Money</a></div><div class="step"><span class="step-num">3</span><a href="credit.html">Credit</a></div><div class="step"><span class="step-num">4</span><a href="rights.html">Know Your Rights</a></div></article>
+<article class="path" data-search="invest wealth rental property money credit land construction"><h3>📊 I want to invest</h3><div class="step"><span class="step-num">1</span><a href="investing.html">Investing</a></div><div class="step"><span class="step-num">2</span><a href="money.html">Money</a></div><div class="step"><span class="step-num">3</span><a href="credit.html">Credit</a></div><div class="step"><span class="step-num">4</span><a href="property-management.html">Property Management</a></div></article>
+<article class="path" data-search="curious beginner learn explore foundation atlas housing"><h3>🧭 I am curious and want the map</h3><div class="step"><span class="step-num">1</span><a href="foundation.html">Foundation</a></div><div class="step"><span class="step-num">2</span><a href="housing.html">Housing</a></div><div class="step"><span class="step-num">3</span><a href="living-atlas.html">Live Atlas</a></div><div class="step"><span class="step-num">4</span><a href="#districts">Choose the next district</a></div></article>
+</div></div></section>
+
+<section><div class="wrap"><div class="eyebrow">Revolving staircases</div><h2>Follow the question—not a rigid course order.</h2><div class="staircases">
+<article class="staircase" data-search="cottage cluster land construction property management investing oregon"><h3>Cottage Cluster Staircase</h3><div class="route"><a href="h-018.html">Housing</a><span class="arrow">→</span><a href="land.html">Land</a><span class="arrow">→</span><a href="construction.html">Construction</a><span class="arrow">→</span><a href="property-management.html">Management</a><span class="arrow">→</span><a href="investing.html">Investing</a><span class="arrow">→</span><a href="oregon.html">Oregon</a></div></article>
+<article class="staircase" data-search="vendor contractor business insurance licensing work order property management"><h3>Vendor Management Staircase</h3><div class="route"><a href="pm-013.html">Vendor Management</a><span class="arrow">→</span><a href="business.html">Business</a><span class="arrow">→</span><a href="construction.html">Construction</a><span class="arrow">→</span><a href="oregon.html">Oregon Licensing</a></div></article>
+<article class="staircase" data-search="first time homebuyer mortgage credit money rights oregon"><h3>First Home Staircase</h3><div class="route"><a href="h-009.html">Homebuyer Roadmap</a><span class="arrow">→</span><a href="credit.html">Credit</a><span class="arrow">→</span><a href="money.html">Money</a><span class="arrow">→</span><a href="rights.html">Rights</a><span class="arrow">→</span><a href="oregon.html">Current Programs</a></div></article>
+<article class="staircase" data-search="investment property deal analysis construction property management money land"><h3>Investment Property Staircase</h3><div class="route"><a href="i-001.html">Investing Basics</a><span class="arrow">→</span><a href="i-004.html">Deal Analysis</a><span class="arrow">→</span><a href="construction.html">Condition</a><span class="arrow">→</span><a href="property-management.html">Operations</a><span class="arrow">→</span><a href="living-atlas.html">Current Data</a></div></article>
+</div></div></section>
+
+<section><div class="wrap"><div class="brain"><div class="eyebrow">The brain inside every path</div><h2>Live Atlas</h2><p>Lessons explain what stays true. The Live Atlas supplies what is true now and where you are.</p><div class="brain-grid"><div class="brain-card"><h3>Oregon</h3><p>State laws, licensing, codes, agencies, programs, and forms.</p><a href="oregon.html">Open Oregon →</a></div><div class="brain-card"><h3>Jackson County</h3><p>Planning, GIS, permits, courts, taxes, wildfire, and housing.</p><a href="jackson-county.html">Open Jackson County →</a></div><div class="brain-card"><h3>Josephine County</h3><p>Rural property, septic, permits, taxes, courts, and Grants Pass.</p><a href="josephine-county.html">Open Josephine County →</a></div></div></div><div class="notice"><strong>System rule:</strong> Every new lesson should link to this Knowledge Map and to the exact Live Atlas branch needed for that lesson.</div></div></section>
+
+<footer><div class="wrap">© 2026 The Everyday Investor Academy · Knowledge Map v1.0</div></footer>
+
+<script>
+async function exists(file){
+  try{
+    let response=await fetch(file+'?mapcheck='+Date.now(),{method:'HEAD',cache:'no-store'});
+    if(response.ok)return true;
+    if(response.status===405){response=await fetch(file+'?mapcheck='+Date.now(),{cache:'no-store'});return response.ok}
+    return false;
+  }catch(error){return false}
+}
+async function activateDoors(){
+  const doors=[...document.querySelectorAll('.district[data-file]')];let live=0;
+  for(const door of doors){
+    const status=door.querySelector('.status'),isLive=await exists(door.dataset.file);
+    if(isLive){status.textContent='Open now';status.classList.add('live');live++}
+    else{status.textContent='Mapped';status.classList.add('mapped');door.removeAttribute('href');door.style.cursor='default'}
+  }
+  document.getElementById('liveCount').textContent=live;
+}
+function setupSearch(){
+  const input=document.getElementById('mapSearch'),clear=document.getElementById('clearSearch'),searchable=[...document.querySelectorAll('[data-search]')];
+  input.addEventListener('input',()=>{const term=input.value.trim().toLowerCase();searchable.forEach(item=>item.classList.toggle('hidden',term&&!item.dataset.search.includes(term)))});
+  clear.addEventListener('click',()=>{input.value='';searchable.forEach(item=>item.classList.remove('hidden'));input.focus()});
+}
+document.addEventListener('DOMContentLoaded',()=>{activateDoors();setupSearch()});
+</script>
+</body>
+</html>
