@@ -1,0 +1,101 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>H-002 · Housing Looks Different | The Everyday Investor Academy</title><style>
+:root{
+  --navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;
+  --gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;
+  --soft:#EEF1E8;--green:#52705A;--gray:#ECEFF3
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.68}
+a{color:inherit}
+.wrap{width:min(1120px,calc(100% - 28px));margin:auto}
+header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe);backdrop-filter:blur(10px)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0}
+.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:900}
+.navlinks{display:flex;gap:14px;flex-wrap:wrap}
+.hero{padding:68px 0 48px;background:linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}
+.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}
+h1{font-size:clamp(3rem,8vw,6rem);line-height:.96;margin:.2em 0 .25em;max-width:940px}
+.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.23rem;max-width:860px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:12px 17px;border:2px solid var(--navy);border-radius:10px;font-weight:900;min-height:48px}
+.btn.primary{background:var(--navy);color:#fff}
+section{padding:48px 0}
+.section-title{font-size:2.3rem;margin:0 0 8px}
+.section-copy{max-width:850px;color:var(--muted)}
+.module-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.module{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:20px;box-shadow:0 8px 22px rgba(16,47,85,.05)}
+.module h3{margin:0;font-size:1.55rem}
+.module p{color:var(--muted);margin:.45em 0 1em}
+.lesson-list{display:grid;gap:9px}
+.lesson{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;background:#F7F8F5;border:1px solid #D9DDCF;border-radius:11px;padding:11px 12px;text-decoration:none}
+.lesson .code{color:var(--olive);font-weight:950;font-size:.78rem;letter-spacing:.08em}
+.lesson .title{color:var(--navy);font-weight:850}
+.lesson .state{font-size:.68rem;font-weight:900;text-transform:uppercase;border-radius:999px;padding:6px 9px;background:var(--gray);color:#6D7580;white-space:nowrap}
+.lesson.live{border-color:var(--olive);background:#FBFCF9}
+.lesson.live .state{background:var(--soft);color:var(--green)}
+.lesson.disabled{pointer-events:none}
+.search-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin:22px 0}
+.search-row input,.search-row button{padding:13px 14px;border:1px solid var(--taupe);background:var(--paper);border-radius:10px;font:inherit}
+.search-row button{font-weight:900;cursor:pointer}
+.progress{background:var(--navy);color:#fff;border-radius:17px;padding:22px;margin-top:24px}
+.progress h2{color:#fff;margin-top:0}
+.progress-bar{height:12px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:#D6DEC9;transition:width .25s ease}
+.progress-text{margin-top:10px;color:#E6EBF0}
+.stairs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stair{background:var(--paper);border:1px solid var(--taupe);border-radius:14px;padding:18px;text-decoration:none}
+.stair h3{margin-top:0}
+.stair strong{color:var(--olive)}
+.live-atlas{background:var(--navy);color:#fff;border-radius:18px;padding:25px}
+.live-atlas h2{color:#fff;margin-top:0}
+.live-atlas a{display:inline-flex;margin-top:10px;background:#fff;color:var(--navy);text-decoration:none;border-radius:10px;padding:11px 14px;font-weight:900}
+.notice{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin-top:22px}
+.article{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:28px;box-shadow:0 8px 22px rgba(16,47,85,.05);max-width:900px;margin:auto}
+.article h2{font-size:2rem;margin-top:1.5em}
+.article h3{font-size:1.3rem;margin-top:1.3em}
+.callout{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin:18px 0}
+.olivebox{background:var(--soft);border-left:5px solid var(--olive);padding:15px 17px;border-radius:8px;margin:18px 0}
+.term-grid,.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.term,.choice{background:#F8FAFC;border:1px solid var(--taupe);border-radius:10px;padding:15px}
+.term strong,.choice strong{display:block;color:var(--navy);margin-bottom:5px}
+.quiz{background:var(--navy);color:#fff;border-radius:14px;padding:22px;margin-top:26px}
+.quiz h2,.quiz h3{color:#fff}
+.quiz details{background:rgba(255,255,255,.1);border-radius:8px;padding:12px;margin-top:10px}
+.navdoors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.navdoor{background:var(--paper);border:1px solid var(--taupe);border-radius:12px;padding:17px;text-decoration:none}
+.navdoor strong{display:block;color:var(--navy);margin-bottom:5px}
+footer{border-top:1px solid var(--taupe);padding:28px 0 42px;color:var(--muted);font-size:.9rem}
+@media(max-width:800px){.module-grid,.term-grid,.choice-grid{grid-template-columns:1fr}.stairs,.navdoors{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.stairs,.navdoors{grid-template-columns:1fr}.navlinks{display:none}.lesson{grid-template-columns:auto 1fr}.lesson .state{grid-column:1/-1;width:max-content}.search-row{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="housing.html">Housing</a><a href="index.html#choose">Choose Your Path</a><a href="living-atlas.html">Live Atlas</a></div></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Housing District · H-002</div><h1>Housing Looks Different</h1><p class="lead">There is no single correct housing type. Different homes solve different needs, costs, locations, and stages of life.</p><div class="actions"><a class="btn primary" href="#lesson">Start reading</a><a class="btn" href="living-atlas.html">Check current information</a></div></div></section>
+<section id="lesson"><div class="wrap"><article class="article"><h2>Housing is not one shape</h2>
+<p>A detached house is only one housing form. Some people need privacy and land. Others need lower maintenance, smaller spaces, shared services, accessible design, or a location close to work and transit.</p>
+<div class="choice-grid">
+<div class="choice"><strong>Detached home</strong>More separation and control, usually more maintenance and land responsibility.</div>
+<div class="choice"><strong>Apartment</strong>Shared building and management, often lower personal maintenance responsibility.</div>
+<div class="choice"><strong>Condo</strong>Individual ownership inside a shared community with association rules and fees.</div>
+<div class="choice"><strong>Manufactured home</strong>Factory-built housing that may sit on owned land or rented space.</div>
+<div class="choice"><strong>ADU</strong>A smaller secondary home on the same property as a primary dwelling.</div>
+<div class="choice"><strong>Cottage cluster</strong>Several compact homes organized as a coordinated community, often around shared open space.</div>
+</div>
+<h2>The best housing type depends on the goal</h2>
+<p>A first-time renter, single parent, retiree, contractor, investor, disabled resident, and multigenerational family may all evaluate the same property differently.</p>
+<h2>Tradeoffs matter</h2>
+<ul><li>Privacy versus shared responsibility</li><li>Lower purchase price versus association fees</li><li>More land versus more maintenance</li><li>Smaller space versus better location</li><li>Ownership control versus flexibility</li></ul>
+<div class="olivebox"><strong>Better question:</strong> Not “Which housing type is best?” Ask “Which housing type fits the person, budget, responsibilities, location, and next stage?”</div>
+<h2>How to compare housing types</h2>
+<p>Compare total monthly cost, maintenance, rules, accessibility, privacy, parking, storage, outdoor space, location, resale or rental flexibility, and the amount of control the resident or owner actually has.</p>
+<div class="quiz"><h2>Quick knowledge check</h2><p><strong>Question:</strong> What is the biggest idea to remember from this lesson?</p><details><summary>Open answer</summary><p>There is no single correct housing type. Different homes solve different needs, costs, locations, and stages of life.</p></details></div>
+<h2>Choose your next door</h2><div class="navdoors">
+<a class="navdoor" href="h-001.html"><strong>← Previous</strong><span>Move back one step.</span></a>
+<a class="navdoor" href="housing.html"><strong>Housing Map</strong><span>Choose another housing path.</span></a>
+<a class="navdoor" href="h-003.html"><strong>Next →</strong><span>Continue the housing path.</span></a>
+</div>
+</article></div></section>
+<footer><div class="wrap">© 2026 The Everyday Investor Academy. Educational information only.</div></footer>
+</body></html>
