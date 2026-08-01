@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lesson Template v2</title><style>
+:root{--navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;--gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;--soft:#EEF1E8;--line:#D9DDCF}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.68}a{color:inherit}
+.wrap{width:min(1120px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0}.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:900}.navlinks{display:flex;gap:14px;flex-wrap:wrap}
+.hero{padding:62px 0 42px;background:linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:.97;margin:.2em 0 .25em}.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.2rem;max-width:840px}
+section{padding:44px 0}.card,.panel,.lesson-shell,.node{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:22px;box-shadow:0 8px 22px rgba(16,47,85,.05)}
+.callout{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin:18px 0}.olivebox{background:var(--soft);border-left:5px solid var(--olive);padding:15px 17px;border-radius:8px;margin:18px 0}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.path-grid,.lens-grid,.atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:.78rem;font-weight:850}
+.breadcrumbs{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted)}.breadcrumbs a{text-decoration:none;color:var(--navy);font-weight:850}
+details.atlas{background:var(--navy);color:#fff;border-radius:16px;padding:18px 20px;margin:24px 0}details.atlas summary{cursor:pointer;font-weight:900}details.atlas h2,details.atlas h3{color:#fff}
+.atlas-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:14px}
+.lens,.path{background:#F8FAFC;border:1px solid var(--taupe);border-radius:12px;padding:16px}.quiz{background:var(--navy);color:#fff;border-radius:16px;padding:22px}.quiz h2{color:#fff}
+footer{border-top:1px solid var(--taupe);padding:28px 0 42px;color:var(--muted)}
+@media(max-width:800px){.grid-2,.path-grid,.lens-grid,.atlas-grid{grid-template-columns:1fr}.navlinks{display:none}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="index.html#choose">Choose Your Path</a><a href="knowledge-map.html">Knowledge Map</a><a href="living-atlas.html">Live Atlas</a></div></div></header>
+<section class="hero"><div class="wrap"><div class="breadcrumbs"><a href="index.html">Academy</a><span>→</span><a href="investing.html">District</a><span>→</span><span>Lesson Code</span></div><div class="eyebrow">Lesson Hub</div><h1>Replace with lesson title</h1><p class="lead">Replace with one clear sentence explaining the lesson.</p><div class="pills"><span class="pill">20–40 minutes</span><span class="pill">Beginner friendly</span><span class="pill">Evergreen core</span><span class="pill">Live Atlas connected</span></div></div></section>
+<section><div class="wrap"><article class="lesson-shell">
+<div class="callout"><strong>Why this matters:</strong> Replace with the real-world reason this topic affects decisions, money, safety, or opportunity.</div>
+<h2>Start Here</h2><p>Place the main plain-English lesson here.</p>
+<h2>Key Terms</h2><div class="grid-2"><div class="card"><h3>Term 1</h3><p>Definition.</p></div><div class="card"><h3>Term 2</h3><p>Definition.</p></div></div>
+<h2>Real-World Example</h2><div class="olivebox"><strong>Scenario:</strong> Add one practical example.</div>
+<h2>Perspective Lenses</h2><div class="lens-grid"><div class="lens"><h3>Homeowner</h3><p>Perspective.</p></div><div class="lens"><h3>Builder</h3><p>Perspective.</p></div><div class="lens"><h3>Investor</h3><p>Perspective.</p></div></div>
+<details class="atlas" open><summary>🧠 Living Atlas — current information connected to this lesson</summary><div class="atlas-grid">
+<div class="atlas-item"><h3>Current Rules</h3><p>State, county, city, and federal rules.</p><a href="living-atlas.html">Open rules →</a></div>
+<div class="atlas-item"><h3>Official Forms</h3><p>Applications, permits, and checklists.</p><a href="living-atlas.html">Open forms →</a></div>
+<div class="atlas-item"><h3>Current Numbers</h3><p>Rates, fees, limits, and market figures.</p><a href="living-atlas.html">Open data →</a></div>
+<div class="atlas-item"><h3>Videos</h3><p>Current explainers and demonstrations.</p><a href="living-atlas.html">Open videos →</a></div>
+<div class="atlas-item"><h3>Local Layer</h3><p>Oregon, Jackson County, Josephine County, California, Washington.</p><a href="living-atlas.html">Open local layer →</a></div>
+<div class="atlas-item"><h3>Tools</h3><p>Templates, calculators, worksheets, and AI prompts.</p><a href="living-atlas.html">Open tools →</a></div>
+</div></details>
+<h2>Knowledge Connections</h2><div class="path-grid"><a class="path" href="construction.html"><h3>Construction</h3><p>Explain connection.</p></a><a class="path" href="property-management.html"><h3>Property Management</h3><p>Explain connection.</p></a><a class="path" href="money.html"><h3>Money</h3><p>Explain connection.</p></a></div>
+<div class="quiz"><h2>Quick Check</h2><p><strong>Question:</strong> Replace with a useful concept check.</p><details><summary>Open answer</summary><p>Replace with explanation.</p></details></div>
+</article></div></section><footer><div class="wrap">© 2026 The Everyday Investor Academy.</div></footer></body></html>

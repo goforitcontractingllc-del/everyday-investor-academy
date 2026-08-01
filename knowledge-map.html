@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Knowledge Map</title><style>
+:root{--navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;--gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;--soft:#EEF1E8;--line:#D9DDCF}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.68}a{color:inherit}
+.wrap{width:min(1120px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0}.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:900}.navlinks{display:flex;gap:14px;flex-wrap:wrap}
+.hero{padding:62px 0 42px;background:linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:.97;margin:.2em 0 .25em}.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.2rem;max-width:840px}
+section{padding:44px 0}.card,.panel,.lesson-shell,.node{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:22px;box-shadow:0 8px 22px rgba(16,47,85,.05)}
+.callout{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin:18px 0}.olivebox{background:var(--soft);border-left:5px solid var(--olive);padding:15px 17px;border-radius:8px;margin:18px 0}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.path-grid,.lens-grid,.atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:.78rem;font-weight:850}
+.breadcrumbs{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted)}.breadcrumbs a{text-decoration:none;color:var(--navy);font-weight:850}
+details.atlas{background:var(--navy);color:#fff;border-radius:16px;padding:18px 20px;margin:24px 0}details.atlas summary{cursor:pointer;font-weight:900}details.atlas h2,details.atlas h3{color:#fff}
+.atlas-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:14px}
+.lens,.path{background:#F8FAFC;border:1px solid var(--taupe);border-radius:12px;padding:16px}.quiz{background:var(--navy);color:#fff;border-radius:16px;padding:22px}.quiz h2{color:#fff}
+footer{border-top:1px solid var(--taupe);padding:28px 0 42px;color:var(--muted)}
+@media(max-width:800px){.grid-2,.path-grid,.lens-grid,.atlas-grid{grid-template-columns:1fr}.navlinks{display:none}}
+
+.map{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.node{text-decoration:none;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}.node.center{background:var(--navy);color:#fff}.node.center h3{color:#fff}.node strong{color:var(--olive)}.route{margin:24px 0;background:var(--paper);border:1px dashed var(--taupe);border-radius:14px;padding:18px}@media(max-width:900px){.map{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.map{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="index.html#choose">Choose Your Path</a><a href="living-atlas.html">Live Atlas</a></div></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Revolving staircases</div><h1>Knowledge Map</h1><p class="lead">One topic can branch into several districts and the Living Atlas.</p></div></section>
+<section><div class="wrap"><div class="map">
+<a class="node" href="foundation.html"><h3>🧭 Foundation</h3><p>Core language and research.</p><strong>Enter →</strong></a>
+<a class="node" href="housing.html"><h3>🏠 Housing</h3><p>Renting, buying, and housing types.</p><strong>Enter →</strong></a>
+<a class="node" href="money.html"><h3>💵 Money</h3><p>Budgeting and cash flow.</p><strong>Enter →</strong></a>
+<a class="node" href="credit.html"><h3>📈 Credit</h3><p>Scores, reports, and borrowing.</p><strong>Enter →</strong></a>
+<a class="node" href="land.html"><h3>🌲 Land</h3><p>Zoning, utilities, and development.</p><strong>Enter →</strong></a>
+<a class="node" href="construction.html"><h3>🔨 Construction</h3><p>Building systems and estimating.</p><strong>Enter →</strong></a>
+<a class="node" href="property-management.html"><h3>🏢 Property Management</h3><p>Residents, maintenance, and operations.</p><strong>Enter →</strong></a>
+<a class="node center" href="living-atlas.html"><h3>🧠 Living Atlas</h3><p>The current-information brain connected to every district.</p><strong style="color:#D6DEC9">Open →</strong></a>
+<a class="node" href="business.html"><h3>💼 Business</h3><p>Systems, pricing, and growth.</p><strong>Enter →</strong></a>
+<a class="node" href="investing.html"><h3>📊 Investing</h3><p>Strategies, analysis, and risk.</p><strong>Enter →</strong></a>
+<a class="node" href="rights.html"><h3>⚖️ Know Your Rights</h3><p>Contracts, housing law, and disputes.</p><strong>Enter →</strong></a>
+</div>
+<div class="route"><h2>Example staircase</h2><p>Cottage Cluster → Land feasibility → Construction budgeting → Property Management → Investment analysis → Oregon current rules.</p></div>
+</div></section></body></html>
