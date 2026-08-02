@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas Terms Example</title>
+<link rel="stylesheet" href="atlas-terms.css">
+<style>
+body{font-family:Arial,sans-serif;background:#F7F1E7;color:#2D302F;line-height:1.7;margin:0}
+main{max-width:820px;margin:auto;padding:30px;background:#FFFDF8}
+h1{color:#102F55}
+</style>
+</head>
+<body>
+<main>
+<h1>Clickable Term Example</h1>
+
+<p>
+A deal can look strong because of its
+<span class="atlas-term" data-term="roi">ROI</span>,
+but you should also compare
+<span class="atlas-term" data-term="cap-rate">cap rate</span>,
+<span class="atlas-term" data-term="cash-flow">cash flow</span>,
+and
+<span class="atlas-term" data-term="cash-on-cash">cash-on-cash return</span>.
+</p>
+</main>
+
+<script>
+window.ATLAS_TERMS = {
+  "roi": {
+    title: "ROI — Return on Investment",
+    definition: "A percentage that compares the gain or profit from an investment with the amount invested.",
+    formula: "ROI = Gain or Profit ÷ Total Investment × 100",
+    example: "You invest $20,000 and earn $3,000. $3,000 ÷ $20,000 = 15% ROI.",
+    whyItMatters: "ROI gives a broad view of return, but it does not automatically show how long the investment took or how risky it was.",
+    mistakes: [
+      "Using gross revenue instead of actual gain.",
+      "Ignoring repair costs, fees, financing, and taxes.",
+      "Comparing investments with very different time periods."
+    ],
+    related: ["Cash-on-Cash Return", "Cap Rate", "Equity"],
+    resources: [
+      {label:"Open Investing Map", href:"investing.html"},
+      {label:"Open Live Atlas", href:"living-atlas.html"}
+    ]
+  },
+  "cap-rate": {
+    title: "Cap Rate — Capitalization Rate",
+    definition: "A property-level return measure based on net operating income before loan payments.",
+    formula: "Cap Rate = Net Operating Income ÷ Property Value × 100",
+    example: "A property with $18,000 NOI and a $300,000 value has a 6% cap rate.",
+    mistakes: [
+      "Subtracting the mortgage payment before calculating NOI.",
+      "Using unrealistic rent or expense numbers.",
+      "Comparing properties from very different markets without context."
+    ],
+    related: ["NOI", "Cash Flow", "Vacancy"]
+  },
+  "cash-flow": {
+    title: "Cash Flow",
+    definition: "Money left after operating expenses and debt service are paid.",
+    formula: "Cash Flow = Income − Operating Expenses − Debt Service",
+    example: "A property brings in $2,000, has $700 in operating expenses, and an $1,050 loan payment. Cash flow is $250.",
+    related: ["NOI", "Debt Service", "Reserves"]
+  },
+  "cash-on-cash": {
+    title: "Cash-on-Cash Return",
+    definition: "The annual pre-tax cash flow compared with the actual cash invested.",
+    formula: "Cash-on-Cash Return = Annual Pre-Tax Cash Flow ÷ Cash Invested × 100",
+    example: "You invest $40,000 and receive $4,000 in annual cash flow. The cash-on-cash return is 10%.",
+    related: ["ROI", "Cash Flow", "Leverage"]
+  }
+};
+</script>
+<script src="atlas-terms.js"></script>
+</body>
+</html>
