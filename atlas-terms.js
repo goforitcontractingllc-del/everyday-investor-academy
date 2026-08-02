@@ -1,176 +1,91 @@
 
-(() => {
-  "use strict";
-
-  const registry = new Map();
-  let modal;
-  let lastTrigger = null;
-
-  function normalizeKey(value) {
-    return String(value || "").trim().toLowerCase();
-  }
-
-  function ensureModal() {
-    if (modal) return modal;
-
-    modal = document.createElement("div");
-    modal.className = "atlas-term-modal";
-    modal.hidden = true;
-    modal.innerHTML = `
-      <div class="atlas-term-backdrop" data-atlas-close></div>
-      <section class="atlas-term-dialog" role="dialog" aria-modal="true" aria-labelledby="atlas-term-title">
-        <div class="atlas-term-head">
-          <h2 id="atlas-term-title">Term</h2>
-          <button class="atlas-term-close" type="button" aria-label="Close" data-atlas-close>×</button>
-        </div>
-        <div class="atlas-term-body" id="atlas-term-body"></div>
-      </section>
-    `;
-    document.body.appendChild(modal);
-
-    modal.addEventListener("click", (event) => {
-      if (event.target.closest("[data-atlas-close]")) closeTerm();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !modal.hidden) closeTerm();
-    });
-
-    return modal;
-  }
-
-  function renderLinks(items = []) {
-    if (!Array.isArray(items) || items.length === 0) return "";
-    const links = items.map(item => {
-      if (typeof item === "string") {
-        return `<span class="atlas-term-related">${escapeHtml(item)}</span>`;
-      }
-      const label = escapeHtml(item.label || item.title || "Open");
-      const href = escapeAttribute(item.href || "#");
-      return `<a href="${href}">${label}</a>`;
-    }).join("");
-    return `<div class="atlas-term-links">${links}</div>`;
-  }
-
-  function renderTerm(term) {
-    const sections = [];
-
-    if (term.definition) {
-      sections.push(`<div class="atlas-term-definition"><strong>Plain-English definition</strong><p>${term.definition}</p></div>`);
-    }
-    if (term.formula) {
-      sections.push(`<h3>Formula</h3><div class="atlas-term-formula">${term.formula}</div>`);
-    }
-    if (term.example) {
-      sections.push(`<h3>Example</h3><div class="atlas-term-example">${term.example}</div>`);
-    }
-    if (term.whyItMatters) {
-      sections.push(`<h3>Why it matters</h3><p>${term.whyItMatters}</p>`);
-    }
-    if (Array.isArray(term.mistakes) && term.mistakes.length) {
-      sections.push(`<h3>Common mistakes</h3><ul>${term.mistakes.map(x => `<li>${x}</li>`).join("")}</ul>`);
-    }
-    if (term.atlas) {
-      sections.push(`<h3>Living Atlas connection</h3><p>${term.atlas}</p>`);
-    }
-    if (Array.isArray(term.related) && term.related.length) {
-      sections.push(`<h3>Related concepts</h3>${renderLinks(term.related)}`);
-    }
-    if (Array.isArray(term.resources) && term.resources.length) {
-      sections.push(`<h3>Open next</h3>${renderLinks(term.resources)}`);
-    }
-
-    if (!sections.length) {
-      return `<div class="atlas-term-empty">This term has not been filled in yet.</div>`;
-    }
-    return sections.join("");
-  }
-
-  function openTerm(key, trigger = null) {
-    const term = registry.get(normalizeKey(key));
-    const shell = ensureModal();
-    const title = shell.querySelector("#atlas-term-title");
-    const body = shell.querySelector("#atlas-term-body");
-
-    lastTrigger = trigger || document.activeElement;
-    title.textContent = term?.title || key;
-    body.innerHTML = term ? renderTerm(term) : `
-      <div class="atlas-term-empty">
-        <strong>Term not found:</strong> ${escapeHtml(key)}
-      </div>
-    `;
-
-    shell.hidden = false;
-    document.body.classList.add("atlas-term-open");
-    shell.querySelector(".atlas-term-close").focus();
-  }
-
-  function closeTerm() {
-    if (!modal) return;
-    modal.hidden = true;
-    document.body.classList.remove("atlas-term-open");
-    if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
-  }
-
-  function registerTerms(terms) {
-    if (!terms || typeof terms !== "object") return;
-    Object.entries(terms).forEach(([key, value]) => {
-      registry.set(normalizeKey(key), { ...value });
-    });
-  }
-
-  function hydrateTemplateTerms() {
-    document.querySelectorAll("template[data-atlas-term]").forEach(template => {
-      const key = normalizeKey(template.dataset.atlasTerm);
-      if (!key) return;
-      registry.set(key, {
-        title: template.dataset.title || key,
-        definition: template.innerHTML
-      });
-    });
-  }
-
-  function bindTerms(root = document) {
-    root.querySelectorAll(".atlas-term[data-term]").forEach(element => {
-      if (element.dataset.atlasBound === "true") return;
-      element.dataset.atlasBound = "true";
-      element.setAttribute("role", "button");
-      element.setAttribute("tabindex", "0");
-
-      const activate = () => openTerm(element.dataset.term, element);
-
-      element.addEventListener("click", activate);
-      element.addEventListener("keydown", event => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          activate();
-        }
-      });
-    });
-  }
-
-  function escapeHtml(value) {
-    return String(value ?? "").replace(/[&<>"']/g, char => ({
-      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
-    }[char]));
-  }
-
-  function escapeAttribute(value) {
-    return escapeHtml(value);
-  }
-
-  window.AtlasTerms = {
-    register: registerTerms,
-    bind: bindTerms,
-    open: openTerm,
-    close: closeTerm
+(function(){
+  const TERMS = {
+    "roi":{title:"ROI",definition:"Return on investment compares gain or profit with the amount invested.",example:"A $4,000 profit on $20,000 invested is a simplified 20% ROI.",link:"roi.html"},
+    "cash-flow":{title:"Cash Flow",definition:"Money remaining after income is reduced by expenses and debt payments.",example:"$2,000 income minus $1,650 costs leaves $350.",link:"cash-flow.html"},
+    "noi":{title:"NOI",definition:"Net operating income is property income after normal operating expenses but before debt service and income tax.",link:"noi.html"},
+    "cap-rate":{title:"Cap Rate",definition:"A ratio comparing annual NOI with property value.",link:"cap-rate.html"},
+    "equity":{title:"Equity",definition:"The portion of property value not owed to lenders.",link:"equity.html"},
+    "appreciation":{title:"Appreciation",definition:"An increase in property value over time.",link:"appreciation.html"},
+    "depreciation":{title:"Depreciation",definition:"A tax method allocating qualifying property cost over a recovery period.",link:"depreciation.html"},
+    "leverage":{title:"Leverage",definition:"Using borrowed money to control or acquire an asset.",link:"leverage.html"},
+    "ltv":{title:"LTV",definition:"Loan-to-value compares loan amount with property value.",link:"ltv.html"},
+    "dscr":{title:"DSCR",definition:"Debt service coverage ratio compares income available for debt payments with required debt service.",link:"dscr.html"},
+    "arv":{title:"ARV",definition:"After-repair value is the estimated market value after planned improvements.",link:"arv.html"},
+    "brrrr":{title:"BRRRR",definition:"Buy, rehab, rent, refinance, repeat.",link:"brrrr.html"},
+    "escrow":{title:"Escrow",definition:"A neutral arrangement holding money, documents, or instructions until conditions are met.",link:"escrow.html"},
+    "earnest-money":{title:"Earnest Money",definition:"A buyer deposit handled according to the purchase contract and escrow instructions.",link:"earnest-money.html"},
+    "closing-costs":{title:"Closing Costs",definition:"Fees and charges paid to complete a real-estate or loan transaction.",link:"closing-costs.html"},
+    "title":{title:"Property Title",definition:"The legal concept of ownership rights in property.",link:"title.html"},
+    "deed":{title:"Deed",definition:"A written legal instrument used to transfer an interest in real property.",link:"deed.html"},
+    "easement":{title:"Easement",definition:"A legal right to use another person's property for a limited purpose.",link:"easement.html"},
+    "lien":{title:"Lien",definition:"A legal claim against property securing payment or performance.",link:"lien.html"},
+    "llc":{title:"LLC",definition:"A state-created legal entity that can own property, enter contracts, and conduct business.",link:"llc.html"},
+    "operating-agreement":{title:"Operating Agreement",definition:"A contract governing an LLC's ownership, management, economics, and internal rules.",link:"operating-agreement.html"},
+    "section-1031":{title:"1031 Exchange",definition:"A federal tax provision that may defer gain on qualifying real-property exchanges.",link:"section-1031.html"},
+    "vacancy":{title:"Vacancy",definition:"A period when a rentable unit is not producing rent.",link:"vacancy.html"},
+    "reserves":{title:"Reserves",definition:"Money intentionally set aside for repairs, vacancy, emergencies, or capital work.",link:"reserves.html"},
+    "contingency":{title:"Contingency",definition:"A contract condition that must be satisfied, waived, or resolved under stated terms.",link:"contingency.html"}
   };
 
-  document.addEventListener("DOMContentLoaded", () => {
-    ensureModal();
-    hydrateTemplateTerms();
-
-    if (window.ATLAS_TERMS) registerTerms(window.ATLAS_TERMS);
-    bindTerms();
-  });
+  let modal=null,last=null;
+  function ensureModal(){
+    if(modal)return modal;
+    modal=document.createElement("div");
+    modal.className="atlas-popover";
+    modal.hidden=true;
+    modal.innerHTML=`
+      <div class="atlas-backdrop" data-atlas-close></div>
+      <section class="atlas-dialog" role="dialog" aria-modal="true" aria-labelledby="atlas-title">
+        <div class="atlas-head">
+          <h2 id="atlas-title">Atlas Term</h2>
+          <button class="atlas-close" type="button" data-atlas-close aria-label="Close">×</button>
+        </div>
+        <div class="atlas-body" id="atlas-body"></div>
+      </section>`;
+    document.body.appendChild(modal);
+    modal.addEventListener("click",e=>{
+      if(e.target.closest("[data-atlas-close]"))closeModal();
+    });
+    document.addEventListener("keydown",e=>{
+      if(e.key==="Escape"&&!modal.hidden)closeModal();
+    });
+    return modal;
+  }
+  function openTerm(key,el){
+    const term=(window.ATLAS_TERMS&&window.ATLAS_TERMS[key])||TERMS[key];
+    if(!term)return;
+    const m=ensureModal();
+    last=el;
+    m.querySelector("#atlas-title").textContent=term.title||key;
+    const href=term.link||`${key}.html`;
+    m.querySelector("#atlas-body").innerHTML=`
+      <div class="atlas-definition"><h3>Plain-English definition</h3><p>${term.definition||""}</p></div>
+      ${term.example?`<div class="atlas-example"><h3>Example</h3><p>${term.example}</p></div>`:""}
+      <div class="atlas-related"><a href="${href}">Open the full Atlas entry →</a></div>`;
+    m.hidden=false;
+    document.body.classList.add("atlas-open");
+    m.querySelector(".atlas-close").focus();
+  }
+  function closeModal(){
+    if(!modal)return;
+    modal.hidden=true;
+    document.body.classList.remove("atlas-open");
+    if(last)last.focus();
+  }
+  function activate(){
+    document.querySelectorAll(".atlas-term[data-term]").forEach(el=>{
+      if(el.dataset.atlasReady==="1")return;
+      el.dataset.atlasReady="1";
+      el.tabIndex=0;
+      el.setAttribute("role","button");
+      const go=()=>openTerm(el.dataset.term,el);
+      el.addEventListener("click",go);
+      el.addEventListener("keydown",e=>{
+        if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}
+      });
+    });
+  }
+  document.addEventListener("DOMContentLoaded",activate);
+  window.activateAtlasTerms=activate;
 })();

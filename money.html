@@ -1,20 +1,279 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Money | The Everyday Investor Academy</title><style>
-:root{--navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;--gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;--soft:#EEF1E8;--green:#52705A;--gray:#ECEFF3}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.66}a{color:inherit}.wrap{width:min(1120px,calc(100% - 28px));margin:auto}
-header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe);backdrop-filter:blur(10px)}.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0}.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:900}.navlinks{display:flex;gap:14px;flex-wrap:wrap}
-.hero{padding:68px 0 48px;background:linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}h1{font-size:clamp(3rem,8vw,6rem);line-height:.96;margin:.2em 0 .25em;max-width:940px}.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.23rem;max-width:860px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:12px 17px;border:2px solid var(--navy);border-radius:10px;font-weight:900;min-height:48px}.btn.primary{background:var(--navy);color:#fff}
-section{padding:48px 0}.section-title{font-size:2.3rem;margin:0 0 8px}.section-copy{max-width:850px;color:var(--muted)}.module-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}.module{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:20px;box-shadow:0 8px 22px rgba(16,47,85,.05)}.module h3{margin:0;font-size:1.55rem}.module p{color:var(--muted);margin:.45em 0 1em}.lesson-list{display:grid;gap:9px}.lesson{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;background:#F7F8F5;border:1px solid #D9DDCF;border-radius:11px;padding:11px 12px;text-decoration:none}.lesson .code{color:var(--olive);font-weight:950;font-size:.78rem;letter-spacing:.08em}.lesson .title{color:var(--navy);font-weight:850}.lesson .state{font-size:.68rem;font-weight:900;text-transform:uppercase;border-radius:999px;padding:6px 9px;background:var(--gray);color:#6D7580;white-space:nowrap}.lesson.live{border-color:var(--olive);background:#FBFCF9}.lesson.live .state{background:var(--soft);color:var(--green)}.lesson.disabled{pointer-events:none}.search-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin:22px 0}.search-row input,.search-row button{padding:13px 14px;border:1px solid var(--taupe);background:var(--paper);border-radius:10px;font:inherit}.search-row button{font-weight:900;cursor:pointer}.progress{background:var(--navy);color:#fff;border-radius:17px;padding:22px;margin-top:24px}.progress h2{color:#fff;margin-top:0}.progress-bar{height:12px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden}.progress-fill{height:100%;width:0;background:#D6DEC9;transition:width .25s ease}.progress-text{margin-top:10px;color:#E6EBF0}.stairs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stair{background:var(--paper);border:1px solid var(--taupe);border-radius:14px;padding:18px;text-decoration:none}.stair h3{margin-top:0}.stair strong{color:var(--olive)}.live-atlas{background:var(--navy);color:#fff;border-radius:18px;padding:25px}.live-atlas h2{color:#fff;margin-top:0}.live-atlas a{display:inline-flex;margin-top:10px;background:#fff;color:var(--navy);text-decoration:none;border-radius:10px;padding:11px 14px;font-weight:900}.notice{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin-top:22px}footer{border-top:1px solid var(--taupe);padding:28px 0 42px;color:var(--muted);font-size:.9rem}
-@media(max-width:800px){.module-grid{grid-template-columns:1fr}.stairs{grid-template-columns:1fr 1fr}}@media(max-width:560px){.stairs{grid-template-columns:1fr}.navlinks{display:none}.lesson{grid-template-columns:auto 1fr}.lesson .state{grid-column:1/-1;width:max-content}.search-row{grid-template-columns:1fr}}
-</style></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="index.html#choose">Choose Your Path</a><a href="index.html#districts">Explore the Atlas</a><a href="living-atlas.html">Live Atlas</a></div></div></header>
-<section class="hero"><div class="wrap"><div class="eyebrow">District 3 · M</div><h1>Learn where your money goes and what to do next.</h1><p class="lead">Build practical systems for budgeting, cash flow, emergencies, debt, banking, taxes, insurance, income, retirement, and investing readiness.</p><div class="actions"><a class="btn primary" href="#lessons">Open the lesson map</a><a class="btn" href="living-atlas.html">Check current information</a></div></div></section>
-<section><div class="wrap"><div class="eyebrow">Easy-entry map</div><h2 class="section-title">Choose a section instead of scanning everything.</h2><p class="section-copy">Each lesson door checks the repository automatically. Upload the lesson file and the door opens—this page does not need to be rebuilt.</p><div class="search-row"><input id="search" type="search" placeholder="Search this district…"><button id="clear">Clear</button></div><div class="progress"><h2>District progress</h2><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div><div class="progress-text"><strong id="openCount">0</strong> of <strong id="totalCount">24</strong> lesson doors currently open.</div></div><div class="notice"><strong>How to use this:</strong> Pick the section that matches your question. Move in order, jump across the district, or take a staircase into another subject.</div></div></section>
-<section id="lessons"><div class="wrap"><div class="module-grid"><article class="module" data-search="know your money income, spending, cash flow, net worth, and financial reality. your money snapshot income and take-home pay spending and cash flow net worth financial priorities"><h3>Know Your Money</h3><p>Income, spending, cash flow, net worth, and financial reality.</p><div class="lesson-list"><a class="lesson disabled" data-file="m-001.html"><span class="code">M-001</span><span class="title">Your Money Snapshot</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-002.html"><span class="code">M-002</span><span class="title">Income and Take-Home Pay</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-003.html"><span class="code">M-003</span><span class="title">Spending and Cash Flow</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-004.html"><span class="code">M-004</span><span class="title">Net Worth</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-005.html"><span class="code">M-005</span><span class="title">Financial Priorities</span><span class="state">Checking…</span></a></div></article><article class="module" data-search="protect the basics emergency funds, banking, insurance, taxes, and essential documents. emergency funds banking systems insurance basics taxes and withholding financial records"><h3>Protect the Basics</h3><p>Emergency funds, banking, insurance, taxes, and essential documents.</p><div class="lesson-list"><a class="lesson disabled" data-file="m-006.html"><span class="code">M-006</span><span class="title">Emergency Funds</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-007.html"><span class="code">M-007</span><span class="title">Banking Systems</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-008.html"><span class="code">M-008</span><span class="title">Insurance Basics</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-009.html"><span class="code">M-009</span><span class="title">Taxes and Withholding</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-010.html"><span class="code">M-010</span><span class="title">Financial Records</span><span class="state">Checking…</span></a></div></article><article class="module" data-search="debt and recovery debt inventory, payoff methods, high-interest debt, collections, and rebuilding. understanding debt debt snowball and avalanche high-interest debt collections and judgments financial recovery"><h3>Debt and Recovery</h3><p>Debt inventory, payoff methods, high-interest debt, collections, and rebuilding.</p><div class="lesson-list"><a class="lesson disabled" data-file="m-011.html"><span class="code">M-011</span><span class="title">Understanding Debt</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-012.html"><span class="code">M-012</span><span class="title">Debt Snowball and Avalanche</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-013.html"><span class="code">M-013</span><span class="title">High-Interest Debt</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-014.html"><span class="code">M-014</span><span class="title">Collections and Judgments</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-015.html"><span class="code">M-015</span><span class="title">Financial Recovery</span><span class="state">Checking…</span></a></div></article><article class="module" data-search="build stability income growth, family money, irregular income, sinking funds, and major goals. growing income family money systems irregular income sinking funds planning major purchases"><h3>Build Stability</h3><p>Income growth, family money, irregular income, sinking funds, and major goals.</p><div class="lesson-list"><a class="lesson disabled" data-file="m-016.html"><span class="code">M-016</span><span class="title">Growing Income</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-017.html"><span class="code">M-017</span><span class="title">Family Money Systems</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-018.html"><span class="code">M-018</span><span class="title">Irregular Income</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-019.html"><span class="code">M-019</span><span class="title">Sinking Funds</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-020.html"><span class="code">M-020</span><span class="title">Planning Major Purchases</span><span class="state">Checking…</span></a></div></article><article class="module" data-search="build the future retirement, investing readiness, real-estate money, scams, and the lifetime plan. retirement foundations investing readiness money for real estate your lifetime money system"><h3>Build the Future</h3><p>Retirement, investing readiness, real-estate money, scams, and the lifetime plan.</p><div class="lesson-list"><a class="lesson disabled" data-file="m-021.html"><span class="code">M-021</span><span class="title">Retirement Foundations</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-022.html"><span class="code">M-022</span><span class="title">Investing Readiness</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-023.html"><span class="code">M-023</span><span class="title">Money for Real Estate</span><span class="state">Checking…</span></a><a class="lesson disabled" data-file="m-024.html"><span class="code">M-024</span><span class="title">Your Lifetime Money System</span><span class="state">Checking…</span></a></div></article></div></div></section>
-<section><div class="wrap"><div class="eyebrow">Revolving staircases</div><h2 class="section-title">Where do you want to go next?</h2><div class="stairs"><a class="stair" href="credit.html"><h3>Credit</h3><p>Connect money habits to borrowing.</p><strong>Take this staircase →</strong></a><a class="stair" href="housing.html"><h3>Housing</h3><p>Plan rent, buying, and ownership.</p><strong>Take this staircase →</strong></a><a class="stair" href="business.html"><h3>Business</h3><p>Separate business and personal money.</p><strong>Take this staircase →</strong></a><a class="stair" href="investing.html"><h3>Investing</h3><p>Know when you are ready to invest.</p><strong>Take this staircase →</strong></a></div></div></section>
-<section><div class="wrap"><div class="live-atlas"><div class="eyebrow" style="color:#CFD7C1">Current-information layer</div><h2>Open the Live Atlas for updated rules, agencies, forms, programs, local resources, and videos.</h2><p>The lessons teach durable concepts. The Live Atlas holds information that can change by date and location.</p><a href="living-atlas.html">Open the Live Atlas →</a></div></div></section>
-<footer><div class="wrap">© 2026 The Everyday Investor Academy. Educational information only.</div></footer><script>
-async function fileExists(path){try{let r=await fetch(path+'?doorcheck='+Date.now(),{method:'HEAD',cache:'no-store'});if(r.ok)return true;if(r.status===405){r=await fetch(path+'?doorcheck='+Date.now(),{cache:'no-store'});return r.ok}return false}catch(e){return false}}
-async function activateLessons(){const lessons=[...document.querySelectorAll('.lesson[data-file]')];let open=0;for(const lesson of lessons){const yes=await fileExists(lesson.dataset.file);const state=lesson.querySelector('.state');if(yes){lesson.classList.add('live');lesson.classList.remove('disabled');lesson.href=lesson.dataset.file;state.textContent='Open';open++}else{lesson.classList.add('disabled');lesson.removeAttribute('href');state.textContent='Mapped'}}const total=lessons.length;document.getElementById('openCount').textContent=open;document.getElementById('totalCount').textContent=total;document.getElementById('progressFill').style.width=((open/total)*100)+'%'}
-function wireSearch(){const q=document.getElementById('search');const modules=[...document.querySelectorAll('.module')];q.addEventListener('input',()=>{const s=q.value.trim().toLowerCase();modules.forEach(m=>m.style.display=!s||m.dataset.search.includes(s)?'':'none')});document.getElementById('clear').addEventListener('click',()=>{q.value='';modules.forEach(m=>m.style.display='');q.focus()})}
-document.addEventListener('DOMContentLoaded',()=>{wireSearch();activateLessons()});
-</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Money | The Everyday Investor Academy</title>
+<style>
+:root{
+  --navy:#102F55;
+  --olive:#6D755B;
+  --cream:#F7F1E7;
+  --paper:#FFFDF8;
+  --gold:#C69A42;
+  --taupe:#B7AA96;
+  --ink:#2D302F;
+  --muted:#6E716E;
+  --soft:#EEF1E8;
+  --line:#D9DDCF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.62;
+}
+a{color:inherit}
+.wrap{width:min(1120px,calc(100% - 28px));margin:auto}
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,253,248,.97);
+  border-bottom:1px solid var(--taupe);
+  backdrop-filter:blur(12px);
+}
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  padding:14px 0;
+}
+.brand,.nav a{
+  text-decoration:none;
+  color:var(--navy);
+  font-weight:900;
+}
+.navlinks{display:flex;gap:14px;flex-wrap:wrap}
+.hero{
+  padding:64px 0 42px;
+  background:
+    radial-gradient(circle at 88% 15%,rgba(198,154,66,.18),transparent 30%),
+    linear-gradient(135deg,var(--paper),var(--soft));
+  border-bottom:1px solid var(--taupe);
+}
+.eyebrow{
+  color:var(--olive);
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}
+h1{
+  font-size:clamp(3.2rem,8vw,6rem);
+  line-height:.96;
+  margin:.2em 0 .25em;
+}
+.lead{
+  font-family:Georgia,serif;
+  color:var(--olive);
+  font-size:1.22rem;
+  max-width:860px;
+}
+.statusbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+.pill{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:.78rem;
+  font-weight:900;
+  color:var(--navy);
+}
+.notice{
+  background:#FBF6EB;
+  border-left:5px solid var(--gold);
+  padding:15px 17px;
+  border-radius:8px;
+  margin-top:20px;
+}
+section{padding:42px 0}
+.search{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+  margin-bottom:22px;
+}
+.search input,.search button{
+  padding:13px;
+  border:1px solid var(--taupe);
+  border-radius:10px;
+  background:var(--paper);
+  font:inherit;
+}
+.search button{font-weight:900;cursor:pointer}
+.module{
+  background:var(--paper);
+  border:1px solid var(--taupe);
+  border-radius:18px;
+  padding:24px;
+  margin-bottom:18px;
+}
+.module p{color:var(--muted)}
+.lesson-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.lesson{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:12px;
+  align-items:center;
+  background:#FAFBF8;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:16px;
+  text-decoration:none;
+  min-height:92px;
+}
+.lesson:hover{
+  transform:translateY(-2px);
+  box-shadow:0 7px 18px rgba(16,47,85,.08);
+}
+.code{font-weight:900;color:var(--olive)}
+.title{font-weight:900;color:var(--navy)}
+.state{
+  font-size:.7rem;
+  font-weight:900;
+  border-radius:999px;
+  padding:6px 9px;
+  background:#ECEFF3;
+  color:#6E7480;
+  text-transform:uppercase;
+}
+.state.live{background:#DCE8D8;color:#35503B}
+.lesson.mapped{cursor:default;opacity:.72}
+.hidden{display:none!important}
+.related{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.related a{
+  text-decoration:none;
+  background:var(--paper);
+  border:1px solid var(--taupe);
+  border-radius:14px;
+  padding:18px;
+}
+footer{
+  border-top:1px solid var(--taupe);
+  padding:28px 0 42px;
+  color:var(--muted);
+}
+@media(max-width:720px){
+  .lesson-grid,.related{grid-template-columns:1fr}
+  .navlinks{display:none}
+  .lesson{grid-template-columns:auto 1fr}
+  .state{grid-column:2;width:max-content}
+}
+</style>
+<link rel="stylesheet" href="atlas-terms.css">
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="index.html">✦ The Everyday Investor Academy</a>
+<div class="navlinks"><a href="knowledge-map.html">Knowledge Map</a><a href="living-atlas.html">Living Atlas</a></div>
+</div></header>
+<section class="hero"><div class="wrap">
+<div class="eyebrow">Money District · 24 lesson doors</div>
+<h1>Money</h1>
+<p class="lead">Learn the money systems behind daily life, housing, business, credit, investing, and long-term stability.</p>
+<div class="statusbar">
+<span class="pill"><strong id="liveTotal">0</strong> lessons detected</span>
+<span class="pill">24 total doors</span>
+<span class="pill">Mobile friendly</span>
+<span class="pill">Atlas ready</span>
+</div>
+<div class="notice"><strong>How this page works:</strong> Uploaded lesson files automatically change from <strong>Mapped</strong> to <strong>Open</strong>. The Atlas definition system stays hidden until a term is tapped.</div>
+</div></section>
+<section><div class="wrap">
+<div class="search"><input id="lessonSearch" type="search" placeholder="Search the Money district…"><button id="clearSearch" type="button">Clear</button></div>
+<article class="module"><h2>Foundations</h2><div class="lesson-grid"><a class="lesson" data-file="m-001.html" data-search="m-001 what money does">
+<span class="code">M-001</span><span class="title">What Money Does</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-002.html" data-search="m-002 income">
+<span class="code">M-002</span><span class="title">Income</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-003.html" data-search="m-003 expenses">
+<span class="code">M-003</span><span class="title">Expenses</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-004.html" data-search="m-004 cash flow">
+<span class="code">M-004</span><span class="title">Cash Flow</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-005.html" data-search="m-005 needs and wants">
+<span class="code">M-005</span><span class="title">Needs and Wants</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-006.html" data-search="m-006 budgeting">
+<span class="code">M-006</span><span class="title">Budgeting</span><span class="state">Checking…</span></a></div></article><article class="module"><h2>Core Systems</h2><div class="lesson-grid"><a class="lesson" data-file="m-007.html" data-search="m-007 banking basics">
+<span class="code">M-007</span><span class="title">Banking Basics</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-008.html" data-search="m-008 emergency funds">
+<span class="code">M-008</span><span class="title">Emergency Funds</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-009.html" data-search="m-009 saving">
+<span class="code">M-009</span><span class="title">Saving</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-010.html" data-search="m-010 debt">
+<span class="code">M-010</span><span class="title">Debt</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-011.html" data-search="m-011 interest">
+<span class="code">M-011</span><span class="title">Interest</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-012.html" data-search="m-012 inflation">
+<span class="code">M-012</span><span class="title">Inflation</span><span class="state">Checking…</span></a></div></article><article class="module"><h2>Applied Knowledge</h2><div class="lesson-grid"><a class="lesson" data-file="m-013.html" data-search="m-013 taxes">
+<span class="code">M-013</span><span class="title">Taxes</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-014.html" data-search="m-014 insurance">
+<span class="code">M-014</span><span class="title">Insurance</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-015.html" data-search="m-015 net worth">
+<span class="code">M-015</span><span class="title">Net Worth</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-016.html" data-search="m-016 financial goals">
+<span class="code">M-016</span><span class="title">Financial Goals</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-017.html" data-search="m-017 sinking funds">
+<span class="code">M-017</span><span class="title">Sinking Funds</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-018.html" data-search="m-018 irregular income">
+<span class="code">M-018</span><span class="title">Irregular Income</span><span class="state">Checking…</span></a></div></article><article class="module"><h2>Action and Capstone</h2><div class="lesson-grid"><a class="lesson" data-file="m-019.html" data-search="m-019 household money systems">
+<span class="code">M-019</span><span class="title">Household Money Systems</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-020.html" data-search="m-020 business and personal separation">
+<span class="code">M-020</span><span class="title">Business and Personal Separation</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-021.html" data-search="m-021 money decisions under stress">
+<span class="code">M-021</span><span class="title">Money Decisions Under Stress</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-022.html" data-search="m-022 building stability">
+<span class="code">M-022</span><span class="title">Building Stability</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-023.html" data-search="m-023 creating your money plan">
+<span class="code">M-023</span><span class="title">Creating Your Money Plan</span><span class="state">Checking…</span></a><a class="lesson" data-file="m-024.html" data-search="m-024 money district capstone">
+<span class="code">M-024</span><span class="title">Money District Capstone</span><span class="state">Checking…</span></a></div></article>
+<h2>Follow another connection</h2><div class="related"><a href="foundation.html"><h3>Foundation</h3><p>Follow the connection →</p></a><a href="housing.html"><h3>Housing</h3><p>Follow the connection →</p></a><a href="credit.html"><h3>Credit</h3><p>Follow the connection →</p></a></div>
+</div></section>
+<footer><div class="wrap">© 2026 The Everyday Investor Academy · Money District</div></footer>
+<script>
+async function fileExists(file){
+  try{
+    let r=await fetch(file+'?check='+Date.now(),{method:'HEAD',cache:'no-store'});
+    if(r.ok)return true;
+    if(r.status===405){
+      r=await fetch(file+'?check='+Date.now(),{cache:'no-store'});
+      return r.ok;
+    }
+    return false;
+  }catch(e){return false}
+}
+async function activateLessons(){
+  const cards=[...document.querySelectorAll('.lesson[data-file]')];
+  let count=0;
+  for(const card of cards){
+    const ok=await fileExists(card.dataset.file);
+    const state=card.querySelector('.state');
+    if(ok){
+      card.href=card.dataset.file;
+      state.textContent='Open';
+      state.classList.add('live');
+      count++;
+    }else{
+      card.removeAttribute('href');
+      card.classList.add('mapped');
+      state.textContent='Mapped';
+    }
+  }
+  document.getElementById('liveTotal').textContent=count;
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  activateLessons();
+  const input=document.getElementById('lessonSearch');
+  const clear=document.getElementById('clearSearch');
+  const cards=[...document.querySelectorAll('.lesson[data-search]')];
+  input.addEventListener('input',()=>{
+    const q=input.value.toLowerCase().trim();
+    cards.forEach(card=>card.classList.toggle('hidden',q&&!card.dataset.search.includes(q)));
+  });
+  clear.addEventListener('click',()=>{
+    input.value='';
+    cards.forEach(card=>card.classList.remove('hidden'));
+    input.focus();
+  });
+});
+</script>
+<script src="atlas-terms.js" defer></script>
+</body></html>
