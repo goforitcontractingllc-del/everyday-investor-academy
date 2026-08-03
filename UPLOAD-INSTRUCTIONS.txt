@@ -1,0 +1,28 @@
+COTTAGE CLUSTER FLAGSHIP PROJECT HUB
+
+Upload both files:
+1. cottage-cluster-project.html
+2. Cottage_Clusters_Clickable_Guide_Updated.html
+
+The second file safely replaces the old article file and redirects visitors to the new flagship project hub.
+
+After upload, open:
+https://goforitcontractingllc-del.github.io/everyday-investor-academy/cottage-cluster-project.html
+
+The old article URL will also forward to the new hub:
+https://goforitcontractingllc-del.github.io/everyday-investor-academy/Cottage_Clusters_Clickable_Guide_Updated.html
+
+BEST PLACEMENTS
+- Knowledge Map Cottage Cluster Staircase:
+  cottage-cluster-project.html
+- L-010 featured-project button:
+  cottage-cluster-project.html
+- Housing cottage-cluster card:
+  cottage-cluster-project.html
+- Live Atlas cottage-cluster term:
+  cottage-cluster-project.html
+
+No index.html replacement is required.
+
+Commit:
+Launch flagship Cottage Cluster interactive project hub

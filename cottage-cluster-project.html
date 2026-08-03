@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cottage Cluster Project Hub: Oregon rules, Medford and Southern Oregon resources, feasibility steps, checklists, budgeting, lessons, videos, and development tools.">
+<title>Cottage Cluster Project Hub | The Everyday Investor Academy</title>
+<style>
+:root{--navy:#102f55;--navy2:#174b7a;--olive:#6d755b;--cream:#f7f1e7;--paper:#fffdf8;--gold:#c69a42;--taupe:#b7aa96;--ink:#2d302f;--muted:#6e716e;--soft:#eef1e8;--line:#d9ddcf;--danger:#7a3d2b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.68 Arial,sans-serif}.wrap{width:min(1120px,calc(100% - 28px));margin:auto}a{color:inherit}
+header{position:sticky;top:0;z-index:40;background:#fffdf8f4;border-bottom:1px solid var(--taupe);backdrop-filter:blur(9px)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0}header a{text-decoration:none;color:var(--navy);font-weight:900}.nav{display:flex;gap:12px;flex-wrap:wrap}.nav a{font-size:.92rem}
+.hero{padding:76px 0 52px;background:radial-gradient(circle at 84% 12%,rgba(198,154,66,.18),transparent 28%),radial-gradient(circle at 14% 88%,rgba(109,117,91,.12),transparent 30%),linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}.eyebrow{color:var(--olive);font-size:.78rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}h1{font-size:clamp(3.4rem,9vw,6.8rem);line-height:.92;margin:.2em 0}.lead{font:1.25rem/1.6 Georgia,serif;color:var(--olive);max-width:860px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.hero-actions a{padding:12px 15px;border:2px solid var(--navy);border-radius:12px;text-decoration:none;font-weight:900;color:var(--navy)}.hero-actions a:first-child{background:var(--navy);color:#fff}
+.notice{background:#fff7df;border-left:5px solid var(--gold);border-radius:9px;padding:15px 18px;margin-top:22px}
+section{padding:48px 0}.section-title{font-size:clamp(2.35rem,6vw,4.7rem);margin:.18em 0 24px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--paper);border:1px solid var(--taupe);border-radius:18px;padding:20px;box-shadow:0 10px 26px rgba(16,47,85,.05)}.card h3{margin:.1em 0 .45em;font-size:1.45rem}.card p{color:var(--muted)}.card a{color:var(--navy);font-weight:900}
+.roadmap{display:grid;gap:12px}.step{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:17px}.step b{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--soft);color:var(--navy);font-size:1.2rem}.step h3{margin:0}.step p{margin:.35em 0 0;color:var(--muted)}
+.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:14px}.tab{white-space:nowrap;border:1px solid var(--taupe);background:#fff;color:var(--navy);font-weight:900;padding:9px 13px;border-radius:999px;cursor:pointer}.tab[aria-selected=true]{background:var(--navy);color:#fff}.tabpanel{display:none}.tabpanel.active{display:block}
+.progressrow{display:flex;justify-content:space-between;font-weight:900;color:var(--navy)}.bar{height:11px;background:#e4e8df;border-radius:999px;margin:8px 0 14px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:var(--olive);transition:.2s}.checks{display:grid;gap:9px}.check{display:flex;gap:11px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:13px;padding:12px}.check input{margin-top:4px;transform:scale(1.22)}
+.calculator{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:20px;padding:22px}.calculator h2,.calculator h3{color:#fff}.calc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field label{display:block;font-weight:900;margin-bottom:5px}.field input{width:100%;padding:11px;border:0;border-radius:9px;font:inherit}.results{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.result{background:#ffffff17;border:1px solid #ffffff33;border-radius:12px;padding:13px}.result strong{display:block;font-size:1.35rem}
+.resource{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px}.resource h3{font:700 1.04rem/1.2 Arial,sans-serif;margin:0 0 5px}.resource p{margin:0;color:var(--muted);font-size:.93rem}.resource a{color:var(--navy);font-weight:900}
+.local{background:#f0e9dc}.local .card{height:100%}.callout{background:var(--soft);border-left:5px solid var(--olive);padding:16px 18px;border-radius:9px}.warning{background:#f8ece7;border-left:5px solid var(--danger);padding:16px 18px;border-radius:9px}
+.term-cloud{display:flex;flex-wrap:wrap;gap:8px}.term-cloud a{background:var(--soft);border:1px solid #d5dbcf;border-radius:999px;padding:9px 12px;color:var(--navy);font-weight:900;text-decoration:none}
+footer{padding:36px 0;color:var(--muted);border-top:1px solid var(--taupe)}
+@media(max-width:850px){.grid3{grid-template-columns:1fr 1fr}}@media(max-width:700px){.grid,.grid3,.calc-grid,.results{grid-template-columns:1fr}.nav{display:none}.card{padding:17px}}
+</style></head><body>
+<header><div class="wrap"><a href="index.html">✦ The Everyday Investor Academy</a><nav class="nav"><a href="#roadmap">Roadmap</a><a href="#checklist">Checklist</a><a href="#calculator">Budget</a><a href="#resources">Resources</a><a href="living-atlas.html">Live Atlas</a></nav></div></header>
+
+<section class="hero"><div class="wrap">
+<div class="eyebrow">Flagship interactive project guide</div>
+<h1>Build a Cottage Cluster.</h1>
+<p class="lead">Learn the housing model, test a parcel, understand Oregon and local rules, sketch the people-first site, build the development budget, assemble the team, move through approvals, and create a community that can actually operate.</p>
+<div class="hero-actions"><a href="#roadmap">Start the project</a><a href="#checklist">Open the master checklist</a><a href="l-010.html">Open L-010 lesson</a><a href="knowledge-map.html#staircases">Cottage Cluster Staircase</a></div>
+<div class="notice"><strong>Important:</strong> This guide is educational. Rules and fees change, and a site can fail even when cottage clusters are generally allowed. Verify the current code, parcel conditions, utility capacity, ownership structure, and professional requirements before buying land or paying for final design.</div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+<div class="eyebrow">The complete development path</div><h2 class="section-title">From idea to operating community.</h2>
+<div class="roadmap"><div class="step"><b>1</b><div><h3>Start with the housing idea</h3><p>Define who the homes are for, whether they will be rentals or individually owned, expected unit sizes, accessibility goals, and why a cluster is a better fit than detached lots or a larger apartment building.</p></div></div><div class="step"><b>2</b><div><h3>Find a possible parcel</h3><p>Record the parcel number, owner, acreage, zoning, plan designation, access, topography, nearby utilities, flood or wetland indicators, and the surrounding neighborhood pattern.</p></div></div><div class="step"><b>3</b><div><h3>Read the actual local rules</h3><p>Confirm whether cottage clusters are allowed, the minimum and maximum unit count, cottage footprint limits, common-courtyard standards, setbacks, height, parking, access, landscaping, and approval type.</p></div></div><div class="step"><b>4</b><div><h3>Sketch the site around people</h3><p>Place the common courtyard first. Orient entrances and pedestrian paths toward it. Then solve privacy, parking, trash, mail, fire access, utilities, stormwater, storage, and service access.</p></div></div><div class="step"><b>5</b><div><h3>Choose the ownership and operating model</h3><p>Compare one-owner rental, condominium, individual lots through a middle-housing land division, cooperative ownership, affordable-housing ownership, or another qualified legal structure.</p></div></div><div class="step"><b>6</b><div><h3>Build the real development budget</h3><p>Include land, closing, survey, design, engineering, land use, building permits, utilities, road work, stormwater, fire requirements, financing, insurance, taxes, holding costs, construction, contingency, marketing, and operations.</p></div></div><div class="step"><b>7</b><div><h3>Assemble the professional team</h3><p>Identify the planner, surveyor, civil engineer, architect or designer, geotechnical or environmental professionals, lender, attorney, contractor, utility contacts, property manager, and insurance broker.</p></div></div><div class="step"><b>8</b><div><h3>Verify before spending heavily</h3><p>Use a pre-application meeting, written planning questions, title review, survey research, utility letters, preliminary engineering, and a feasibility period to test the concept.</p></div></div><div class="step"><b>9</b><div><h3>Move through approvals and construction</h3><p>Track applications, conditions of approval, final plans, permits, fees, inspections, change orders, utility coordination, public improvements, and closeout documents.</p></div></div><div class="step"><b>10</b><div><h3>Operate or sell the completed community</h3><p>Create maintenance, reserves, common-area rules, landscaping, insurance, management, leasing or resale, resident communication, and long-term governance systems.</p></div></div></div>
+</div></section>
+
+<section id="checklist"><div class="wrap">
+<div class="eyebrow">Saved on this device</div><h2 class="section-title">Cottage Cluster Master Checklist</h2>
+<div class="tabs">
+<button class="tab" data-tab="check" aria-selected="true">☑ Master checklist</button>
+<button class="tab" data-tab="questions" aria-selected="false">❓ Questions to ask</button>
+<button class="tab" data-tab="team" aria-selected="false">👥 Project team</button>
+<button class="tab" data-tab="documents" aria-selected="false">📁 Project file</button>
+</div>
+<div class="tabpanel active" data-panel="check">
+<div class="progressrow"><span>Project progress</span><span data-count>0 / 20</span></div><div class="bar"><span data-bar></span></div>
+<div class="checks"><label class="check"><input type="checkbox" data-check="0"><span>Write the target resident and housing purpose</span></label><label class="check"><input type="checkbox" data-check="1"><span>Choose rental, condominium, individual-lot, cooperative, or other ownership concept</span></label><label class="check"><input type="checkbox" data-check="2"><span>Identify a real parcel and tax-lot number</span></label><label class="check"><input type="checkbox" data-check="3"><span>Confirm zoning and comprehensive-plan designation</span></label><label class="check"><input type="checkbox" data-check="4"><span>Read current cottage-cluster and middle-housing code sections</span></label><label class="check"><input type="checkbox" data-check="5"><span>Map setbacks, easements, access, slope, flood, wetlands, and wildfire constraints</span></label><label class="check"><input type="checkbox" data-check="6"><span>Verify water, sewer or septic, power, stormwater, road, and fire-access feasibility</span></label><label class="check"><input type="checkbox" data-check="7"><span>Sketch the common courtyard before parking</span></label><label class="check"><input type="checkbox" data-check="8"><span>Test cottage footprints, entries, privacy, accessibility, and pedestrian routes</span></label><label class="check"><input type="checkbox" data-check="9"><span>Estimate survey, design, engineering, permit, and land-use costs</span></label><label class="check"><input type="checkbox" data-check="10"><span>Estimate utility, road, drainage, fire, and site-development costs</span></label><label class="check"><input type="checkbox" data-check="11"><span>Estimate building, financing, tax, insurance, marketing, and holding costs</span></label><label class="check"><input type="checkbox" data-check="12"><span>Create a minimum, expected, and high-cost budget</span></label><label class="check"><input type="checkbox" data-check="13"><span>Request a local pre-application or planning conversation</span></label><label class="check"><input type="checkbox" data-check="14"><span>Identify the surveyor, engineer, designer, lender, attorney, contractor, and manager</span></label><label class="check"><input type="checkbox" data-check="15"><span>Review title, easements, legal access, and ownership restrictions</span></label><label class="check"><input type="checkbox" data-check="16"><span>Choose the project entity and ownership structure</span></label><label class="check"><input type="checkbox" data-check="17"><span>Create a written feasibility memo</span></label><label class="check"><input type="checkbox" data-check="18"><span>Create a go, redesign, renegotiate, or no-go decision</span></label><label class="check"><input type="checkbox" data-check="19"><span>Track approvals, permits, inspections, closeout, and long-term operations</span></label></div>
+</div>
+<div class="tabpanel" data-panel="questions"><div class="grid">
+<div class="card"><h3>Planning</h3><p>Is the use allowed? What is the approval type? Which cottage, courtyard, parking, height, setback, tree, accessibility, and design rules apply? Are current rule changes pending?</p></div>
+<div class="card"><h3>Utilities</h3><p>Can water, sewer, stormwater, power, and fire service support the proposed units? Who pays for extensions, upgrades, meters, easements, and system charges?</p></div>
+<div class="card"><h3>Ownership</h3><p>Will the project be one rental property, condominium, individual lots, cooperative housing, affordable housing, or another structure? How are common areas governed and funded?</p></div>
+<div class="card"><h3>Finance</h3><p>What loan covers land, predevelopment, construction, and stabilization? What equity and reserves are required? What happens if approvals or construction take longer?</p></div>
+</div></div>
+<div class="tabpanel" data-panel="team"><div class="grid3">
+<div class="card"><h3>Land-use planner</h3><p>Interprets zoning, approval path, standards, and local process.</p></div>
+<div class="card"><h3>Surveyor</h3><p>Researches boundaries, plats, easements, and land-division work.</p></div>
+<div class="card"><h3>Civil engineer</h3><p>Roads, grading, utilities, drainage, and public improvements.</p></div>
+<div class="card"><h3>Designer or architect</h3><p>Cottages, courtyard, accessibility, privacy, and code coordination.</p></div>
+<div class="card"><h3>Attorney and CPA</h3><p>Entity, ownership, condominium or lot structure, contracts, and taxes.</p></div>
+<div class="card"><h3>Contractor and manager</h3><p>Constructability, pricing, phasing, operations, maintenance, and turnover.</p></div>
+</div></div>
+<div class="tabpanel" data-panel="documents"><div class="grid">
+<div class="card"><h3>Property file</h3><p>Deed, title report, tax records, maps, surveys, easements, access, environmental, and utility information.</p></div>
+<div class="card"><h3>Approval file</h3><p>Planning notes, applications, staff responses, conditions, drawings, engineering, fees, permits, and inspections.</p></div>
+<div class="card"><h3>Money file</h3><p>Land contract, studies, development budget, financing, invoices, draws, taxes, insurance, contingency, and operating pro forma.</p></div>
+<div class="card"><h3>Operations file</h3><p>Ownership documents, common-area rules, reserves, maintenance, landscaping, insurance, leases or sales, and resident communication.</p></div>
+</div></div>
+</div></section>
+
+<section id="calculator"><div class="wrap">
+<div class="calculator">
+<div class="eyebrow" style="color:#dce6d6">Early feasibility calculator</div><h2>What might each completed cottage carry?</h2>
+<p>This is a first-pass planning tool—not a construction bid or investment projection.</p>
+<div class="calc-grid">
+<div class="field"><label for="land">Land and closing costs</label><input id="land" type="number" value="250000" min="0"></div>
+<div class="field"><label for="soft">Design, studies, permits, and legal</label><input id="soft" type="number" value="180000" min="0"></div>
+<div class="field"><label for="site">Utilities, roads, drainage, and site work</label><input id="site" type="number" value="420000" min="0"></div>
+<div class="field"><label for="build">Building cost per cottage</label><input id="build" type="number" value="210000" min="0"></div>
+<div class="field"><label for="units">Number of cottages</label><input id="units" type="number" value="6" min="1"></div>
+<div class="field"><label for="other">Financing, holding, contingency, and other</label><input id="other" type="number" value="260000" min="0"></div>
+</div>
+<div class="results">
+<div class="result"><span>Total project</span><strong data-total>$0</strong></div>
+<div class="result"><span>Cost per cottage</span><strong data-per>$0</strong></div>
+<div class="result"><span>Site and soft cost per cottage</span><strong data-siteper>$0</strong></div>
+</div>
+</div></div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">The project connects the entire Academy</div><h2 class="section-title">Learn every side of the project.</h2>
+<div class="grid"><article class="resource"><h3><a href="l-010.html">L-010 — Cottage Clusters</a></h3><p>The Academy Land lesson on cottage clusters and small-scale community design.</p></article><article class="resource"><h3><a href="land.html">Land Development District</a></h3><p>Parcel, zoning, utilities, due diligence, financing, approvals, and development.</p></article><article class="resource"><h3><a href="housing.html">Housing District</a></h3><p>Housing choices, manufactured homes, ADUs, mobile-home parks, and affordability.</p></article><article class="resource"><h3><a href="construction.html">Construction District</a></h3><p>Estimating, permits, field operations, inspections, and closeout.</p></article><article class="resource"><h3><a href="business.html">Business District</a></h3><p>Entity setup, licenses, banking, vendor readiness, and business systems.</p></article><article class="resource"><h3><a href="property-management.html">Property Management Course</a></h3><p>Leasing, maintenance, fair housing, operations, records, and management.</p></article><article class="resource"><h3><a href="investing.html">Investing District</a></h3><p>Deal analysis, financing, returns, risk, and exit strategy.</p></article><article class="resource"><h3><a href="living-atlas.html">Live Atlas</a></h3><p>Definitions, formulas, examples, and connected concepts.</p></article></div>
+</div></section>
+
+<section id="resources" class="local"><div class="wrap">
+<div class="eyebrow">Current official and local starting points</div><h2 class="section-title">Resource R Us: Cottage Cluster Edition</h2>
+<h3>Oregon housing and land-use resources</h3><div class="grid3"><article class="resource"><h3><a href="https://www.oregon.gov/lcd/housing/pages/choice.aspx" target="_blank" rel="noopener">Oregon DLCD — Housing Choice</a></h3><p>State middle-housing background, guidance, model-code resources, and current housing-choice information.</p></article><article class="resource"><h3><a href="https://www.oregon.gov/LCD/Housing/Pages/index.aspx" target="_blank" rel="noopener">Oregon DLCD — Housing Program</a></h3><p>Current Oregon housing policy, planning, rulemaking, and production resources.</p></article><article class="resource"><h3><a href="https://www.oregon.gov/lcd/lar/pages/rulemaking.aspx" target="_blank" rel="noopener">Oregon Housing Rulemaking</a></h3><p>Current rulemaking materials, recordings, and cottage-cluster definition work.</p></article><article class="resource"><h3><a href="https://www.oregonlegislature.gov/bills_laws/Pages/ORS.aspx" target="_blank" rel="noopener">Oregon Revised Statutes</a></h3><p>Search current Oregon statutes, including middle housing and land-division law.</p></article><article class="resource"><h3><a href="https://www.oregon.gov/bcd/" target="_blank" rel="noopener">Oregon Building Codes Division</a></h3><p>Building code, manufactured structures, permits, and professional-program resources.</p></article><article class="resource"><h3><a href="https://www.oregon.gov/ohcs/" target="_blank" rel="noopener">Oregon Housing and Community Services</a></h3><p>Affordable-housing finance, policy, and program resources.</p></article></div>
+<h3 style="margin-top:34px">Medford, Jackson County, and Josephine County</h3><div class="grid3"><article class="resource"><h3><a href="https://www.medfordoregon.gov/Government/Departments/Planning/Middle-Housing" target="_blank" rel="noopener">City of Medford — Middle Housing</a></h3><p>Middle housing, land-division resources, site standards, pre-application information, and local program links.</p></article><article class="resource"><h3><a href="https://www.medfordoregon.gov/Government/Departments/Planning" target="_blank" rel="noopener">City of Medford — Planning</a></h3><p>Zoning, land-use applications, map tools, public notices, and planning contacts.</p></article><article class="resource"><h3><a href="https://www.medfordoregon.gov/Government/Departments/Building-Safety" target="_blank" rel="noopener">City of Medford — Building Safety</a></h3><p>Building permits, inspections, applications, and plan-review resources.</p></article><article class="resource"><h3><a href="https://jacksoncountyor.gov/ds" target="_blank" rel="noopener">Jackson County Development Services</a></h3><p>County planning, building, land-use, and development information.</p></article><article class="resource"><h3><a href="https://web.jacksoncounty.org/pdo/" target="_blank" rel="noopener">Jackson County Property Data Online</a></h3><p>Parcel, assessor, map, and property research starting point.</p></article><article class="resource"><h3><a href="https://www.josephinecounty.gov/departments/community_development/index.php" target="_blank" rel="noopener">Josephine County Community Development</a></h3><p>Planning, building, zoning, and county development resources.</p></article></div>
+<h3 style="margin-top:34px">Parcel and site research</h3><div class="grid3"><article class="resource"><h3><a href="https://msc.fema.gov/portal/home" target="_blank" rel="noopener">FEMA Flood Map Service Center</a></h3><p>Official flood-map research.</p></article><article class="resource"><h3><a href="https://websoilsurvey.nrcs.usda.gov/" target="_blank" rel="noopener">USDA Web Soil Survey</a></h3><p>Preliminary soil mapping and limitations.</p></article><article class="resource"><h3><a href="https://www.fws.gov/program/national-wetlands-inventory/wetlands-mapper" target="_blank" rel="noopener">USFWS Wetlands Mapper</a></h3><p>National wetlands inventory research.</p></article><article class="resource"><h3><a href="https://oregonexplorer.info/topics/wildfire-risk" target="_blank" rel="noopener">Oregon Wildfire Risk Explorer</a></h3><p>Wildfire-risk information and mapping.</p></article><article class="resource"><h3><a href="https://digsafelyoregon.com/" target="_blank" rel="noopener">Oregon 811</a></h3><p>Utility-locate resources before excavation.</p></article><article class="resource"><h3><a href="https://www.epa.gov/green-infrastructure" target="_blank" rel="noopener">EPA Green Infrastructure</a></h3><p>Stormwater and green-infrastructure concepts.</p></article></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">Watch with purpose</div><h2 class="section-title">Videos and visual examples</h2>
+<div class="grid"><article class="resource"><h3><a href="https://www.youtube.com/results?search_query=Oregon+DLCD+middle+housing+cottage+clusters" target="_blank" rel="noopener">Oregon DLCD housing-choice videos</a></h3><p>State and local middle-housing education.</p></article><article class="resource"><h3><a href="https://www.youtube.com/results?search_query=Medford+Oregon+middle+housing" target="_blank" rel="noopener">Medford middle housing</a></h3><p>Local planning, design, and housing information.</p></article><article class="resource"><h3><a href="https://www.youtube.com/results?search_query=cottage+cluster+design+courtyard" target="_blank" rel="noopener">Cottage cluster design</a></h3><p>Design examples and walkthroughs.</p></article><article class="resource"><h3><a href="https://www.youtube.com/results?search_query=Oregon+middle+housing+land+division" target="_blank" rel="noopener">Middle housing land divisions</a></h3><p>Ownership and land-division explanations.</p></article><article class="resource"><h3><a href="https://www.youtube.com/results?search_query=small+housing+development+pro+forma" target="_blank" rel="noopener">Small-home development finance</a></h3><p>Supplemental budgeting and feasibility education.</p></article></div>
+<div class="callout" style="margin-top:18px"><strong>Use videos as supplements:</strong> verify every legal rule, approval requirement, fee, program, and parcel fact through current official sources.</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">Connected Atlas terms</div><h2 class="section-title">Know the language of the project.</h2>
+<div class="term-cloud"><a href="living-atlas.html#cottage-cluster">Cottage Cluster</a><a href="living-atlas.html#common-courtyard">Common Courtyard</a><a href="living-atlas.html#middle-housing">Middle Housing</a><a href="living-atlas.html#zoning">Zoning</a><a href="living-atlas.html#entitlement">Entitlement</a><a href="living-atlas.html#feasibility">Feasibility</a><a href="living-atlas.html#system-development-charge">System Development Charge</a><a href="living-atlas.html#condominium">Condominium</a><a href="living-atlas.html#middle-housing-land-division">Middle Housing Land Division</a><a href="living-atlas.html#gentle-density">Gentle Density</a></div>
+<div class="warning" style="margin-top:22px"><strong>Current-rule alert:</strong> Oregon housing law and administrative rules are actively evolving. The project team should check current state and local rules immediately before feasibility, application, financing, and construction decisions.</div>
+</div></section>
+
+<footer><div class="wrap">© 2026 The Everyday Investor Academy · Cottage Cluster Project Hub</div></footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{
+ document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected','false'));
+ document.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));
+ tab.setAttribute('aria-selected','true');
+ document.querySelector(`[data-panel="${tab.dataset.tab}"]`).classList.add('active');
+}));
+const checks=[...document.querySelectorAll('[data-check]')];
+const saved=JSON.parse(localStorage.getItem('eia-cottage-cluster-checklist')||'{}');
+function update(){
+ const state={};checks.forEach(c=>state[c.dataset.check]=c.checked);
+ localStorage.setItem('eia-cottage-cluster-checklist',JSON.stringify(state));
+ const done=checks.filter(c=>c.checked).length;
+ document.querySelector('[data-count]').textContent=`${done} / ${checks.length}`;
+ document.querySelector('[data-bar]').style.width=`${Math.round(done/checks.length*100)}%`;
+}
+checks.forEach(c=>{c.checked=!!saved[c.dataset.check];c.addEventListener('change',update)});update();
+const ids=['land','soft','site','build','units','other'];
+function money(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n||0)}
+function calc(){
+ const v=Object.fromEntries(ids.map(id=>[id,Number(document.getElementById(id).value)||0]));
+ const total=v.land+v.soft+v.site+(v.build*v.units)+v.other;
+ const per=v.units?total/v.units:0;
+ const siteper=v.units?(v.land+v.soft+v.site+v.other)/v.units:0;
+ document.querySelector('[data-total]').textContent=money(total);
+ document.querySelector('[data-per]').textContent=money(per);
+ document.querySelector('[data-siteper]').textContent=money(siteper);
+}
+ids.forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();
+</script></body></html>
