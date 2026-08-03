@@ -1,0 +1,1 @@
+Upload c-001.html through c-003.html. Each lesson includes official resources and YouTube learning links.
