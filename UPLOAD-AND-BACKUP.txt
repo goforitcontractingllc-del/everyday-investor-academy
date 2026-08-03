@@ -1,0 +1,28 @@
+COMPLETE KNOWLEDGE MAP REMAKE
+
+1. Rename the current knowledge-map.html in GitHub to:
+   knowledge-map-old.html
+
+2. Upload this new knowledge-map.html.
+
+3. Do not change index.html.
+   The existing Open the Knowledge Map button should still work.
+
+4. Test:
+https://goforitcontractingllc-del.github.io/everyday-investor-academy/knowledge-map.html
+
+This file includes:
+- clickable guided paths
+- mission roadmaps
+- saved checklists
+- lesson links
+- official resources
+- working-tool cards
+- Live Atlas Resource R Us concept
+- clickable revolving staircases
+- clickable local branches
+- mobile design
+- self-contained CSS and JavaScript
+
+Commit:
+Replace Knowledge Map with complete clickable mission and Live Atlas system
