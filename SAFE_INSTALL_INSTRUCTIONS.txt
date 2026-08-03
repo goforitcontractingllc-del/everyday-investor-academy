@@ -1,0 +1,43 @@
+KNOWLEDGE MAP WOW ZONE — SAFE PREVIEW
+
+THIS ZIP DOES NOT REPLACE:
+- index.html
+- knowledge-map.html
+- living-atlas.html
+- any district page
+- any lesson page
+
+FIRST TEST
+1. Upload these four files without deleting anything:
+   knowledge-map-wow-preview.html
+   knowledge-map-wow.css
+   knowledge-map-wow.js
+   knowledge-map-resources.js
+
+2. Open:
+   https://goforitcontractingllc-del.github.io/everyday-investor-academy/knowledge-map-wow-preview.html
+
+3. Test Construction, Business, Property Management, and Land.
+   Each opens Learn / Do It / Checklist / Resources / Watch / Atlas.
+   Checklist progress saves on that device.
+
+AFTER APPROVAL
+- Download your current knowledge-map.html as a backup.
+- Add this inside <head>:
+  <link rel="stylesheet" href="knowledge-map-wow.css">
+
+- Add these immediately before </body>:
+  <script src="knowledge-map-resources.js"></script>
+  <script src="knowledge-map-wow.js"></script>
+
+- Add data-km-wow to the existing guided-paths wrapper.
+- Replace ONLY the first pathway card using INSERT_FIRST_PATH_ONLY.html.
+- Do not replace the hero, top buttons, Revolving Staircases, other cards, or the rest of the Knowledge Map.
+
+INDEX
+No index.html replacement is included or required.
+Your existing "Open the knowledge map" button remains unchanged.
+Your existing "Choose a guided path" button should continue jumping to the guided-path section.
+
+COMMIT FOR PREVIEW
+Add safe Knowledge Map Wow Zone preview without replacing existing pages

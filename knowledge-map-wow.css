@@ -1,0 +1,62 @@
+
+:root{
+  --km-navy:#12365f;
+  --km-navy-2:#1c4a7d;
+  --km-olive:#747b60;
+  --km-cream:#f7f0e5;
+  --km-paper:#fffdf8;
+  --km-soft:#eef2e9;
+  --km-line:#c7bba9;
+  --km-gold:#c49a43;
+  --km-text:#29302f;
+  --km-muted:#6b706d;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--km-cream);color:var(--km-text);font-family:Arial,sans-serif;line-height:1.6}
+.km-wrap{width:min(1060px,calc(100% - 28px));margin:auto}
+.km-demo-header{background:var(--km-paper);border-bottom:1px solid var(--km-line);padding:20px 0}
+.km-demo-header a{color:var(--km-navy);font-weight:900;text-decoration:none;font-size:1.35rem}
+.km-demo-hero{padding:60px 0 38px}
+.km-eyebrow{font-size:.78rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--km-olive)}
+.km-demo-hero h1{font:700 clamp(2.8rem,8vw,5.7rem)/.98 Georgia,serif;color:var(--km-navy);margin:.25em 0}
+.km-demo-hero p{font:1.2rem/1.6 Georgia,serif;color:var(--km-olive);max-width:800px}
+.km-safe-note{background:#fff6dc;border-left:5px solid var(--km-gold);padding:15px 18px;border-radius:8px;margin:18px 0 28px}
+.km-guided-paths{padding:8px 0 70px}
+.km-path-card{background:var(--km-paper);border:1px solid var(--km-line);border-radius:24px;padding:24px;margin:22px 0;box-shadow:0 10px 24px rgba(18,54,95,.04)}
+.km-path-card h2{font:700 clamp(1.8rem,5vw,2.7rem)/1.15 Georgia,serif;color:var(--km-navy);margin:0 0 16px}
+.km-step-list{display:grid;gap:10px}
+.km-step-button{width:100%;display:grid;grid-template-columns:48px 1fr 24px;align-items:center;gap:12px;border:0;background:transparent;text-align:left;padding:10px 6px;border-radius:14px;color:var(--km-navy);font-size:1.12rem;font-weight:900;cursor:pointer}
+.km-step-button:hover,.km-step-button:focus{background:var(--km-soft);outline:2px solid transparent}
+.km-step-number{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--km-soft);font-size:1.25rem}
+.km-chevron{transition:transform .2s ease}
+.km-step-button[aria-expanded="true"] .km-chevron{transform:rotate(180deg)}
+.km-wow-panel{display:none;margin:8px 0 18px;padding:18px;border:1px solid var(--km-line);border-radius:18px;background:linear-gradient(145deg,#fff,#f7faf5)}
+.km-wow-panel.is-open{display:block;animation:kmOpen .22s ease}
+@keyframes kmOpen{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+.km-panel-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.km-panel-top h3{font:700 1.7rem/1.2 Georgia,serif;color:var(--km-navy);margin:0}
+.km-open-district{display:inline-block;background:var(--km-navy);color:white;text-decoration:none;font-weight:900;border-radius:12px;padding:11px 15px}
+.km-tabbar{display:flex;gap:8px;overflow:auto;padding:16px 0 12px}
+.km-tab{border:1px solid var(--km-line);background:white;color:var(--km-navy);font-weight:900;border-radius:999px;padding:9px 13px;white-space:nowrap;cursor:pointer}
+.km-tab[aria-selected="true"]{background:var(--km-navy);color:white;border-color:var(--km-navy)}
+.km-tabpanel{display:none}
+.km-tabpanel.is-active{display:block}
+.km-resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.km-resource{border:1px solid #d8ded2;background:white;border-radius:14px;padding:15px}
+.km-resource h4{color:var(--km-navy);margin:0 0 5px;font-size:1rem}
+.km-resource p{margin:0;color:var(--km-muted);font-size:.94rem}
+.km-resource a{color:var(--km-navy);font-weight:900}
+.km-checklist{display:grid;gap:9px}
+.km-check{display:flex;gap:10px;align-items:flex-start;border:1px solid #d8ded2;background:white;border-radius:12px;padding:12px}
+.km-check input{margin-top:4px;transform:scale(1.2)}
+.km-progress-row{display:flex;justify-content:space-between;gap:12px;font-weight:900;color:var(--km-navy);margin:6px 0}
+.km-progress{height:10px;background:#e5e9e1;border-radius:999px;overflow:hidden}
+.km-progress>span{display:block;height:100%;width:0;background:var(--km-olive);transition:width .2s ease}
+.km-filter{display:flex;gap:8px;margin-bottom:12px}
+.km-filter input{width:100%;padding:12px;border:1px solid var(--km-line);border-radius:12px;font:inherit}
+.km-coming{padding:14px;background:var(--km-soft);border-left:4px solid var(--km-olive);border-radius:8px}
+@media(max-width:650px){
+  .km-resource-grid{grid-template-columns:1fr}
+  .km-path-card{padding:18px}
+  .km-step-button{grid-template-columns:44px 1fr 20px;font-size:1.05rem}
+}
