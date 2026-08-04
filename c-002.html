@@ -1,5 +1,6 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<meta name='description' content='Construction Academy interactive command center C-002: The Life of a Construction Job.'>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Construction Academy interactive command center C-002: The Life of a Construction Job." name="description"/>
 <title>C-002 · The Life of a Construction Job | The Everyday Investor Academy</title><style>
 :root{
   --navy:#0f3157;--navy2:#194f80;--cream:#f7f0e5;--paper:#fffdf8;
@@ -43,17 +44,631 @@ section{padding:46px 0}.section-title{font-size:clamp(2.3rem,6vw,4.6rem);margin:
 footer{padding:34px 0;color:var(--muted);border-top:1px solid var(--line)}
 @media(max-width:920px){.dashboard{grid-template-columns:repeat(2,1fr)}.workflow{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.nav{display:none}.dashboard,.grid,.grid3,.grid4,.fieldgrid,.results,.tool-links,.lesson-nav{grid-template-columns:1fr}.workflow{grid-template-columns:repeat(2,1fr)}.search-row{flex-direction:column}.search-row button{padding:12px}}
+
+/* Embedded pop-up knowledge and tool system */
+.modal-backdrop{position:fixed;inset:0;background:rgba(10,24,39,.72);z-index:1000;display:none;padding:18px;overflow:auto}
+.modal-backdrop.open{display:block}
+.modal-window{width:min(920px,100%);margin:3vh auto;background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:0 28px 80px rgba(0,0,0,.35);overflow:hidden}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:20px 22px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:white}
+.modal-head h2{color:white;margin:0;font-size:1.9rem}.modal-head p{margin:.35em 0 0;color:#e7eef5}
+.modal-close{border:1px solid #ffffff66;background:#ffffff18;color:white;width:42px;height:42px;border-radius:50%;font-size:1.45rem;cursor:pointer;flex:0 0 auto}
+.modal-body{padding:22px}.modal-body label{display:block;font-weight:900;color:var(--navy);margin:12px 0}
+.modal-body input[type=text],.modal-body input[type=number],.modal-body textarea,.modal-body select{display:block;width:100%;margin-top:5px;border:1px solid var(--line);border-radius:10px;padding:11px;font:inherit;background:white;color:var(--ink)}
+.modal-body textarea{min-height:105px;resize:vertical}
+.modal-form{display:grid;gap:12px}.modal-form.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.modal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.modal-launch{border:1px solid var(--line);background:white;color:var(--navy);padding:13px;border-radius:12px;font-weight:900;cursor:pointer;text-align:left}
+.modal-launch:hover{background:var(--soft)}
+.modal-check{display:flex!important;gap:10px;align-items:flex-start;background:white;border:1px solid var(--line);border-radius:12px;padding:11px;margin:0!important;color:var(--ink)!important}
+.modal-check input{margin-top:4px;transform:scale(1.15)}
+.modal-results{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:15px 0}
+.modal-results div{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:13px}
+.modal-results span{display:block;color:var(--muted)}.modal-results strong{display:block;color:var(--navy);font-size:1.3rem}
+.modal-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.modal-cards article{background:white;border:1px solid var(--line);border-radius:13px;padding:14px}.modal-cards h4{margin:.05em 0 .4em}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap;padding:0 22px 22px}
+.modal-actions button{border:0;background:var(--navy);color:white;padding:11px 14px;border-radius:10px;font-weight:900;cursor:pointer}
+.term-pop{cursor:pointer!important;text-decoration:none!important}
+.term-pop::after{content:" ⓘ";font-size:.82em}
+@media(max-width:680px){.modal-form.two,.modal-grid,.modal-results,.modal-cards{grid-template-columns:1fr}.modal-window{margin:0 auto}.modal-head{padding:17px}.modal-body{padding:17px}}
+@media print{.modal-backdrop{position:static;display:block;background:white;padding:0}.modal-window{box-shadow:none;border:0;margin:0}.modal-head,.modal-close,.modal-actions{display:none}.modal-body{padding:0}}
 </style></head><body>
-<header><div class='wrap'><a href='index.html'>✦ The Everyday Investor Academy</a><nav class='nav'><a href='construction.html'>Construction</a><a href='construction-toolkit.html'>Toolkit</a><a href='knowledge-map.html'>Knowledge Map</a><a href='living-atlas.html'>Live Atlas</a></nav></div></header>
-<section class='hero'><div class='wrap'><div class='eyebrow'>Construction Academy · Interactive Command Center · C-002</div><h1>The Life of a Construction Job</h1><p class='lead'>Learn every handoff from lead qualification to warranty.</p>
-<div class='hero-actions'><a href='#dashboard'>Open the command center</a><a href='construction-toolkit.html'>Open the toolkit</a><a href='c-003.html'>Next lesson</a></div>
-<div class='notice'><strong>This page teaches first.</strong> Official websites, videos, and tools deepen the lesson after the concepts are explained.</div></div></section>
-<section class='search-zone'><div class='wrap'><div class='search-row'><input id='hub-search' type='search' placeholder='Search this command center…'><button id='clear-search'>Clear</button></div></div></section>
-<main class='wrap' id='dashboard'><section><div class='eyebrow'>Choose what to explore</div><h2 class='section-title'>C-002 Command Center</h2><div class='dashboard'><article class='tile searchable' data-open='lead'><div class='eyebrow'>Interactive module</div><h3>📞 Lead Qualification</h3><p>Decide whether the opportunity fits your license, capacity, service area, and business.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='site'><div class='eyebrow'>Interactive module</div><h3>🚙 Site Visit</h3><p>Observe the project before pricing or promising.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='discovery'><div class='eyebrow'>Interactive module</div><h3>📸 Discovery File</h3><p>Photos, measurements, notes, questions, and decisions.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='scope'><div class='eyebrow'>Interactive module</div><h3>📋 Scope &amp; Estimate</h3><p>Turn discovery into written work and price.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='agreement'><div class='eyebrow'>Interactive module</div><h3>✍️ Agreement &amp; Deposit</h3><p>Clarify responsibilities, payment, changes, and timing.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='planning'><div class='eyebrow'>Interactive module</div><h3>📦 Planning &amp; Procurement</h3><p>Materials, labor, access, permits, and inspections.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='production'><div class='eyebrow'>Interactive module</div><h3>🏗️ Production</h3><p>Run the job and protect quality, safety, and communication.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='changes'><div class='eyebrow'>Interactive module</div><h3>🔄 Change Management</h3><p>Control hidden conditions and customer changes.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='quality'><div class='eyebrow'>Interactive module</div><h3>✅ Quality &amp; Punch</h3><p>Inspect before asking the customer to find everything.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='closeout'><div class='eyebrow'>Interactive module</div><h3>📁 Closeout &amp; Warranty</h3><p>Finish records, payment, handoff, and warranty.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='oregon'><div class='eyebrow'>Interactive module</div><h3>🏛️ Oregon Job Path</h3><p>Where official agencies enter the workflow.</p><span class='open-label'>Open module →</span></article><article class='tile searchable' data-open='challenge'><div class='eyebrow'>Interactive module</div><h3>🎮 Job-Life Challenge</h3><p>Practice the sequence on a real turnover job.</p><span class='open-label'>Open module →</span></article></div><section class='panel' data-panel='lead'><h2>📞 Lead Qualification</h2><div class='grid'><div class='card'><h3>Project Fit</h3><p>Does the work fit your license, skills, equipment, service area, schedule, and risk tolerance?</p></div><div class='card'><h3>Customer Fit</h3><p>Who makes the decision? Is the request clear? Is the timing realistic?</p></div><div class='card'><h3>Information Before Visit</h3><p>Address, photos, problem, desired result, occupancy, access, and urgency.</p></div><div class='card'><h3>Do Not Quote Yet</h3><p>A phone description rarely contains enough information for a reliable final price.</p></div></div><div class='tool-links' style='margin-top:14px'><a href='site-visit-workspace.html'>Open Lead + Site Visit Workspace →</a></div></section><section class='panel' data-panel='site'><h2>🚙 Site Visit</h2><div class='grid'><div class='card'><h3>Observe</h3><p>Existing condition, access, hazards, utilities, adjacent property, weather exposure, and occupants.</p></div><div class='card'><h3>Ask</h3><p>What changed? What result matters? What has been tried? Who approves selections?</p></div><div class='card'><h3>Measure</h3><p>Take enough dimensions to define work and calculate quantity.</p></div><div class='card'><h3>Document</h3><p>Organized photos and notes become the source for scope and estimate.</p></div></div><div class='tool-links' style='margin-top:14px'><a href='site-visit-workspace.html'>Open Site Visit Workspace →</a></div></section><section class='panel' data-panel='discovery'><h2>📸 Discovery File</h2><div class='grid'><div class='card'><h3>Photos</h3><p>Wide view, medium view, close-up, reference measurements, access, damage, and adjacent property.</p></div><div class='card'><h3>Notes</h3><p>Customer language, contractor observations, unresolved questions, and next action.</p></div><div class='card'><h3>Measurements</h3><p>Label location, unit, method, and verification status.</p></div><div class='card'><h3>Unknowns</h3><p>Separate what is visible from what may require opening, demolition, testing, or professional review.</p></div></div></section><section class='panel' data-panel='scope'><h2>📋 Scope & Estimate</h2><div class='grid'><div class='card'><h3>Scope</h3><p>Convert discovery into included work, exclusions, assumptions, materials, cleanup, and closeout.</p></div><div class='card'><h3>Estimate</h3><p>Price labor, material, equipment, subcontractors, travel, disposal, overhead, contingency, and profit.</p></div><div class='card'><h3>Options</h3><p>When useful, present repair, replacement, or phased options.</p></div><div class='card'><h3>Expiration</h3><p>Material prices, availability, and schedule capacity can change.</p></div></div><div class='tool-links' style='margin-top:14px'><a href='scope-builder.html'>Scope Builder →</a><a href='estimate-builder.html'>Estimate Builder →</a></div></section><section class='panel' data-panel='agreement'><h2>✍️ Agreement & Deposit</h2><div class='grid'><div class='card'><h3>Parties</h3><p>Use correct legal names and project address.</p></div><div class='card'><h3>Payment</h3><p>Deposit, draws, due dates, final payment, and accepted method.</p></div><div class='card'><h3>Changes</h3><p>Written authorization before added work.</p></div><div class='card'><h3>Delay</h3><p>Weather, access, selections, inspection, hidden conditions, and supplier delays.</p></div></div></section><section class='panel' data-panel='planning'><h2>📦 Planning & Procurement</h2><div class='grid'><div class='card'><h3>Dependencies</h3><p>Permits, inspections, selections, material lead time, utility locates, cure time, and subcontractors.</p></div><div class='card'><h3>Procurement</h3><p>Order the correct product, quantity, delivery date, storage, and handling.</p></div><div class='card'><h3>Schedule</h3><p>Create a realistic sequence rather than one optimistic finish date.</p></div><div class='card'><h3>Communication</h3><p>Tell the customer what must happen before work begins.</p></div></div><div class='tool-links' style='margin-top:14px'><a href='construction-daily-log.html'>Daily Job Log →</a></div></section><section class='panel' data-panel='production'><h2>🏗️ Production</h2><div class='grid'><div class='card'><h3>Daily Start</h3><p>Safety, site protection, materials, tools, assignments, and access.</p></div><div class='card'><h3>Quality Gates</h3><p>Inspect hidden work before covering it.</p></div><div class='card'><h3>Progress Records</h3><p>Photos, labor, material, delays, questions, and completed tasks.</p></div><div class='card'><h3>Customer Updates</h3><p>Explain progress, decisions, and schedule effects without overwhelming the customer.</p></div></div></section><section class='panel' data-panel='changes'><h2>🔄 Change Management</h2><div class='grid'><div class='card'><h3>Hidden Condition</h3><p>Document what was discovered and why it was not in the original scope.</p></div><div class='card'><h3>Customer Change</h3><p>Define added or removed work.</p></div><div class='card'><h3>Price + Time</h3><p>Show the effect before continuing.</p></div><div class='card'><h3>Authorization</h3><p>Verbal conversation should be followed by written approval.</p></div></div><div class='tool-links' style='margin-top:14px'><a href='change-order-builder.html'>Open Change Order Builder →</a></div></section><section class='panel' data-panel='quality'><h2>✅ Quality & Punch</h2><div class='grid'><div class='card'><h3>Self-Inspection</h3><p>Inspect against scope, plans, product instructions, and finish standard.</p></div><div class='card'><h3>Punch List</h3><p>Capture remaining corrections in one controlled list.</p></div><div class='card'><h3>Cleanliness</h3><p>A technically correct project can still feel unfinished when the site is dirty or disorganized.</p></div><div class='card'><h3>Customer Walkthrough</h3><p>Explain operation, care, limitations, and remaining work.</p></div></div><div class='tool-links' style='margin-top:14px'><a href='punch-list.html'>Open Punch List →</a></div></section><section class='panel' data-panel='closeout'><h2>📁 Closeout & Warranty</h2><div class='grid'><div class='card'><h3>Final Records</h3><p>Photos, permits, inspections, warranties, manuals, selections, and receipts.</p></div><div class='card'><h3>Final Invoice</h3><p>Match the agreement and approved changes.</p></div><div class='card'><h3>Handoff</h3><p>Explain use, care, maintenance, and warranty process.</p></div><div class='card'><h3>Follow-Up</h3><p>A consistent closeout supports reviews, referrals, and fewer disputes.</p></div></div><div class='tool-links' style='margin-top:14px'><a href='construction-closeout.html'>Open Closeout Checklist →</a></div></section><section class='panel' data-panel='oregon'><h2>🏛️ Oregon Construction Resources</h2><div class='grid3'><div class='card'><h3><a href='https://www.oregon.gov/ccb/' target='_blank' rel='noopener'>Oregon CCB</a></h3><p>Licensing, endorsements, consumer rules, education, complaint information, and contractor tools.</p></div><div class='card'><h3><a href='https://www.oregon.gov/bcd/' target='_blank' rel='noopener'>Oregon Building Codes Division</a></h3><p>State building codes, trade programs, manufactured structures, and code resources.</p></div><div class='card'><h3><a href='https://osha.oregon.gov/edu/Pages/index.aspx' target='_blank' rel='noopener'>Oregon OSHA Education</a></h3><p>Free Oregon OSHA workshops, online courses, training materials, and safety education.</p></div><div class='card'><h3><a href='https://osha.oregon.gov/pages/topics/training.aspx' target='_blank' rel='noopener'>Oregon OSHA Training Topics</a></h3><p>Training responsibilities, publications, examples, and topic resources.</p></div><div class='card'><h3><a href='https://digsafelyoregon.com/' target='_blank' rel='noopener'>Oregon 811</a></h3><p>Utility-locate starting point before excavation.</p></div><div class='card'><h3><a href='https://www.medfordoregon.gov/Government/Departments/Building-Safety' target='_blank' rel='noopener'>Medford Building Safety</a></h3><p>Local permits, plan review, and inspection information.</p></div><div class='card'><h3><a href='https://jacksoncountyor.gov/ds' target='_blank' rel='noopener'>Jackson County Development Services</a></h3><p>County planning, building, and development resources.</p></div></div><div class='pro'><strong>Use these resources with a specific project question:</strong> identify the property location, exact scope, trade, and stage before calling or searching.</div></section><section class='panel' data-panel='challenge'><h2>🎮 Turnover Job-Life Challenge</h2><div class='grid'><div class='card'><h3>Lead</h3><p>Property manager asks for a two-day turnover.</p></div><div class='card'><h3>Discovery</h3><p>Walls, flooring, smoke odor, damaged blinds, and missing hardware are discovered.</p></div><div class='card'><h3>Dependency</h3><p>Cleaning must happen after dusty repairs but before final inspection.</p></div><div class='card'><h3>Decision</h3><p>Build a sequence, scope, price, and change process before promising two days.</p></div></div><div class='tool-links' style='margin-top:14px'><a href='site-visit-workspace.html'>Start Discovery →</a><a href='scope-builder.html'>Build Scope →</a><a href='estimate-builder.html'>Build Estimate →</a></div></section>
-<div class='lesson-nav'><a href='c-001.html'>← Previous</a><a href='construction.html'>Construction Home</a><a href='c-003.html'>Next →</a></div></section></main>
-<footer><div class='wrap'>© 2026 The Everyday Investor Academy · Construction Academy · C-002</div></footer>
+<header><div class="wrap"><a href="index.html">✦ The Everyday Investor Academy</a><nav class="nav"><a href="construction.html">Construction</a><a data-modal-link="toolkit" href="#" role="button">Toolkit</a><a href="knowledge-map.html">Knowledge Map</a><a href="living-atlas.html">Live Atlas</a></nav></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Construction Academy · Interactive Command Center · C-002</div><h1>The Life of a Construction Job</h1><p class="lead">Learn every handoff from lead qualification to warranty.</p>
+<div class="hero-actions"><a href="#dashboard">Open the command center</a><a data-modal-link="toolkit" href="#" role="button">Open the toolkit</a><a href="c-003.html">Next lesson</a></div>
+<div class="notice"><strong>This page teaches first.</strong> Official websites, videos, and tools deepen the lesson after the concepts are explained.</div></div></section>
+<section class="search-zone"><div class="wrap"><div class="search-row"><input id="hub-search" placeholder="Search this command center…" type="search"/><button id="clear-search">Clear</button></div></div></section>
+<main class="wrap" id="dashboard"><section><div class="eyebrow">Choose what to explore</div><h2 class="section-title">C-002 Command Center</h2><div class="dashboard"><article class="tile searchable" data-open="lead"><div class="eyebrow">Interactive module</div><h3>📞 Lead Qualification</h3><p>Decide whether the opportunity fits your license, capacity, service area, and business.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="site"><div class="eyebrow">Interactive module</div><h3>🚙 Site Visit</h3><p>Observe the project before pricing or promising.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="discovery"><div class="eyebrow">Interactive module</div><h3>📸 Discovery File</h3><p>Photos, measurements, notes, questions, and decisions.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="scope"><div class="eyebrow">Interactive module</div><h3>📋 Scope &amp; Estimate</h3><p>Turn discovery into written work and price.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="agreement"><div class="eyebrow">Interactive module</div><h3>✍️ Agreement &amp; Deposit</h3><p>Clarify responsibilities, payment, changes, and timing.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="planning"><div class="eyebrow">Interactive module</div><h3>📦 Planning &amp; Procurement</h3><p>Materials, labor, access, permits, and inspections.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="production"><div class="eyebrow">Interactive module</div><h3>🏗️ Production</h3><p>Run the job and protect quality, safety, and communication.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="changes"><div class="eyebrow">Interactive module</div><h3>🔄 Change Management</h3><p>Control hidden conditions and customer changes.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="quality"><div class="eyebrow">Interactive module</div><h3>✅ Quality &amp; Punch</h3><p>Inspect before asking the customer to find everything.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="closeout"><div class="eyebrow">Interactive module</div><h3>📁 Closeout &amp; Warranty</h3><p>Finish records, payment, handoff, and warranty.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="oregon"><div class="eyebrow">Interactive module</div><h3>🏛️ Oregon Job Path</h3><p>Where official agencies enter the workflow.</p><span class="open-label">Open module →</span></article><article class="tile searchable" data-open="challenge"><div class="eyebrow">Interactive module</div><h3>🎮 Job-Life Challenge</h3><p>Practice the sequence on a real turnover job.</p><span class="open-label">Open module →</span></article></div><section class="panel" data-panel="lead"><h2>📞 Lead Qualification</h2><div class="grid"><div class="card"><h3>Project Fit</h3><p>Does the work fit your license, skills, equipment, service area, schedule, and risk tolerance?</p></div><div class="card"><h3>Customer Fit</h3><p>Who makes the decision? Is the request clear? Is the timing realistic?</p></div><div class="card"><h3>Information Before Visit</h3><p>Address, photos, problem, desired result, occupancy, access, and urgency.</p></div><div class="card"><h3>Do Not Quote Yet</h3><p>A phone description rarely contains enough information for a reliable final price.</p></div></div><div class="tool-links" style="margin-top:14px"><a data-modal-link="site-visit" href="#" role="button">Open Lead + Site Visit Workspace →</a></div></section><section class="panel" data-panel="site"><h2>🚙 Site Visit</h2><div class="grid"><div class="card"><h3>Observe</h3><p>Existing condition, access, hazards, utilities, adjacent property, weather exposure, and occupants.</p></div><div class="card"><h3>Ask</h3><p>What changed? What result matters? What has been tried? Who approves selections?</p></div><div class="card"><h3>Measure</h3><p>Take enough dimensions to define work and calculate quantity.</p></div><div class="card"><h3>Document</h3><p>Organized photos and notes become the source for scope and estimate.</p></div></div><div class="tool-links" style="margin-top:14px"><a data-modal-link="site-visit" href="#" role="button">Open Site Visit Workspace →</a></div></section><section class="panel" data-panel="discovery"><h2>📸 Discovery File</h2><div class="grid"><div class="card"><h3>Photos</h3><p>Wide view, medium view, close-up, reference measurements, access, damage, and adjacent property.</p></div><div class="card"><h3>Notes</h3><p>Customer language, contractor observations, unresolved questions, and next action.</p></div><div class="card"><h3>Measurements</h3><p>Label location, unit, method, and verification status.</p></div><div class="card"><h3>Unknowns</h3><p>Separate what is visible from what may require opening, demolition, testing, or professional review.</p></div></div></section><section class="panel" data-panel="scope"><h2>📋 Scope &amp; Estimate</h2><div class="grid"><div class="card"><h3>Scope</h3><p>Convert discovery into included work, exclusions, assumptions, materials, cleanup, and closeout.</p></div><div class="card"><h3>Estimate</h3><p>Price labor, material, equipment, subcontractors, travel, disposal, overhead, contingency, and profit.</p></div><div class="card"><h3>Options</h3><p>When useful, present repair, replacement, or phased options.</p></div><div class="card"><h3>Expiration</h3><p>Material prices, availability, and schedule capacity can change.</p></div></div><div class="tool-links" style="margin-top:14px"><a data-modal-link="scope-builder" href="#" role="button">Scope Builder →</a><a data-modal-link="estimate-builder" href="#" role="button">Estimate Builder →</a></div></section><section class="panel" data-panel="agreement"><h2>✍️ Agreement &amp; Deposit</h2><div class="grid"><div class="card"><h3>Parties</h3><p>Use correct legal names and project address.</p></div><div class="card"><h3>Payment</h3><p>Deposit, draws, due dates, final payment, and accepted method.</p></div><div class="card"><h3>Changes</h3><p>Written authorization before added work.</p></div><div class="card"><h3>Delay</h3><p>Weather, access, selections, inspection, hidden conditions, and supplier delays.</p></div></div></section><section class="panel" data-panel="planning"><h2>📦 Planning &amp; Procurement</h2><div class="grid"><div class="card"><h3>Dependencies</h3><p>Permits, inspections, selections, material lead time, utility locates, cure time, and subcontractors.</p></div><div class="card"><h3>Procurement</h3><p>Order the correct product, quantity, delivery date, storage, and handling.</p></div><div class="card"><h3>Schedule</h3><p>Create a realistic sequence rather than one optimistic finish date.</p></div><div class="card"><h3>Communication</h3><p>Tell the customer what must happen before work begins.</p></div></div><div class="tool-links" style="margin-top:14px"><a data-modal-link="daily-log" href="#" role="button">Daily Job Log →</a></div></section><section class="panel" data-panel="production"><h2>🏗️ Production</h2><div class="grid"><div class="card"><h3>Daily Start</h3><p>Safety, site protection, materials, tools, assignments, and access.</p></div><div class="card"><h3>Quality Gates</h3><p>Inspect hidden work before covering it.</p></div><div class="card"><h3>Progress Records</h3><p>Photos, labor, material, delays, questions, and completed tasks.</p></div><div class="card"><h3>Customer Updates</h3><p>Explain progress, decisions, and schedule effects without overwhelming the customer.</p></div></div></section><section class="panel" data-panel="changes"><h2>🔄 Change Management</h2><div class="grid"><div class="card"><h3>Hidden Condition</h3><p>Document what was discovered and why it was not in the original scope.</p></div><div class="card"><h3>Customer Change</h3><p>Define added or removed work.</p></div><div class="card"><h3>Price + Time</h3><p>Show the effect before continuing.</p></div><div class="card"><h3>Authorization</h3><p>Verbal conversation should be followed by written approval.</p></div></div><div class="tool-links" style="margin-top:14px"><a data-modal-link="change-order" href="#" role="button">Open Change Order Builder →</a></div></section><section class="panel" data-panel="quality"><h2>✅ Quality &amp; Punch</h2><div class="grid"><div class="card"><h3>Self-Inspection</h3><p>Inspect against scope, plans, product instructions, and finish standard.</p></div><div class="card"><h3>Punch List</h3><p>Capture remaining corrections in one controlled list.</p></div><div class="card"><h3>Cleanliness</h3><p>A technically correct project can still feel unfinished when the site is dirty or disorganized.</p></div><div class="card"><h3>Customer Walkthrough</h3><p>Explain operation, care, limitations, and remaining work.</p></div></div><div class="tool-links" style="margin-top:14px"><a data-modal-link="punch-list" href="#" role="button">Open Punch List →</a></div></section><section class="panel" data-panel="closeout"><h2>📁 Closeout &amp; Warranty</h2><div class="grid"><div class="card"><h3>Final Records</h3><p>Photos, permits, inspections, warranties, manuals, selections, and receipts.</p></div><div class="card"><h3>Final Invoice</h3><p>Match the agreement and approved changes.</p></div><div class="card"><h3>Handoff</h3><p>Explain use, care, maintenance, and warranty process.</p></div><div class="card"><h3>Follow-Up</h3><p>A consistent closeout supports reviews, referrals, and fewer disputes.</p></div></div><div class="tool-links" style="margin-top:14px"><a data-modal-link="closeout" href="#" role="button">Open Closeout Checklist →</a></div></section><section class="panel" data-panel="oregon"><h2>🏛️ Oregon Construction Resources</h2><div class="grid3"><div class="card"><h3><a href="https://www.oregon.gov/ccb/" rel="noopener" target="_blank">Oregon CCB</a></h3><p>Licensing, endorsements, consumer rules, education, complaint information, and contractor tools.</p></div><div class="card"><h3><a href="https://www.oregon.gov/bcd/" rel="noopener" target="_blank">Oregon Building Codes Division</a></h3><p>State building codes, trade programs, manufactured structures, and code resources.</p></div><div class="card"><h3><a href="https://osha.oregon.gov/edu/Pages/index.aspx" rel="noopener" target="_blank">Oregon OSHA Education</a></h3><p>Free Oregon OSHA workshops, online courses, training materials, and safety education.</p></div><div class="card"><h3><a href="https://osha.oregon.gov/pages/topics/training.aspx" rel="noopener" target="_blank">Oregon OSHA Training Topics</a></h3><p>Training responsibilities, publications, examples, and topic resources.</p></div><div class="card"><h3><a href="https://digsafelyoregon.com/" rel="noopener" target="_blank">Oregon 811</a></h3><p>Utility-locate starting point before excavation.</p></div><div class="card"><h3><a href="https://www.medfordoregon.gov/Government/Departments/Building-Safety" rel="noopener" target="_blank">Medford Building Safety</a></h3><p>Local permits, plan review, and inspection information.</p></div><div class="card"><h3><a href="https://jacksoncountyor.gov/ds" rel="noopener" target="_blank">Jackson County Development Services</a></h3><p>County planning, building, and development resources.</p></div></div><div class="pro"><strong>Use these resources with a specific project question:</strong> identify the property location, exact scope, trade, and stage before calling or searching.</div></section><section class="panel" data-panel="challenge"><h2>🎮 Turnover Job-Life Challenge</h2><div class="grid"><div class="card"><h3>Lead</h3><p>Property manager asks for a two-day turnover.</p></div><div class="card"><h3>Discovery</h3><p>Walls, flooring, smoke odor, damaged blinds, and missing hardware are discovered.</p></div><div class="card"><h3>Dependency</h3><p>Cleaning must happen after dusty repairs but before final inspection.</p></div><div class="card"><h3>Decision</h3><p>Build a sequence, scope, price, and change process before promising two days.</p></div></div><div class="tool-links" style="margin-top:14px"><a data-modal-link="site-visit" href="#" role="button">Start Discovery →</a><a data-modal-link="scope-builder" href="#" role="button">Build Scope →</a><a data-modal-link="estimate-builder" href="#" role="button">Build Estimate →</a></div></section>
+<section class="panel open" style="display:block"><h2>🌎 Construction Atlas Terms — Tap to Open</h2><p>These definitions open on top of the lesson so you never lose your place.</p><div class="modal-grid"><button class="modal-launch term-pop" data-open-modal="term-lead-qualification" type="button">Lead Qualification</button><button class="modal-launch term-pop" data-open-modal="term-dependency" type="button">Dependency</button><button class="modal-launch term-pop" data-open-modal="term-procurement" type="button">Procurement</button><button class="modal-launch term-pop" data-open-modal="term-change-order" type="button">Change Order</button><button class="modal-launch term-pop" data-open-modal="term-punch-list" type="button">Punch List</button><button class="modal-launch term-pop" data-open-modal="term-closeout" type="button">Closeout</button></div></section><div class="lesson-nav"><a href="c-001.html">← Previous</a><a href="construction.html">Construction Home</a><a href="c-003.html">Next →</a></div></section></main>
+<footer><div class="wrap">© 2026 The Everyday Investor Academy · Construction Academy · C-002</div></footer>
 <script>
 document.querySelectorAll('[data-open]').forEach(tile=>tile.addEventListener('click',()=>{const panel=document.querySelector(`[data-panel="${tile.dataset.open}"]`);const opening=!panel.classList.contains('open');document.querySelectorAll('.panel.open').forEach(p=>p.classList.remove('open'));if(opening){panel.classList.add('open');setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'start'}),25)}}));
 const search=document.getElementById('hub-search');search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();document.querySelectorAll('.searchable').forEach(x=>x.style.display=x.textContent.toLowerCase().includes(q)?'':'none')});document.getElementById('clear-search').addEventListener('click',()=>{search.value='';search.dispatchEvent(new Event('input'));search.focus()});
 
+</script>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="toolkit" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🧰 Construction Toolkit</h2><p>Use these working modules without leaving the lesson.</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="modal-grid">
+<button class="modal-launch" data-open-modal="site-visit">📍 Site Visit Workspace</button>
+<button class="modal-launch" data-open-modal="scope-builder">📋 Scope Builder</button>
+<button class="modal-launch" data-open-modal="estimate-builder">💰 Estimate Builder</button>
+<button class="modal-launch" data-open-modal="change-order">🔄 Change Order</button>
+<button class="modal-launch" data-open-modal="daily-log">🗓 Daily Job Log</button>
+<button class="modal-launch" data-open-modal="punch-list">✅ Punch List</button>
+<button class="modal-launch" data-open-modal="closeout">📁 Closeout</button>
+<button class="modal-launch" data-open-modal="fence-hub">🏡 Fence Project Hub</button>
+</div></div>
+<div class="modal-actions"><button data-print-modal="" type="button">Print / Save This Module</button><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="site-visit" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>📍 Site Visit Workspace</h2><p>Capture enough facts to price and plan the job without relying on memory.</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="modal-form two">
+<label>Project / Address<input type="text"/></label>
+<label>Date / Time<input type="text"/></label>
+<label>Customer / Contact<input type="text"/></label>
+<label>Weather / Occupancy<input type="text"/></label>
+</div>
+<label>Customer's description<textarea></textarea></label>
+<label>Contractor observations<textarea></textarea></label>
+<div class="modal-grid">
+<label class="modal-check"><input type="checkbox"/> Access and parking</label>
+<label class="modal-check"><input type="checkbox"/> Utilities / excavation</label>
+<label class="modal-check"><input type="checkbox"/> People, pets, or public</label>
+<label class="modal-check"><input type="checkbox"/> Adjacent property</label>
+<label class="modal-check"><input type="checkbox"/> Hazards and PPE</label>
+<label class="modal-check"><input type="checkbox"/> Material staging / disposal</label>
+</div>
+<label>Measurements and photo references<textarea></textarea></label>
+<label>Unknowns and next verified action<textarea></textarea></label>
+</div>
+<div class="modal-actions"><button data-print-modal="" type="button">Print / Save This Module</button><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="scope-builder" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>📋 Scope Builder</h2><p>Turn a vague request into a document that can be priced, scheduled, changed, and inspected.</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="modal-form two">
+<label>Project<input type="text"/></label><label>Location<input type="text"/></label>
+<label>Customer<input type="text"/></label><label>Prepared by<input type="text"/></label>
+</div>
+<label>Existing condition<textarea></textarea></label>
+<label>Completed result<textarea></textarea></label>
+<label>Included work<textarea></textarea></label>
+<label>Materials and finish<textarea></textarea></label>
+<label>Protection, cleanup, and disposal<textarea></textarea></label>
+<label>Exclusions<textarea></textarea></label>
+<label>Assumptions, allowances, and hidden conditions<textarea></textarea></label>
+<label>Customer responsibilities<textarea></textarea></label>
+<label>Change-order process<textarea>Added, removed, or changed work must be documented with price and schedule effect before proceeding.</textarea></label>
+</div>
+<div class="modal-actions"><button data-print-modal="" type="button">Print / Save This Module</button><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="estimate-builder" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>💰 Estimate Builder</h2><p>Practice building a price from direct cost, contingency, overhead, and profit.</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="modal-form two calc-estimate">
+<label>Labor<input id="modal-labor" type="number" value="800"/></label>
+<label>Materials<input id="modal-materials" type="number" value="1200"/></label>
+<label>Equipment / travel / disposal<input id="modal-other" type="number" value="300"/></label>
+<label>Subcontractors<input id="modal-subs" type="number" value="0"/></label>
+<label>Contingency %<input id="modal-cont" type="number" value="5"/></label>
+<label>Overhead + profit %<input id="modal-markup" type="number" value="30"/></label>
+</div>
+<div class="modal-results">
+<div><span>Direct cost</span><strong id="modal-direct">$0</strong></div>
+<div><span>Contingency</span><strong id="modal-cont-val">$0</strong></div>
+<div><span>Suggested price</span><strong id="modal-price">$0</strong></div>
+</div>
+<label>Scope summary<textarea></textarea></label>
+<label>Assumptions and exclusions<textarea></textarea></label>
+</div>
+<div class="modal-actions"><button data-print-modal="" type="button">Print / Save This Module</button><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="change-order" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🔄 Change Order Builder</h2><p>Document changed work, price, schedule, and approval before proceeding.</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="modal-form two">
+<label>Project<input type="text"/></label><label>Change order #<input type="text"/></label>
+<label>Date<input type="text"/></label><label>Requested / discovered by<input type="text"/></label>
+</div>
+<label>Original scope reference<textarea></textarea></label>
+<label>Reason for change<textarea></textarea></label>
+<label>Added, removed, or changed work<textarea></textarea></label>
+<div class="modal-form two"><label>Price change<input type="text"/></label><label>Schedule change<input type="text"/></label></div>
+<label>Assumptions and exclusions<textarea></textarea></label>
+<label>Authorization<textarea>Customer approval: ____________________  Date: __________</textarea></label>
+</div>
+<div class="modal-actions"><button data-print-modal="" type="button">Print / Save This Module</button><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="daily-log" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🗓 Construction Daily Job Log</h2><p>Create the daily project memory: safety, labor, materials, decisions, delays, and tomorrow's plan.</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="modal-form two">
+<label>Project<input type="text"/></label><label>Date<input type="text"/></label>
+<label>Weather<input type="text"/></label><label>Crew / hours<input type="text"/></label>
+</div>
+<label>Safety and site-protection review<textarea></textarea></label>
+<label>Work completed<textarea></textarea></label>
+<label>Materials received / used<textarea></textarea></label>
+<label>Inspections, visitors, and customer decisions<textarea></textarea></label>
+<label>Delays, hidden conditions, damage, or questions<textarea></textarea></label>
+<label>Photos and tomorrow's plan<textarea></textarea></label>
+</div>
+<div class="modal-actions"><button data-print-modal="" type="button">Print / Save This Module</button><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="punch-list" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>✅ Punch List</h2><p>Control remaining corrections instead of letting them become scattered conversations.</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="modal-grid">
+<label class="modal-check"><input type="checkbox"/> Scope completed</label>
+<label class="modal-check"><input type="checkbox"/> Finish quality reviewed</label>
+<label class="modal-check"><input type="checkbox"/> Operation tested</label>
+<label class="modal-check"><input type="checkbox"/> Site cleaned</label>
+<label class="modal-check"><input type="checkbox"/> Damage checked</label>
+<label class="modal-check"><input type="checkbox"/> Photos completed</label>
+</div>
+<label>Punch items — location, issue, responsible person, target date<textarea style="min-height:220px"></textarea></label>
+<label>Completion verification<textarea></textarea></label>
+</div>
+<div class="modal-actions"><button data-print-modal="" type="button">Print / Save This Module</button><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="closeout" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>📁 Construction Closeout</h2><p>Finish the records, customer handoff, final payment, warranty, and internal review.</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="modal-grid">
+<label class="modal-check"><input type="checkbox"/> Final scope reviewed</label>
+<label class="modal-check"><input type="checkbox"/> Approved changes included</label>
+<label class="modal-check"><input type="checkbox"/> Punch list complete</label>
+<label class="modal-check"><input type="checkbox"/> Inspections / approvals saved</label>
+<label class="modal-check"><input type="checkbox"/> Final photos saved</label>
+<label class="modal-check"><input type="checkbox"/> Manuals / warranties delivered</label>
+<label class="modal-check"><input type="checkbox"/> Final invoice sent</label>
+<label class="modal-check"><input type="checkbox"/> Payment received / tracked</label>
+<label class="modal-check"><input type="checkbox"/> Review / referral requested</label>
+</div>
+<label>Warranty and maintenance notes<textarea></textarea></label>
+<label>Internal lessons learned<textarea></textarea></label>
+</div>
+<div class="modal-actions"><button data-print-modal="" type="button">Print / Save This Module</button><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="fence-hub" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🏡 Fence Project Hub</h2><p>Move a fence repair or replacement from discovery through closeout.</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="modal-grid">
+<button class="modal-launch" data-open-modal="site-visit">1. Site Walk</button>
+<button class="modal-launch" data-open-modal="scope-builder">2. Build Scope</button>
+<button class="modal-launch" data-open-modal="estimate-builder">3. Build Estimate</button>
+<button class="modal-launch" data-open-modal="change-order">4. Change Process</button>
+<button class="modal-launch" data-open-modal="punch-list">5. Punch List</button>
+<button class="modal-launch" data-open-modal="closeout">6. Closeout</button>
+</div>
+<div class="modal-cards">
+<article><h4>Inspect</h4><p>Ownership, boundary, utilities, grade, drainage, access, posts, concrete, rails, boards, gates, fasteners, and rot.</p></article>
+<article><h4>Choose the project</h4><p>Temporary repair, functional repair, partial replacement, or full replacement.</p></article>
+<article><h4>Measure</h4><p>Total length, height, corners, gates, grade changes, post spacing, access, and disposal.</p></article>
+<article><h4>Price</h4><p>Labor, material, delivery, excavation, equipment, disposal, overhead, contingency, and profit.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button data-print-modal="" type="button">Print / Save This Module</button><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-scope-of-work" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Scope of Work</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A written description of the work included, excluded, assumed, and expected at completion.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-estimate" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Estimate</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A project price built from labor, materials, equipment, subcontractors, overhead, risk, and profit.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-change-order" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Change Order</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A written modification to scope, price, or schedule.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-punch-list" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Punch List</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A controlled list of incomplete or corrective items before closeout.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-closeout" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Closeout</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> The final process of inspection, documentation, billing, handoff, and warranty setup.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-permit" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Permit</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> Government authorization required before certain work begins.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-ppe" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 PPE</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> Personal protective equipment selected for a specific hazard.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-lead-qualification" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Lead Qualification</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> Deciding whether an opportunity fits the business, license, capacity, and risk tolerance.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-dependency" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Dependency</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A task, selection, approval, or condition that must occur before another step.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-procurement" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Procurement</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> Ordering and securing materials, equipment, and outside services.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-plan-view" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Plan View</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A horizontal drawing viewed from above.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-elevation" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Elevation</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A vertical view of a building face or assembly.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-section" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Section</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A cut-through view showing hidden layers and relationships.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-specification" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Specification</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> Written technical requirements for products, installation, testing, and quality.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-rfi" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 RFI</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A request for information used to document and resolve a project question.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-inclusion" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Inclusion</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> Work expressly included in the agreed price.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-exclusion" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Exclusion</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> Work expressly not included.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-allowance" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Allowance</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A budget placeholder for an item or quantity not finally selected or verified.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-hidden-condition" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Hidden Condition</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A condition not reasonably visible before opening or demolition.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-linear-foot" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Linear Foot</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A one-dimensional foot of length.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-square-foot" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Square Foot</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> An area measuring one foot by one foot.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-cubic-yard" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Cubic Yard</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> A volume equal to 27 cubic feet.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-tolerance" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Tolerance</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> The permitted variation from a target measurement or condition.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div>
+<div aria-hidden="true" aria-modal="true" class="modal-backdrop" data-modal="term-waste-factor" role="dialog">
+<div class="modal-window">
+<div class="modal-head"><div><h2>🌎 Waste Factor</h2><p>Construction Live Atlas term</p></div><button aria-label="Close" class="modal-close" type="button">×</button></div>
+<div class="modal-body">
+<div class="story"><p><strong>Plain-English definition:</strong> Additional material added for cuts, damage, layout, and uncertainty.</p></div>
+<div class="modal-cards">
+<article><h4>Why it matters</h4><p>This concept changes what must be observed, documented, priced, or verified on a real job.</p></article>
+<article><h4>Field question</h4><p>Where does this appear in the current project, and what decision depends on it?</p></article>
+<article><h4>Common mistake</h4><p>Using the word without defining the exact project-specific meaning.</p></article>
+<article><h4>Next action</h4><p>Write one example from a real or imagined construction project.</p></article>
+</div>
+</div>
+<div class="modal-actions"><button class="modal-close-text" type="button">Close</button></div>
+</div>
+</div><script>
+(function(){
+  const stack=[];
+  function openModal(id){
+    const modal=document.querySelector(`[data-modal="${id}"]`);
+    if(!modal)return;
+    document.querySelectorAll('.modal-backdrop.open').forEach(m=>{m.classList.remove('open');m.setAttribute('aria-hidden','true')});
+    modal.classList.add('open');modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    stack.push(id);
+    const first=modal.querySelector('input,textarea,button');
+    setTimeout(()=>first&&first.focus(),30);
+    if(id==='estimate-builder') calcEmbeddedEstimate();
+  }
+  function closeModal(modal){
+    if(!modal)return;
+    modal.classList.remove('open');modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+  document.addEventListener('click',e=>{
+    const trigger=e.target.closest('[data-open-modal]');
+    if(trigger){e.preventDefault();openModal(trigger.dataset.openModal);return;}
+    const link=e.target.closest('a[data-modal-link]');
+    if(link){e.preventDefault();openModal(link.dataset.modalLink);return;}
+    if(e.target.classList.contains('modal-backdrop'))closeModal(e.target);
+    if(e.target.closest('.modal-close,.modal-close-text'))closeModal(e.target.closest('.modal-backdrop'));
+    if(e.target.closest('[data-print-modal]'))window.print();
+  });
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal(document.querySelector('.modal-backdrop.open'))});
+  function money(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n||0)}
+  function calcEmbeddedEstimate(){
+    const ids=['modal-labor','modal-materials','modal-other','modal-subs','modal-cont','modal-markup'];
+    if(!ids.every(id=>document.getElementById(id)))return;
+    const labor=+document.getElementById('modal-labor').value||0,materials=+document.getElementById('modal-materials').value||0,other=+document.getElementById('modal-other').value||0,subs=+document.getElementById('modal-subs').value||0,contP=+document.getElementById('modal-cont').value||0,mark=+document.getElementById('modal-markup').value||0;
+    const direct=labor+materials+other+subs,cont=direct*contP/100,price=(direct+cont)*(1+mark/100);
+    document.getElementById('modal-direct').textContent=money(direct);
+    document.getElementById('modal-cont-val').textContent=money(cont);
+    document.getElementById('modal-price').textContent=money(price);
+  }
+  document.addEventListener('input',e=>{if(e.target.closest('.calc-estimate'))calcEmbeddedEstimate()});
+  window.openConstructionModal=openModal;
+})();
 </script></body></html>
