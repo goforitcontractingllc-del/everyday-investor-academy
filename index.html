@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>The Everyday Investor Academy</title>
-<meta name="description" content="A connected learning system for housing, money, credit, land, construction, business, investing, property management, and practical rights.">
+<meta content="A connected learning system for housing, money, credit, land, construction, business, investing, property management, and practical rights." name="description"/>
 <style>
 :root{
   --navy:#102f55;--navy2:#174b7a;--cream:#f7f1e7;--paper:#fffdf8;
@@ -36,191 +37,277 @@ section{padding:54px 0}.section-title{font-size:clamp(2.5rem,6vw,4.9rem);margin:
 footer{padding:30px 0 44px;color:var(--muted);border-top:1px solid var(--taupe)}
 @media(max-width:900px){.goal-grid{grid-template-columns:repeat(2,1fr)}.tools-grid{grid-template-columns:repeat(2,1fr)}.stairs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.navlinks{display:none}.goal-grid,.district-grid,.tools-grid,.modal-grid{grid-template-columns:1fr}.atlas-search{flex-direction:column}}
+
+.tool-form{display:grid;gap:12px}
+.tool-form.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tool-form label{display:block;color:var(--navy);font-weight:900}
+.tool-form input,.tool-form textarea,.tool-form select{display:block;width:100%;margin-top:5px;padding:11px;border:1px solid var(--line);border-radius:10px;font:inherit;background:white;color:var(--ink)}
+.tool-form textarea{min-height:100px;resize:vertical}
+.tool-results{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.tool-result{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:13px}
+.tool-result span{display:block;color:var(--muted);font-size:.9rem}.tool-result strong{display:block;color:var(--navy);font-size:1.25rem;margin-top:3px}
+.tool-checks{display:grid;gap:8px}.tool-check{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:11px;padding:10px;background:white}
+.tool-check input{margin-top:4px}
+.tool-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}.tool-tabs button{border:1px solid var(--line);background:white;color:var(--navy);border-radius:999px;padding:8px 11px;font-weight:900;cursor:pointer}
+.tool-tabs button.active{background:var(--navy);color:white}
+.tool-panel{display:none}.tool-panel.active{display:block}
+.tool-note{padding:12px 14px;background:#fbf6eb;border-left:4px solid var(--gold);border-radius:8px;margin:12px 0;color:var(--muted)}
+@media(max-width:700px){.tool-form.two,.tool-results{grid-template-columns:1fr}}
 </style>
 </head>
 <body id="top">
 <header>
-  <div class="wrap nav">
-    <a href="index.html">✦ The Everyday Investor Academy</a>
-    <div class="navlinks">
-      <a href="knowledge-map.html">Choose Your Path</a>
-      <a href="#districts">Districts</a>
-      <a href="#tools">Tools</a>
-      <a href="living-atlas.html">Living Atlas</a>
-    </div>
-  </div>
+<div class="wrap nav">
+<a href="index.html">✦ The Everyday Investor Academy</a>
+<div class="navlinks">
+<a href="knowledge-map.html">Choose Your Path</a>
+<a href="#districts">Districts</a>
+<a href="#tools">Tools</a>
+<a href="living-atlas.html">Living Atlas</a>
+</div>
+</div>
 </header>
-
 <section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">A spiraling web of practical knowledge</div>
-    <h1>Pick a door.<br>Follow the connection.<br>Learn what you need next.</h1>
-    <p class="lead">No forced order. No dead ends. Start with the question in front of you, then move across housing, money, credit, land, construction, business, investing, property management, and your rights.</p>
-    <div class="actions">
-      <a href="knowledge-map.html">Choose your path</a>
-      <a href="#districts">Choose a district</a>
-      <a href="living-atlas.html">Open the Living Atlas</a>
-    </div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">A spiraling web of practical knowledge</div>
+<h1>Pick a door.<br/>Follow the connection.<br/>Learn what you need next.</h1>
+<p class="lead">No forced order. No dead ends. Start with the question in front of you, then move across housing, money, credit, land, construction, business, investing, property management, and your rights.</p>
+<div class="actions">
+<a href="knowledge-map.html">Choose your path</a>
+<a href="#districts">Choose a district</a>
+<a href="living-atlas.html">Open the Living Atlas</a>
+</div>
+</div>
 </section>
-
 <section class="chapter">
-  <div class="wrap">
-    <div class="eyebrow">Choose your path</div>
-    <h2 class="section-title">What are you trying to do today?</h2>
-    <p class="section-lead">These are starting points, not rigid courses. Every path can branch into another district.</p>
-    <div class="goal-grid">
-      <article class="card"><h3>🏠 Understand housing</h3><p>Renting, buying, ADUs, cottage clusters, affordability, and housing forms.</p><a href="knowledge-map.html#entrances">Start here →</a></article>
-      <article class="card"><h3>💵 Get control of money</h3><p>Budgeting, debt, cash flow, emergencies, taxes, and planning.</p><a href="money.html">Start here →</a></article>
-      <article class="card"><h3>💼 Build a business</h3><p>Licensing, systems, customers, pricing, estimates, contracts, and growth.</p><a href="business.html">Start here →</a></article>
-      <article class="card"><h3>🌲 Buy, build, or develop</h3><p>Land, access, utilities, construction, financing, operations, and risk.</p><a href="land.html">Start here →</a></article>
-    </div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">Choose your path</div>
+<h2 class="section-title">What are you trying to do today?</h2>
+<p class="section-lead">These are starting points, not rigid courses. Every path can branch into another district.</p>
+<div class="goal-grid">
+<article class="card"><h3>🏠 Understand housing</h3><p>Renting, buying, ADUs, cottage clusters, affordability, and housing forms.</p><a href="knowledge-map.html#entrances">Start here →</a></article>
+<article class="card"><h3>💵 Get control of money</h3><p>Budgeting, debt, cash flow, emergencies, taxes, and planning.</p><a href="money.html">Start here →</a></article>
+<article class="card"><h3>💼 Build a business</h3><p>Licensing, systems, customers, pricing, estimates, contracts, and growth.</p><a href="business.html">Start here →</a></article>
+<article class="card"><h3>🌲 Buy, build, or develop</h3><p>Land, access, utilities, construction, financing, operations, and risk.</p><a href="land.html">Start here →</a></article>
+</div>
+</div>
 </section>
-
 <section class="chapter" id="districts">
-  <div class="wrap">
-    <div class="eyebrow">The Great Hall</div>
-    <h2 class="section-title">All ten district doors</h2>
-    <p class="section-lead">Choose the knowledge area that best matches the question you have now. The doors remain connected.</p>
-    <div class="district-grid">
-      <article class="card"><h3>🧭 Foundations</h3><p>Learn how the game works before you play.</p><div class="tags"><span class="tag">Vocabulary</span><span class="tag">Risk</span><span class="tag">Roadmaps</span></div><a href="foundation.html">Open Foundation →</a></article>
-      <article class="card"><h3>🏠 Housing</h3><p>Everything about places people live.</p><div class="tags"><span class="tag">Renting</span><span class="tag">Buying</span><span class="tag">ADUs</span><span class="tag">Cottage clusters</span></div><a href="housing.html">Open Housing →</a></article>
-      <article class="card"><h3>💵 Money</h3><p>How money moves through everyday life and real estate.</p><div class="tags"><span class="tag">Budgeting</span><span class="tag">Cash flow</span><span class="tag">Taxes</span><span class="tag">Insurance</span></div><a href="money.html">Open Money →</a></article>
-      <article class="card"><h3>📈 Credit</h3><p>Build, repair, protect, and use credit with intention.</p><div class="tags"><span class="tag">Scores</span><span class="tag">Reports</span><span class="tag">Debt</span><span class="tag">Disputes</span></div><a href="credit.html">Open Credit →</a></article>
-      <article class="card"><h3>🌲 Land</h3><p>Understand what land can legally, physically, and financially support.</p><div class="tags"><span class="tag">Zoning</span><span class="tag">Access</span><span class="tag">Wells</span><span class="tag">Septic</span></div><a href="land.html">Open Land →</a></article>
-      <article class="card"><h3>🔨 Construction</h3><p>Follow a project from feasibility through closeout.</p><div class="tags"><span class="tag">Permits</span><span class="tag">Estimating</span><span class="tag">Tools</span><span class="tag">Safety</span></div><a href="construction.html">Open Construction →</a></article>
-      <article class="card"><h3>🏢 Property Management</h3><p>Learn how rental properties are actually operated.</p><div class="tags"><span class="tag">Leasing</span><span class="tag">Maintenance</span><span class="tag">Vendors</span><span class="tag">Compliance</span></div><a href="property-management.html">Open Property Management →</a></article>
-      <article class="card"><h3>💼 Business</h3><p>Build, operate, price, market, and grow a durable business.</p><div class="tags"><span class="tag">Licensing</span><span class="tag">Insurance</span><span class="tag">Contracts</span><span class="tag">Growth</span></div><a href="business.html">Open Business →</a></article>
-      <article class="card"><h3>📊 Investing</h3><p>Learn how property becomes an investment.</p><div class="tags"><span class="tag">Buy and hold</span><span class="tag">BRRRR</span><span class="tag">Analysis</span><span class="tag">Risk</span></div><a href="investing.html">Open Investing →</a></article>
-      <article class="card"><h3>⚖️ Know Your Rights</h3><p>Learn the rule, responsibility, evidence, and process behind a problem.</p><div class="tags"><span class="tag">Tenant rights</span><span class="tag">Fair housing</span><span class="tag">Contracts</span><span class="tag">Disputes</span></div><a href="know-your-rights.html">Open Know Your Rights →</a></article>
-    </div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">The Great Hall</div>
+<h2 class="section-title">All ten district doors</h2>
+<p class="section-lead">Choose the knowledge area that best matches the question you have now. The doors remain connected.</p>
+<div class="district-grid">
+<article class="card"><h3>🧭 Foundations</h3><p>Learn how the game works before you play.</p><div class="tags"><span class="tag">Vocabulary</span><span class="tag">Risk</span><span class="tag">Roadmaps</span></div><a href="foundation.html">Open Foundation →</a></article>
+<article class="card"><h3>🏠 Housing</h3><p>Everything about places people live.</p><div class="tags"><span class="tag">Renting</span><span class="tag">Buying</span><span class="tag">ADUs</span><span class="tag">Cottage clusters</span></div><a href="housing.html">Open Housing →</a></article>
+<article class="card"><h3>💵 Money</h3><p>How money moves through everyday life and real estate.</p><div class="tags"><span class="tag">Budgeting</span><span class="tag">Cash flow</span><span class="tag">Taxes</span><span class="tag">Insurance</span></div><a href="money.html">Open Money →</a></article>
+<article class="card"><h3>📈 Credit</h3><p>Build, repair, protect, and use credit with intention.</p><div class="tags"><span class="tag">Scores</span><span class="tag">Reports</span><span class="tag">Debt</span><span class="tag">Disputes</span></div><a href="credit.html">Open Credit →</a></article>
+<article class="card"><h3>🌲 Land</h3><p>Understand what land can legally, physically, and financially support.</p><div class="tags"><span class="tag">Zoning</span><span class="tag">Access</span><span class="tag">Wells</span><span class="tag">Septic</span></div><a href="land.html">Open Land →</a></article>
+<article class="card"><h3>🔨 Construction</h3><p>Follow a project from feasibility through closeout.</p><div class="tags"><span class="tag">Permits</span><span class="tag">Estimating</span><span class="tag">Tools</span><span class="tag">Safety</span></div><a href="construction.html">Open Construction →</a></article>
+<article class="card"><h3>🏢 Property Management</h3><p>Learn how rental properties are actually operated.</p><div class="tags"><span class="tag">Leasing</span><span class="tag">Maintenance</span><span class="tag">Vendors</span><span class="tag">Compliance</span></div><a href="property-management.html">Open Property Management →</a></article>
+<article class="card"><h3>💼 Business</h3><p>Build, operate, price, market, and grow a durable business.</p><div class="tags"><span class="tag">Licensing</span><span class="tag">Insurance</span><span class="tag">Contracts</span><span class="tag">Growth</span></div><a href="business.html">Open Business →</a></article>
+<article class="card"><h3>📊 Investing</h3><p>Learn how property becomes an investment.</p><div class="tags"><span class="tag">Buy and hold</span><span class="tag">BRRRR</span><span class="tag">Analysis</span><span class="tag">Risk</span></div><a href="investing.html">Open Investing →</a></article>
+<article class="card"><h3>⚖️ Know Your Rights</h3><p>Learn the rule, responsibility, evidence, and process behind a problem.</p><div class="tags"><span class="tag">Tenant rights</span><span class="tag">Fair housing</span><span class="tag">Contracts</span><span class="tag">Disputes</span></div><a href="know-your-rights.html">Open Know Your Rights →</a></article>
+</div>
+</div>
 </section>
-
 <section class="chapter">
-  <div class="wrap connection">
-    <div class="eyebrow" style="color:#dce8f3">Revolving staircases</div>
-    <h2 class="section-title">The same question can take you in different directions.</h2>
-    <p class="section-lead">Choose the perspective that matters now. The Atlas is designed to let you loop, branch, and return without losing your place.</p>
-    <div class="stairs">
-      <a href="property-management.html">I manage property</a>
-      <a href="construction.html">I need the building side</a>
-      <a href="investing.html">I need the investment side</a>
-      <a href="know-your-rights.html">I need the rules</a>
-      <a href="living-atlas.html">I need current information</a>
-    </div>
-  </div>
+<div class="wrap connection">
+<div class="eyebrow" style="color:#dce8f3">Revolving staircases</div>
+<h2 class="section-title">The same question can take you in different directions.</h2>
+<p class="section-lead">Choose the perspective that matters now. The Atlas is designed to let you loop, branch, and return without losing your place.</p>
+<div class="stairs">
+<a href="property-management.html">I manage property</a>
+<a href="construction.html">I need the building side</a>
+<a href="investing.html">I need the investment side</a>
+<a href="know-your-rights.html">I need the rules</a>
+<a href="living-atlas.html">I need current information</a>
+</div>
+</div>
 </section>
-
 <section class="chapter tools-section" id="tools">
-  <div class="wrap">
-    <div class="eyebrow">Academy tools</div>
-    <h2 class="section-title">Calculate it. Plan it. Track it. Build it.</h2>
-    <p class="section-lead">This replaces the duplicate lower Know Your Rights section. Use one central doorway for calculators, estimators, builders, journals, checklists, logs, planners, and printable forms across every district.</p>
-    <div class="tools-grid">
-      <article class="card tool-card"><button data-tool="money"><h3>💵 Money Tools</h3><p>Budgets, debt payoff, savings, affordability, cash flow, and emergency planning.</p><em>Open tools →</em></button></article>
-      <article class="card tool-card"><button data-tool="credit"><h3>📈 Credit Tools</h3><p>Dispute tracking, collection logs, score plans, reports, and rebuilding journals.</p><em>Open tools →</em></button></article>
-      <article class="card tool-card"><button data-tool="housing"><h3>🏠 Housing Tools</h3><p>Rent comparisons, buying readiness, affordability, move-in, and housing checklists.</p><em>Open tools →</em></button></article>
-      <article class="card tool-card"><button data-tool="land"><h3>🌲 Land Tools</h3><p>Parcel scorecards, due diligence, utility logs, comparison sheets, and offer calculators.</p><em>Open tools →</em></button></article>
-      <article class="card tool-card"><button data-tool="construction"><h3>🔨 Construction Tools</h3><p>Estimates, scopes, change orders, daily logs, punch lists, and closeout.</p><em>Open tools →</em></button></article>
-      <article class="card tool-card"><button data-tool="business"><h3>💼 Business Tools</h3><p>Startup, pricing, licensing, vendor tracking, customer systems, and operations.</p><em>Open tools →</em></button></article>
-      <article class="card tool-card"><button data-tool="pm"><h3>🏢 Property Management Tools</h3><p>Inspections, turnovers, rent ledgers, maintenance, vendors, and resident operations.</p><em>Open tools →</em></button></article>
-      <article class="card tool-card"><button data-tool="investing"><h3>📊 Investing Tools</h3><p>Deal analysis, cash flow, renovation estimates, risk, offers, and exit comparisons.</p><em>Open tools →</em></button></article>
-      <article class="card tool-card"><button data-tool="learning"><h3>📓 Journals & Learning Tools</h3><p>Decision journals, lesson notes, project workbooks, progress logs, and reflection tools.</p><em>Open tools →</em></button></article>
-    </div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">Academy tools</div>
+<h2 class="section-title">Calculate it. Plan it. Track it. Build it.</h2>
+<p class="section-lead">This replaces the duplicate lower Know Your Rights section. Use one central doorway for calculators, estimators, builders, journals, checklists, logs, planners, and printable forms across every district.</p>
+<div class="tools-grid">
+<article class="card tool-card"><button data-tool="money"><h3>💵 Money Tools</h3><p>Budgets, debt payoff, savings, affordability, cash flow, and emergency planning.</p><em>Open tools →</em></button></article>
+<article class="card tool-card"><button data-tool="credit"><h3>📈 Credit Tools</h3><p>Dispute tracking, collection logs, score plans, reports, and rebuilding journals.</p><em>Open tools →</em></button></article>
+<article class="card tool-card"><button data-tool="housing"><h3>🏠 Housing Tools</h3><p>Rent comparisons, buying readiness, affordability, move-in, and housing checklists.</p><em>Open tools →</em></button></article>
+<article class="card tool-card"><button data-tool="land"><h3>🌲 Land Tools</h3><p>Parcel scorecards, due diligence, utility logs, comparison sheets, and offer calculators.</p><em>Open tools →</em></button></article>
+<article class="card tool-card"><button data-tool="construction"><h3>🔨 Construction Tools</h3><p>Estimates, scopes, change orders, daily logs, punch lists, and closeout.</p><em>Open tools →</em></button></article>
+<article class="card tool-card"><button data-tool="business"><h3>💼 Business Tools</h3><p>Startup, pricing, licensing, vendor tracking, customer systems, and operations.</p><em>Open tools →</em></button></article>
+<article class="card tool-card"><button data-tool="pm"><h3>🏢 Property Management Tools</h3><p>Inspections, turnovers, rent ledgers, maintenance, vendors, and resident operations.</p><em>Open tools →</em></button></article>
+<article class="card tool-card"><button data-tool="investing"><h3>📊 Investing Tools</h3><p>Deal analysis, cash flow, renovation estimates, risk, offers, and exit comparisons.</p><em>Open tools →</em></button></article>
+<article class="card tool-card"><button data-tool="learning"><h3>📓 Journals &amp; Learning Tools</h3><p>Decision journals, lesson notes, project workbooks, progress logs, and reflection tools.</p><em>Open tools →</em></button></article>
+</div>
+</div>
 </section>
-
 <section class="chapter">
-  <div class="wrap atlas">
-    <div class="eyebrow" style="color:#dce8f3">The Living Atlas</div>
-    <h2 class="section-title">Find the answer behind the lesson.</h2>
-    <p class="section-lead">Search terms, Oregon agencies, county offices, maps, permits, current programs, checklists, videos, and the local branch connected to each topic.</p>
-    <div class="atlas-search">
-      <input type="search" placeholder="Search parcel, septic, permits, credit, contractor, housing programs…">
-      <a href="living-atlas.html">Open Living Atlas →</a>
-    </div>
-  </div>
+<div class="wrap atlas">
+<div class="eyebrow" style="color:#dce8f3">The Living Atlas</div>
+<h2 class="section-title">Find the answer behind the lesson.</h2>
+<p class="section-lead">Search terms, Oregon agencies, county offices, maps, permits, current programs, checklists, videos, and the local branch connected to each topic.</p>
+<div class="atlas-search">
+<input placeholder="Search parcel, septic, permits, credit, contractor, housing programs…" type="search"/>
+<a href="living-atlas.html">Open Living Atlas →</a>
+</div>
+</div>
 </section>
-
 <footer><div class="wrap">© 2026 The Everyday Investor Academy. Educational information only.</div></footer>
-
 <div id="modal-root"></div>
-
 <script>
-const tools={
-money:{title:"Money Tools",links:[
-["Budget & Cash-Flow Workspace","money.html","Build a working monthly money plan."],
-["Debt Payoff Planner","money.html","Organize balances, minimums, priorities, and timing."],
-["Emergency-Fund Planner","money.html","Set a realistic stability target."],
-["Affordability Worksheet","housing.html","Connect income, obligations, housing, and reserves."]
-]},
-credit:{title:"Credit Tools",links:[
-["Credit Report Review","credit.html","Review accounts, dates, balances, and errors."],
-["Dispute Tracker","credit.html","Track disputes, documents, dates, and responses."],
-["Collection Log","credit.html","Record collectors, validation, deadlines, and outcomes."],
-["Credit Rebuild Plan","credit.html","Turn report facts into a step-by-step plan."]
-]},
-housing:{title:"Housing Tools",links:[
-["Rent Comparison","housing.html","Compare total monthly and move-in costs."],
-["Buying Readiness","housing.html","Review money, credit, documents, and stability."],
-["Housing Options Worksheet","housing.html","Compare renting, buying, ADUs, and alternatives."],
-["Move-In / Move-Out Checklist","housing.html","Document condition, duties, and records."]
-]},
-land:{title:"Land Tools",links:[
-["Land Goal Builder","l-001.html","Define the exact land goal and requirements."],
-["Zoning Worksheet","l-002.html","Record zone, overlays, use, and standards."],
-["Property Comparison","l-003.html","Compare parcels side by side."],
-["Utility Verification Log","l-004.html","Track water, wastewater, power, access, and fire."],
-["Maximum Offer Calculator","l-005.html","Work backward from conservative project economics."]
-]},
-construction:{title:"Construction Tools",links:[
-["Construction Toolkit","construction-toolkit.html","Central access to construction workspaces."],
-["Estimate Builder","estimate-builder.html","Price labor, materials, overhead, risk, and profit."],
-["Scope Builder","scope-builder.html","Turn a request into clear included work."],
-["Site Visit Workspace","site-visit-workspace.html","Capture conditions, photos, measurements, and unknowns."],
-["Change Order Builder","change-order-builder.html","Document changed work, price, and time."],
-["Daily Job Log","construction-daily-log.html","Track safety, labor, work, materials, and decisions."],
-["Punch List","punch-list.html","Control final corrections."],
-["Closeout Checklist","construction-closeout.html","Finish records, payment, handoff, and warranty."]
-]},
-business:{title:"Business Tools",links:[
-["Startup Checklist","business.html","Move from idea to legal, financial, and operating setup."],
-["Pricing Workspace","business.html","Connect costs, overhead, labor, and profit."],
-["License & Renewal Tracker","business.html","Track requirements, numbers, dates, and renewals."],
-["Vendor Outreach Tracker","business.html","Organize applications, contacts, and follow-ups."]
-]},
-pm:{title:"Property Management Tools",links:[
-["Property Management Command Center","property-management.html","Open the complete district."],
-["Turnover Planner","property-management.html","Sequence repairs, cleaning, inspections, and readiness."],
-["Inspection Checklist","property-management.html","Document condition and follow-up work."],
-["Maintenance Log","property-management.html","Track requests, vendors, cost, access, and completion."]
-]},
-investing:{title:"Investing Tools",links:[
-["Deal Analysis","investing.html","Review income, expenses, financing, and return."],
-["Renovation Estimate","estimate-builder.html","Build a first-pass improvement budget."],
-["Risk Worksheet","investing.html","Identify cost, time, market, legal, and exit risk."],
-["Exit Comparison","investing.html","Compare hold, rent, sell, refinance, and development."]
-]},
-learning:{title:"Journals & Learning Tools",links:[
-["Decision Journal","foundation.html","Record facts, assumptions, tradeoffs, and next actions."],
-["Lesson Notes","foundation.html","Capture what changed in your understanding."],
-["Project Workbook","knowledge-map.html","Connect lessons, tools, local resources, and real tasks."],
-["Progress Log","foundation.html","Track learning, practice, verification, and completion."]
-]}
-};
-function openTool(key){
- const item=tools[key];if(!item)return;
- const root=document.getElementById("modal-root");
- root.innerHTML=`<div class="modal open"><div class="modal-window"><div class="modal-head"><div><h2>${item.title}</h2><p>Open the tool or the district that contains it.</p></div><button class="modal-close">×</button></div><div class="modal-body"><div class="modal-grid">${item.links.map(x=>`<a class="modal-link" href="${x[1]}">${x[0]} →<span>${x[2]}</span></a>`).join("")}</div></div></div></div>`;
- document.body.style.overflow="hidden";
+const toolDefinitions={
+money:{
+ title:"Money Tools",
+ tabs:[
+  ["budget","Budget",`<div class="tool-form two">
+   <label>Monthly income<input id="m-income" type="number" value="3500"></label>
+   <label>Housing<input id="m-housing" type="number" value="1200"></label>
+   <label>Utilities<input id="m-utilities" type="number" value="300"></label>
+   <label>Transportation<input id="m-transport" type="number" value="600"></label>
+   <label>Debt minimums<input id="m-debt" type="number" value="500"></label>
+   <label>Food + household<input id="m-food" type="number" value="700"></label>
+  </div><div class="tool-results"><div class="tool-result"><span>Total listed expenses</span><strong id="m-expenses">$0</strong></div><div class="tool-result"><span>Money left</span><strong id="m-left">$0</strong></div><div class="tool-result"><span>Housing share</span><strong id="m-share">0%</strong></div></div>
+  <label>Next money action<textarea placeholder="What will you change, verify, or track next?"></textarea></label>`],
+  ["debt","Debt Plan",`<div class="tool-form two"><label>Debt name<input></label><label>Balance<input type="number"></label><label>Interest rate<input type="number"></label><label>Minimum payment<input type="number"></label></div><label>Priority and next action<textarea></textarea></label>`],
+  ["journal","Money Journal",`<label>What happened financially today?<textarea></textarea></label><label>What triggered the decision?<textarea></textarea></label><label>What will I do differently next time?<textarea></textarea></label>`]
+ ]
+},
+credit:{
+ title:"Credit Tools",
+ tabs:[
+  ["review","Report Review",`<div class="tool-form two"><label>Creditor / collector<input></label><label>Account type<input></label><label>Balance<input type="number"></label><label>Status<input></label><label>Date opened<input></label><label>Last reported<input></label></div><label>Possible issue or question<textarea></textarea></label>`],
+  ["dispute","Dispute Tracker",`<div class="tool-form two"><label>Bureau<input></label><label>Date sent<input></label><label>Account disputed<input></label><label>Method<input></label></div><label>Reason and evidence<textarea></textarea></label><label>Response / next deadline<textarea></textarea></label>`],
+  ["plan","Rebuild Plan",`<div class="tool-checks">${["Pull all three reports","List every open collection","Identify urgent court or judgment deadlines","Bring current accounts on time","Lower utilization where possible","Avoid unnecessary new applications","Review progress monthly"].map(x=>`<label class="tool-check"><input type="checkbox">${x}</label>`).join("")}</div>`]
+ ]
+},
+housing:{
+ title:"Housing Tools",
+ tabs:[
+  ["rent","Rent Comparison",`<div class="tool-form two"><label>Option A monthly rent<input id="h-a-rent" type="number" value="1400"></label><label>Option B monthly rent<input id="h-b-rent" type="number" value="1550"></label><label>Option A utilities / fees<input id="h-a-fee" type="number" value="250"></label><label>Option B utilities / fees<input id="h-b-fee" type="number" value="150"></label></div><div class="tool-results"><div class="tool-result"><span>Option A total</span><strong id="h-a-total">$0</strong></div><div class="tool-result"><span>Option B total</span><strong id="h-b-total">$0</strong></div><div class="tool-result"><span>Difference</span><strong id="h-diff">$0</strong></div></div>`],
+  ["buy","Buying Readiness",`<div class="tool-checks">${["Stable income documented","Credit reports reviewed","Down payment / closing plan","Emergency reserve plan","Monthly affordability tested","Loan options compared","Property taxes and insurance included","Repair budget considered"].map(x=>`<label class="tool-check"><input type="checkbox">${x}</label>`).join("")}</div>`],
+  ["move","Move Checklist",`<div class="tool-checks">${["Photograph condition","Save lease / agreement","Record meter readings","Confirm keys and access","Update address","Track deposits and receipts","Document move-out condition"].map(x=>`<label class="tool-check"><input type="checkbox">${x}</label>`).join("")}</div>`]
+ ]
+},
+land:{
+ title:"Land Tools",
+ tabs:[
+  ["parcel","Parcel Scorecard",`<div class="tool-form two"><label>Zoning fit (0–10)<input id="l-zone" type="number" min="0" max="10" value="7"></label><label>Access fit (0–10)<input id="l-access" type="number" min="0" max="10" value="6"></label><label>Utilities fit (0–10)<input id="l-utils" type="number" min="0" max="10" value="5"></label><label>Physical site fit (0–10)<input id="l-site" type="number" min="0" max="10" value="7"></label><label>Price fit (0–10)<input id="l-price" type="number" min="0" max="10" value="6"></label><label>Exit fit (0–10)<input id="l-exit" type="number" min="0" max="10" value="7"></label></div><div class="tool-results"><div class="tool-result"><span>Total score</span><strong id="l-score">0 / 60</strong></div><div class="tool-result"><span>Average</span><strong id="l-average">0</strong></div><div class="tool-result"><span>Signal</span><strong id="l-signal">Research</strong></div></div>`],
+  ["dd","Due Diligence Log",`<label>Verified facts<textarea></textarea></label><label>Unknowns<textarea></textarea></label><label>Assumptions<textarea></textarea></label><label>Next agency / professional to contact<textarea></textarea></label>`],
+  ["utility","Utility Log",`<div class="tool-form two"><label>Water source<input></label><label>Wastewater<input></label><label>Power provider<input></label><label>Legal access<input></label><label>Fire access<input></label><label>Internet / service<input></label></div><label>Estimated cost and timing<textarea></textarea></label>`]
+ ]
+},
+construction:{
+ title:"Construction Tools",
+ tabs:[
+  ["estimate","Estimate Builder",`<div class="tool-form two"><label>Labor<input id="c-labor" type="number" value="800"></label><label>Materials<input id="c-materials" type="number" value="1200"></label><label>Equipment / travel / disposal<input id="c-other" type="number" value="300"></label><label>Overhead + profit %<input id="c-markup" type="number" value="30"></label></div><div class="tool-results"><div class="tool-result"><span>Direct cost</span><strong id="c-direct">$0</strong></div><div class="tool-result"><span>Added amount</span><strong id="c-added">$0</strong></div><div class="tool-result"><span>Suggested price</span><strong id="c-price">$0</strong></div></div>`],
+  ["scope","Scope Builder",`<label>Existing condition<textarea></textarea></label><label>Included work<textarea></textarea></label><label>Materials / finish<textarea></textarea></label><label>Exclusions / hidden conditions<textarea></textarea></label><label>Cleanup / closeout<textarea></textarea></label>`],
+  ["daily","Daily Job Log",`<div class="tool-form two"><label>Project<input></label><label>Date<input></label><label>Crew / hours<input></label><label>Weather<input></label></div><label>Work completed<textarea></textarea></label><label>Materials / delays / decisions<textarea></textarea></label><label>Tomorrow's plan<textarea></textarea></label>`],
+  ["punch","Punch List",`<label>Remaining items<textarea style="min-height:220px"></textarea></label><label>Responsible person and target date<textarea></textarea></label>`]
+ ]
+},
+business:{
+ title:"Business Tools",
+ tabs:[
+  ["startup","Startup Checklist",`<div class="tool-checks">${["Choose business structure","Register business name","Obtain EIN","Open business banking","Check city and industry licenses","Arrange insurance","Create pricing system","Create contracts / forms","Set bookkeeping process","Build lead and follow-up tracker"].map(x=>`<label class="tool-check"><input type="checkbox">${x}</label>`).join("")}</div>`],
+  ["price","Pricing Calculator",`<div class="tool-form two"><label>Hourly labor target<input id="b-labor" type="number" value="50"></label><label>Estimated hours<input id="b-hours" type="number" value="8"></label><label>Materials / direct cost<input id="b-materials" type="number" value="300"></label><label>Overhead + profit %<input id="b-markup" type="number" value="25"></label></div><div class="tool-results"><div class="tool-result"><span>Labor</span><strong id="b-labor-total">$0</strong></div><div class="tool-result"><span>Base cost</span><strong id="b-base">$0</strong></div><div class="tool-result"><span>Price</span><strong id="b-price">$0</strong></div></div>`],
+  ["license","License Tracker",`<div class="tool-form two"><label>License / registration<input></label><label>Agency<input></label><label>Number<input></label><label>Expiration<input></label></div><label>Renewal requirement and next action<textarea></textarea></label>`]
+ ]
+},
+pm:{
+ title:"Property Management Tools",
+ tabs:[
+  ["inspection","Inspection Form",`<div class="tool-form two"><label>Property<input></label><label>Date<input></label><label>Unit / area<input></label><label>Occupancy<input></label></div><label>Condition observations<textarea></textarea></label><label>Photos / evidence<textarea></textarea></label><label>Required follow-up<textarea></textarea></label>`],
+  ["turnover","Turnover Planner",`<div class="tool-checks">${["Move-out condition documented","Scope created","Repairs scheduled","Cleaning scheduled","Safety devices tested","Utilities confirmed","Marketing photos taken","Final inspection completed","Keys / access ready"].map(x=>`<label class="tool-check"><input type="checkbox">${x}</label>`).join("")}</div>`],
+  ["maintenance","Maintenance Log",`<div class="tool-form two"><label>Request date<input></label><label>Property / unit<input></label><label>Issue<input></label><label>Vendor<input></label><label>Scheduled date<input></label><label>Cost<input type="number"></label></div><label>Access, completion, and resident communication<textarea></textarea></label>`]
+ ]
+},
+investing:{
+ title:"Investing Tools",
+ tabs:[
+  ["deal","Deal Analyzer",`<div class="tool-form two"><label>Monthly rent<input id="i-rent" type="number" value="2200"></label><label>Monthly operating expenses<input id="i-exp" type="number" value="850"></label><label>Monthly debt service<input id="i-debt" type="number" value="950"></label><label>Cash invested<input id="i-cash" type="number" value="50000"></label></div><div class="tool-results"><div class="tool-result"><span>NOI before debt</span><strong id="i-noi">$0</strong></div><div class="tool-result"><span>Monthly cash flow</span><strong id="i-cf">$0</strong></div><div class="tool-result"><span>Cash-on-cash</span><strong id="i-coc">0%</strong></div></div>`],
+  ["risk","Risk Worksheet",`<label>Market risk<textarea></textarea></label><label>Property / repair risk<textarea></textarea></label><label>Financing risk<textarea></textarea></label><label>Legal / title / zoning risk<textarea></textarea></label><label>Exit risk<textarea></textarea></label>`],
+  ["exit","Exit Comparison",`<div class="tool-form two"><label>Hold<textarea></textarea></label><label>Rent<textarea></textarea></label><label>Sell<textarea></textarea></label><label>Refinance / develop<textarea></textarea></label></div>`]
+ ]
+},
+learning:{
+ title:"Journals & Learning Tools",
+ tabs:[
+  ["decision","Decision Journal",`<label>Decision<textarea></textarea></label><label>Verified facts<textarea></textarea></label><label>Assumptions<textarea></textarea></label><label>Tradeoffs<textarea></textarea></label><label>Next action<textarea></textarea></label>`],
+  ["notes","Lesson Notes",`<label>Main idea<textarea></textarea></label><label>What surprised me<textarea></textarea></label><label>How this connects to my life / project<textarea></textarea></label><label>Question to research next<textarea></textarea></label>`],
+  ["progress","Progress Log",`<div class="tool-form two"><label>Lesson / tool<input></label><label>Date<input></label><label>Status<select><option>Started</option><option>Practiced</option><option>Verified</option><option>Completed</option></select></label><label>Next checkpoint<input></label></div><label>Notes<textarea></textarea></label>`]
+ ]
 }
+};
+
+function currency(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n||0)}
+
+function openTool(key){
+ const item=toolDefinitions[key]; if(!item)return;
+ const root=document.getElementById("modal-root");
+ root.innerHTML=`<div class="modal open"><div class="modal-window"><div class="modal-head"><div><h2>${item.title}</h2><p>Use the tool here without leaving the homepage.</p></div><button class="modal-close">×</button></div><div class="modal-body">
+ <div class="tool-tabs">${item.tabs.map((t,i)=>`<button class="${i===0?'active':''}" data-tab="${t[0]}">${t[1]}</button>`).join("")}</div>
+ ${item.tabs.map((t,i)=>`<div class="tool-panel ${i===0?'active':''}" data-panel="${t[0]}">${t[2]}</div>`).join("")}
+ <div class="tool-note">These tools are educational planning aids. Verify legal, tax, lending, licensing, code, and professional requirements for the real situation.</div>
+ </div></div></div>`;
+ document.body.style.overflow="hidden";
+ root.querySelectorAll("[data-tab]").forEach(btn=>btn.addEventListener("click",()=>{
+   root.querySelectorAll("[data-tab]").forEach(x=>x.classList.remove("active"));
+   root.querySelectorAll("[data-panel]").forEach(x=>x.classList.remove("active"));
+   btn.classList.add("active");
+   root.querySelector(`[data-panel="${btn.dataset.tab}"]`).classList.add("active");
+   runCalcs();
+ }));
+ root.querySelectorAll("input[type=number]").forEach(x=>x.addEventListener("input",runCalcs));
+ runCalcs();
+}
+
+function runCalcs(){
+ if(document.getElementById("m-income")){
+   const inc=+m_income.value||0, exp=(+m_housing.value||0)+(+m_utilities.value||0)+(+m_transport.value||0)+(+m_debt.value||0)+(+m_food.value||0);
+ }
+ const g=id=>document.getElementById(id);
+ if(g("m-income")){
+   const inc=+g("m-income").value||0, housing=+g("m-housing").value||0;
+   const exp=housing+(+g("m-utilities").value||0)+(+g("m-transport").value||0)+(+g("m-debt").value||0)+(+g("m-food").value||0);
+   g("m-expenses").textContent=currency(exp);g("m-left").textContent=currency(inc-exp);g("m-share").textContent=inc?Math.round(housing/inc*100)+"%":"0%";
+ }
+ if(g("h-a-rent")){
+   const a=(+g("h-a-rent").value||0)+(+g("h-a-fee").value||0), b=(+g("h-b-rent").value||0)+(+g("h-b-fee").value||0);
+   g("h-a-total").textContent=currency(a);g("h-b-total").textContent=currency(b);g("h-diff").textContent=currency(Math.abs(a-b));
+ }
+ if(g("l-zone")){
+   const ids=["l-zone","l-access","l-utils","l-site","l-price","l-exit"], total=ids.reduce((s,id)=>s+(+g(id).value||0),0), avg=total/ids.length;
+   g("l-score").textContent=total+" / 60";g("l-average").textContent=avg.toFixed(1);g("l-signal").textContent=avg>=8?"Strong":avg>=6?"Research":"Caution";
+ }
+ if(g("c-labor")){
+   const direct=(+g("c-labor").value||0)+(+g("c-materials").value||0)+(+g("c-other").value||0), added=direct*(+g("c-markup").value||0)/100;
+   g("c-direct").textContent=currency(direct);g("c-added").textContent=currency(added);g("c-price").textContent=currency(direct+added);
+ }
+ if(g("b-labor")){
+   const labor=(+g("b-labor").value||0)*(+g("b-hours").value||0), base=labor+(+g("b-materials").value||0), price=base*(1+(+g("b-markup").value||0)/100);
+   g("b-labor-total").textContent=currency(labor);g("b-base").textContent=currency(base);g("b-price").textContent=currency(price);
+ }
+ if(g("i-rent")){
+   const noi=(+g("i-rent").value||0)-(+g("i-exp").value||0), cf=noi-(+g("i-debt").value||0), cash=+g("i-cash").value||0;
+   g("i-noi").textContent=currency(noi);g("i-cf").textContent=currency(cf);g("i-coc").textContent=cash?((cf*12/cash)*100).toFixed(1)+"%":"0%";
+ }
+}
+
 document.querySelectorAll("[data-tool]").forEach(btn=>btn.addEventListener("click",()=>openTool(btn.dataset.tool)));
 document.addEventListener("click",e=>{
- if(e.target.classList.contains("modal")||e.target.closest(".modal-close")){document.getElementById("modal-root").innerHTML="";document.body.style.overflow="";}
+ if(e.target.classList.contains("modal")||e.target.closest(".modal-close")){
+   document.getElementById("modal-root").innerHTML="";
+   document.body.style.overflow="";
+ }
 });
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){document.getElementById("modal-root").innerHTML="";document.body.style.overflow="";}});
+document.addEventListener("keydown",e=>{
+ if(e.key==="Escape"){
+   document.getElementById("modal-root").innerHTML="";
+   document.body.style.overflow="";
+ }
+});
 </script>
 </body>
 </html>
