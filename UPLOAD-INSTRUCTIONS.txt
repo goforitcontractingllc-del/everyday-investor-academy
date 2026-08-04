@@ -1,28 +1,42 @@
-COTTAGE CLUSTER FLAGSHIP PROJECT HUB
+CONSTRUCTION COMMAND CENTERS — BATCH 1
 
-Upload both files:
-1. cottage-cluster-project.html
-2. Cottage_Clusters_Clickable_Guide_Updated.html
+Upload and replace:
+c-001.html
+c-002.html
+c-003.html
+c-004.html
+c-005.html
 
-The second file safely replaces the old article file and redirects visitors to the new flagship project hub.
+Upload these new working pages:
+construction-toolkit.html
+estimate-builder.html
+scope-builder.html
+site-visit-workspace.html
+change-order-builder.html
+construction-daily-log.html
+punch-list.html
+construction-closeout.html
+fence-project.html
 
-After upload, open:
-https://goforitcontractingllc-del.github.io/everyday-investor-academy/cottage-cluster-project.html
+WHAT CHANGED
+- C-001 through C-005 are full interactive command centers.
+- Explanations live inside every page.
+- Oregon resources and learning links deepen the content instead of replacing it.
+- Former placeholder links now open real working HTML tools.
+- Tools can be filled out and printed or saved as PDF.
+- All five lessons have topic-specific modules.
+- C-005 includes flooring and concrete calculators.
+- Pages are mobile friendly and self-contained.
 
-The old article URL will also forward to the new hub:
-https://goforitcontractingllc-del.github.io/everyday-investor-academy/Cottage_Clusters_Clickable_Guide_Updated.html
+No index.html change is required.
 
-BEST PLACEMENTS
-- Knowledge Map Cottage Cluster Staircase:
-  cottage-cluster-project.html
-- L-010 featured-project button:
-  cottage-cluster-project.html
-- Housing cottage-cluster card:
-  cottage-cluster-project.html
-- Live Atlas cottage-cluster term:
-  cottage-cluster-project.html
-
-No index.html replacement is required.
+Test:
+.../c-001.html
+.../c-002.html
+.../c-003.html
+.../c-004.html
+.../c-005.html
+.../construction-toolkit.html
 
 Commit:
-Launch flagship Cottage Cluster interactive project hub
+Launch Construction command centers C-001 through C-005 with complete working toolkit
