@@ -1,127 +1,78 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>H-009 · First-Time Homebuyer Roadmap | The Everyday Investor Academy</title><style>
-:root{
-  --navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;
-  --gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;
-  --soft:#EEF1E8;--green:#52705A
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.68}
-a{color:inherit}
-.wrap{width:min(1040px,calc(100% - 28px));margin:auto}
-header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe);backdrop-filter:blur(10px)}
-.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0}
-.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:900}
-.navlinks{display:flex;gap:14px;flex-wrap:wrap}
-.hero{padding:62px 0 42px;background:linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}
-.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}
-h1{font-size:clamp(2.8rem,7vw,5.6rem);line-height:.97;margin:.2em 0 .25em}
-.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.2rem;max-width:820px}
-.meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
-.pill{background:var(--paper);border:1px solid var(--taupe);border-radius:999px;padding:7px 11px;font-size:.8rem;font-weight:900;color:var(--navy)}
-section{padding:42px 0}
-.article{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:30px;box-shadow:0 8px 22px rgba(16,47,85,.05);max-width:920px;margin:auto}
-.article h2{font-size:2rem;margin-top:1.5em}
-.article h3{font-size:1.32rem;margin-top:1.3em}
-.article p{margin:0 0 14px}
-.article ul,.article ol{padding-left:24px}
-.article li{margin:8px 0}
-.callout{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin:18px 0}
-.olivebox{background:var(--soft);border-left:5px solid var(--olive);padding:15px 17px;border-radius:8px;margin:18px 0}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.card{background:#F8FAFC;border:1px solid var(--taupe);border-radius:10px;padding:15px}
-.card strong{display:block;color:var(--navy);margin-bottom:5px}
-.math{background:var(--navy);color:#fff;border-radius:14px;padding:20px;margin:20px 0}
-.math h3{color:#fff;margin-top:0}
-.checklist{list-style:none;padding-left:0!important}
-.checklist li{position:relative;padding-left:28px}
-.checklist li:before{content:"□";position:absolute;left:0;color:var(--olive);font-weight:900}
-.quiz{background:var(--navy);color:#fff;border-radius:14px;padding:22px;margin-top:28px}
-.quiz h2,.quiz h3{color:#fff}
-.quiz details{background:rgba(255,255,255,.1);border-radius:8px;padding:12px;margin-top:10px}
-.navdoors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
-.navdoor{background:var(--paper);border:1px solid var(--taupe);border-radius:12px;padding:17px;text-decoration:none}
-.navdoor strong{display:block;color:var(--navy);margin-bottom:5px}
-.live-atlas{background:var(--soft);border:1px solid var(--taupe);border-radius:12px;padding:18px;margin-top:24px}
-.live-atlas a{font-weight:900;color:var(--olive);text-decoration:none}
-footer{border-top:1px solid var(--taupe);padding:28px 0 42px;color:var(--muted);font-size:.9rem}
-@media(max-width:700px){.grid,.navdoors{grid-template-columns:1fr}.navlinks{display:none}.article{padding:22px}}
+<title>H-009 · Housing Assistance and Counseling Pathways</title><meta name="description" content="Understand how emergency help, rent assistance, subsidized housing, vouchers, homebuyer counseling, utility help, and local referral systems differ."><style>
+:root{--blue:#0f3157;--blue2:#1d5f96;--orange:#ec7c05;--cream:#f7f1e7;--paper:#fffdf8;--olive:#70795f;--line:#d8d5cb;--ink:#29302f;--muted:#6e726f;--soft:#eef2e9;--red:#813a2c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.72 Arial,sans-serif}.wrap{width:min(1120px,calc(100% - 28px));margin:auto}a{color:inherit}
+header{position:sticky;top:0;z-index:50;background:#fffdf8f2;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0}.nav a{text-decoration:none;color:var(--blue);font-weight:900}.navlinks{display:flex;gap:12px;flex-wrap:wrap}
+.hero{padding:58px 0 36px;background:radial-gradient(circle at 88% 12%,rgba(236,124,5,.18),transparent 25%),linear-gradient(135deg,var(--paper),var(--soft))}.eyebrow{font-size:.76rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--olive)}
+h1,h2,h3{font-family:Georgia,serif;color:var(--blue)}h1{font-size:clamp(3.2rem,8vw,6rem);line-height:.95;margin:.2em 0}.lead{font:1.22rem/1.62 Georgia,serif;color:var(--olive);max-width:900px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.badge{padding:7px 10px;border-radius:999px;background:white;border:1px solid var(--line);font-size:.82rem;font-weight:900;color:var(--blue)}
+.hero-image{margin-top:26px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#dfe6dc}.hero-image img{width:100%;display:block;max-height:470px;object-fit:cover}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.actions button,.actions a{padding:11px 14px;border:2px solid var(--blue);border-radius:11px;background:transparent;color:var(--blue);font-weight:900;text-decoration:none;cursor:pointer}.actions .primary{background:var(--blue);color:white}
+section{padding:44px 0}.section-title{font-size:clamp(2.2rem,5vw,3.9rem);margin:.1em 0 10px}.section-lead{max-width:840px;color:var(--muted)}
+.story{padding:22px;background:#fff7e9;border-left:5px solid var(--orange);border-radius:12px}.quick{padding:20px;background:var(--blue);color:white;border-radius:20px}.quick h2{color:white}.field-note,.warning,.remember{padding:14px 16px;border-left:5px solid var(--orange);border-radius:10px;margin-top:14px}.field-note{background:var(--soft)}.warning{background:#f8ece7;border-color:var(--red)}.remember{background:#edf4fb;border-color:var(--blue)}
+.accordion{display:grid;gap:10px}.acc{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}.acc button{width:100%;border:0;background:white;padding:14px 16px;text-align:left;display:flex;justify-content:space-between;color:var(--blue);font-weight:900;font-size:1rem;cursor:pointer}.acc-panel{display:none;padding:0 16px 16px;color:var(--muted)}.acc.open .acc-panel{display:block}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px}.card h3{margin:.1em 0 .45em}.card p{margin:.2em 0;color:var(--muted)}
+.tool{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;border-radius:22px;padding:22px}.tool h2,.tool h3{color:white}.tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tool label{display:block;font-weight:900}.tool input,.tool textarea,.tool select{width:100%;margin-top:5px;padding:11px;border:0;border-radius:10px;font:inherit}.tool textarea{min-height:95px}.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.score-card{background:#ffffff18;border:1px solid #ffffff35;border-radius:12px;padding:13px}.score-card span{display:block;font-size:.85rem}.score-card strong{display:block;font-size:1.25rem;margin-top:3px}
+.term-row{display:flex;gap:8px;flex-wrap:wrap}.term-btn{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 11px;color:var(--blue);font-weight:900;cursor:pointer}
+.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.resource{display:block;background:white;border:1px solid var(--line);border-radius:13px;padding:14px;text-decoration:none}.resource strong{display:block;color:var(--blue)}.resource span{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
+.checks{display:grid;gap:8px}.check{display:flex;gap:10px;align-items:flex-start;padding:11px;border:1px solid var(--line);border-radius:11px;background:white;color:var(--ink)}.check input{margin-top:4px;transform:scale(1.15)}
+.footer-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.footer-nav a{background:white;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;text-decoration:none;color:var(--blue);font-weight:900}
+.version{margin-top:18px;padding:13px;border-radius:11px;background:#edf4fb;color:var(--blue);font-size:.9rem}
+.modal{position:fixed;inset:0;background:rgba(8,22,38,.74);display:none;z-index:1000;padding:18px;overflow:auto}.modal.open{display:block}.modal-window{width:min(760px,100%);margin:5vh auto;background:var(--paper);border-radius:22px;overflow:hidden}.modal-head{display:flex;justify-content:space-between;gap:14px;padding:20px 22px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:white}.modal-head h2{color:white;margin:0}.modal-close{border:1px solid #ffffff66;background:#ffffff18;color:white;width:42px;height:42px;border-radius:50%;font-size:1.4rem;cursor:pointer}.modal-body{padding:22px}
+footer{padding:30px 0 46px;color:var(--muted);border-top:1px solid var(--line)}
+@media print{header,.actions,.navlinks,.footer-nav,.term-row,.modal{display:none!important}body{background:white}.hero{padding-top:0}.tool{background:white;color:black;border:1px solid #aaa}.tool h2,.tool h3{color:#0f3157}.score-card{background:white;border:1px solid #aaa}}
+@media(max-width:760px){.navlinks{display:none}.grid,.tool-grid,.resource-grid,.footer-nav,.score-grid{grid-template-columns:1fr}}
 </style></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="housing.html">Housing</a><a href="index.html#choose">Choose Your Path</a><a href="living-atlas.html">Live Atlas</a></div></div></header>
-<section class="hero"><div class="wrap"><div class="eyebrow">Housing District · H-009</div><h1>First-Time Homebuyer Roadmap</h1><p class="lead">Buying a first home is easier to understand when the process is broken into stages: readiness, preparation, financing, search, contract, due diligence, closing, and ownership.</p><div class="meta"><span class="pill">20–30 minute read</span><span class="pill">Beginner friendly</span><span class="pill">Evergreen core</span></div></div></section>
-<section><div class="wrap"><article class="article">
-
-<h2>Stage 1: Decide whether ownership fits now</h2>
-<p>Buying can create stability and long-term ownership, but it also reduces flexibility and adds repair, maintenance, transaction, and market risk.</p>
-
-<h2>Stage 2: Build the financial base</h2>
-<ul>
-<li>Review credit reports and scores.</li>
-<li>List debts and monthly obligations.</li>
-<li>Build an emergency fund.</li>
-<li>Save for down payment, closing, moving, and repairs.</li>
-<li>Estimate a comfortable monthly housing cost.</li>
-</ul>
-
-<h2>Stage 3: Learn the financing options</h2>
-<p>Compare loan types, down payment requirements, mortgage insurance, rates, fees, fixed and adjustable structures, and assistance options.</p>
-
-<h2>Stage 4: Get preapproved</h2>
-<p>Provide accurate documentation and avoid major new debts or job changes during the process unless the lender has reviewed the effect.</p>
-
-<h2>Stage 5: Build the search team</h2>
-<div class="grid">
-<div class="card"><strong>Lender</strong>Explains financing, underwriting, costs, and deadlines.</div>
-<div class="card"><strong>Real estate professional</strong>Helps search, prepare offers, negotiate, and coordinate the transaction.</div>
-<div class="card"><strong>Inspector</strong>Evaluates visible condition and recommends specialized review when needed.</div>
-<div class="card"><strong>Title and escrow</strong>Coordinate title review, settlement documents, funds, recording, and closing.</div>
-</div>
-
-<h2>Stage 6: Search with a written scorecard</h2>
-<p>Separate needs from preferences. Track payment, taxes, insurance, utilities, condition, commute, schools or services, parking, storage, accessibility, and likely repairs.</p>
-
-<h2>Stage 7: Make an offer</h2>
-<p>An offer includes price, financing, earnest money, contingencies, deadlines, requested personal property, closing, and possession terms.</p>
-
-<h2>Stage 8: Complete due diligence</h2>
-<ul>
-<li>General and specialized inspections</li>
-<li>Title review</li>
-<li>Insurance availability and cost</li>
-<li>Appraisal</li>
-<li>Repair estimates</li>
-<li>HOA or shared-property documents when applicable</li>
-<li>Final lender conditions</li>
-</ul>
-
-<h2>Stage 9: Close</h2>
-<p>Review the final disclosure, confirm funds, complete the final walk-through, sign documents, record the transfer, and receive possession according to the contract.</p>
-
-<h2>Stage 10: Survive the first year</h2>
-<div class="olivebox"><strong>First-year priority:</strong> Learn the property before starting unnecessary cosmetic projects. Find shutoffs, service systems, document condition, schedule maintenance, and rebuild reserves.</div>
-
-<h2>Roadmap checklist</h2>
-<ul class="checklist">
-<li>Comfortable monthly budget</li>
-<li>Emergency fund</li>
-<li>Cash to close</li>
-<li>Repair reserve</li>
-<li>Credit and debt review</li>
-<li>Preapproval comparison</li>
-<li>Written home criteria</li>
-<li>Inspection and title plan</li>
-<li>First-year maintenance plan</li>
-</ul>
-
-<div class="quiz"><h2>Quick knowledge check</h2><p><strong>Question:</strong> What is the main idea from this lesson?</p><details><summary>Open answer</summary><p>Buying a first home is easier to understand when the process is broken into stages: readiness, preparation, financing, search, contract, due diligence, closing, and ownership.</p></details></div>
-<div class="live-atlas"><strong>Current information lives in the Live Atlas.</strong><p>Interest rates, assistance programs, income limits, lender rules, fees, and local resources change. Use the Live Atlas before acting.</p><a href="living-atlas.html">Open the Live Atlas →</a></div>
-<h2>Choose your next door</h2><div class="navdoors">
-<a class="navdoor" href="h-008.html"><strong>← Previous</strong><span>Move back one lesson.</span></a>
-<a class="navdoor" href="housing.html"><strong>Housing Map</strong><span>Choose another housing path.</span></a>
-<a class="navdoor" href="h-010.html"><strong>Next →</strong><span>Continue the housing path.</span></a>
-</div>
-</article></div></section>
-<footer><div class="wrap">© 2026 The Everyday Investor Academy. Educational information only.</div></footer>
-</body></html>
+<header><div class="wrap nav"><a href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="housing.html">Housing</a><a href="knowledge-map.html">Knowledge Map</a><a href="living-atlas.html">Living Atlas</a></div></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Housing · Blue Edition · H-009</div><h1>Housing Assistance and Counseling Pathways</h1><p class="lead">Understand how emergency help, rent assistance, subsidized housing, vouchers, homebuyer counseling, utility help, and local referral systems differ.</p>
+<div class="badges"><span class="badge">Beginner friendly</span><span class="badge">Interactive</span><span class="badge">20–30 minutes</span><span class="badge">Printable workbook</span></div>
+<div class="actions"><button class="primary" onclick="window.print()">Print / Save PDF</button><button id="copy-summary">Copy summary</button><button id="reset-tool">Reset tool</button></div>
+<div class="hero-image" id="image-shell"><img id="lesson-image" alt="Housing lesson 9 graphic"></div></div></section>
+<section><div class="wrap"><div class="story"><div class="eyebrow">Real-life opening</div><h2 class="section-title">Why this matters</h2><p>People often hear &#x27;housing assistance&#x27; as though it were one program with one application. In reality, emergency shelter, rent help, vouchers, affordable properties, utility assistance, counseling, and legal support are different systems with different eligibility, funding, timing, and availability.</p></div></div></section>
+<section><div class="wrap"><div class="quick"><div class="eyebrow" style="color:#dce8f3">Quick answer</div><h2>Start with the exact housing problem, then contact the current local entry point and keep a record of every application, document, date, and follow-up.</h2></div><div class="field-note"><strong>Real-world tip:</strong> do not ask only &#x27;Do you have housing help?&#x27; Say exactly what happened, the deadline, location, household, and document you received.</div></div></section>
+<section><div class="wrap"><div class="eyebrow">Deep dive</div><h2 class="section-title">Open only what you need.</h2><p class="section-lead">The complete lesson is divided into short, expandable sections.</p><div class="accordion"><div class="acc"><button><span>1. Define the immediate need</span><span>⌄</span></button><div class="acc-panel"><p>Shelter tonight, rent arrears, utility shutoff, affordable housing search, eviction defense, homebuyer preparation, and disability accommodation require different pathways.</p></div></div><div class="acc"><button><span>2. Local entry points matter</span><span>⌄</span></button><div class="acc-panel"><p>State and federal agencies often fund or oversee programs that are delivered through local housing authorities, community-action agencies, nonprofits, or approved counselors.</p></div></div><div class="acc"><button><span>3. Eligibility is program-specific</span><span>⌄</span></button><div class="acc-panel"><p>Income, household size, location, immigration or documentation rules, lease status, arrears, disability, age, property type, and funding availability may matter.</p></div></div><div class="acc"><button><span>4. Availability changes</span><span>⌄</span></button><div class="acc-panel"><p>Waitlists, application windows, funding, priorities, and local rules can change. Verify current status before relying on old information.</p></div></div><div class="acc"><button><span>5. Applications need a document system</span><span>⌄</span></button><div class="acc-panel"><p>Keep identification, income proof, notices, lease, utility bills, household records, disability-related documentation when relevant, and contact logs.</p></div></div><div class="acc"><button><span>6. Counseling is not only for crisis</span><span>⌄</span></button><div class="acc-panel"><p>Approved housing counselors may help with homebuying, budgeting, foreclosure prevention, rental issues, and understanding options.</p></div></div><div class="acc"><button><span>7. Legal help is a separate lane</span><span>⌄</span></button><div class="acc-panel"><p>Assistance programs do not replace legal advice when a notice, court date, discrimination issue, or rights question is involved.</p></div></div><div class="acc"><button><span>8. Follow up without losing the trail</span><span>⌄</span></button><div class="acc-panel"><p>Record who was contacted, when, reference numbers, what was requested, what is missing, and the next follow-up date.</p></div></div></div></div></section>
+<section><div class="wrap tool"><div class="eyebrow" style="color:#dce8f3">Interactive workspace</div><h2 class="section-title">Housing Resource Search and Application Log</h2><div class="tool-grid">
+<label>Housing problem<textarea id="problem"></textarea></label>
+<label>Deadline / urgent date<input id="urgent-date"></label>
+<label>City / county<input id="location"></label>
+<label>Household details needed<textarea id="household"></textarea></label>
+<label>Agency / program<input id="agency"></label>
+<label>Date contacted<input id="contact-date" type="date"></label>
+<label>Application / reference number<input id="reference"></label>
+<label>Next follow-up date<input id="followup" type="date"></label>
+</div><label style="display:block;margin-top:14px">Documents requested<textarea id="documents"></textarea></label><label style="display:block">Outcome / next step<textarea id="outcome"></textarea></label>
+<div class="score-grid"><div class="score-card"><span>Problem defined</span><strong id="problem-status">No</strong></div><div class="score-card"><span>Contact logged</span><strong id="contact-status">No</strong></div><div class="score-card"><span>Follow-up set</span><strong id="followup-status">No</strong></div></div></div></section>
+<section><div class="wrap"><div class="eyebrow">Atlas terms</div><h2 class="section-title">Tap a term without leaving the lesson.</h2><div class="term-row"><button class="term-btn" data-term="voucher">Voucher</button><button class="term-btn" data-term="publichousing">Public Housing</button><button class="term-btn" data-term="subsidizedhousing">Subsidized Housing</button><button class="term-btn" data-term="housingauthority">Housing Authority</button><button class="term-btn" data-term="counseling">Counseling</button><button class="term-btn" data-term="waitlist">Waitlist</button></div></div></section>
+<section><div class="wrap"><div class="eyebrow">Common mistakes</div><h2 class="section-title">What people often miss</h2><div class="grid">
+<article class="card"><h3>Using outdated information</h3><p>Housing law, programs, forms, eligibility, and local procedures can change.</p></article>
+<article class="card"><h3>Skipping the written record</h3><p>Notices, requests, payments, decisions, and follow-ups need evidence.</p></article>
+<article class="card"><h3>Confusing different systems</h3><p>Legal rights, assistance programs, lease duties, and operational practices are not interchangeable.</p></article>
+<article class="card"><h3>Waiting until the deadline</h3><p>Housing problems become harder when documents, help, and options are gathered too late.</p></article>
+</div></div></section>
+<section><div class="wrap"><div class="eyebrow">Official resource layer</div><h2 class="section-title">Verify current information at the source.</h2><div class="resource-grid"><a class="resource" href="https://www.211info.org/" target=_blank rel=noopener><strong>211info</strong><span>Current local housing, utility, food, shelter, and community resources.</span></a><a class="resource" href="https://www.oregon.gov/ohcs/" target=_blank rel=noopener><strong>Oregon Housing and Community Services</strong><span>State housing programs and local-partner starting points.</span></a><a class="resource" href="https://www.hud.gov/states/oregon" target=_blank rel=noopener><strong>HUD Oregon</strong><span>Federal housing programs and Oregon contacts.</span></a><a class="resource" href="https://www.oregon.gov/ohcs/homeownership/pages/housing-counseling.aspx" target=_blank rel=noopener><strong>Oregon Housing Counseling</strong><span>Oregon housing-counseling resources.</span></a></div><div class="remember"><strong>Remember:</strong> legal, program, eligibility, and local information must be verified for the current situation.</div></div></section>
+<section><div class="wrap"><div class="eyebrow">Connected learning</div><h2 class="section-title">Keep moving</h2><div class="resource-grid">
+<a class="resource" href="h-008.html"><strong>Previous lesson</strong><span>Return to H-008.</span></a>
+<a class="resource" href="h-010.html"><strong>Next lesson</strong><span>Continue to H-010.</span></a>
+<a class="resource" href="housing.html"><strong>Housing District</strong><span>Return to the complete 24-lesson roadmap.</span></a>
+<a class="resource" href="living-atlas.html"><strong>Living Atlas</strong><span>Open terms, Oregon resources, agencies, and connected tools.</span></a>
+</div></div></section>
+<section><div class="wrap"><div class="version"><strong>Everyday Investor Academy — Blue Edition</strong><br>Corrected Version 1.1 · Core concepts and resource links reviewed August 2026 · Browser-only tool · Print or save a PDF for permanent records.</div></div></section>
+<section><div class="wrap footer-nav"><a href="h-008.html">← Previous</a><a href="housing.html">Housing Home</a><a href="h-010.html">Next →</a></div></section>
+<footer><div class="wrap">© 2026 The Everyday Investor Academy · Educational use only.</div></footer><div id="modal-root"></div>
+<script>
+const imageCandidates=["housing-09.webp", "housing-09.png", "housing-09.jpg", "housing-09.jpeg", "images/housing-09.webp", "images/housing-09.png", "images/housing-09.jpg", "images/housing/housing-09.webp", "images/housing/housing-09.png", "images/housing/housing-09.jpg"],image=document.getElementById("lesson-image"),shell=document.getElementById("image-shell");let imageIndex=0;
+function tryImage(){if(imageIndex>=imageCandidates.length){shell.style.display="none";return;}image.src=imageCandidates[imageIndex++];}image.addEventListener("error",tryImage);tryImage();
+document.querySelectorAll(".acc > button").forEach(btn=>btn.addEventListener("click",()=>btn.closest(".acc").classList.toggle("open")));
+function g(id){return document.getElementById(id);}function currency(n){return new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n||0);}
+function save(){const state={};document.querySelectorAll("input,textarea,select").forEach((el,i)=>state[el.id||("field-"+i)]=el.type==="checkbox"?el.checked:el.value);localStorage.setItem("eia-h-009",JSON.stringify(state));}
+function load(){const state=JSON.parse(localStorage.getItem("eia-h-009")||"{}");document.querySelectorAll("input,textarea,select").forEach((el,i)=>{const k=el.id||("field-"+i);if(!(k in state))return;if(el.type==="checkbox")el.checked=state[k];else el.value=state[k];});}
+function runTool(){g("problem-status").textContent=g("problem").value.trim()?"Yes":"No";g("contact-status").textContent=g("agency").value.trim()&&g("contact-date").value?"Yes":"No";g("followup-status").textContent=g("followup").value?"Yes":"No";}
+document.addEventListener("input",()=>{runTool();save();});document.addEventListener("change",()=>{runTool();save();});
+g("reset-tool").addEventListener("click",()=>{if(!confirm("Reset the saved tool for this lesson?"))return;localStorage.removeItem("eia-h-009");location.reload();});
+g("copy-summary").addEventListener("click",async()=>{const fields=[...document.querySelectorAll("input,textarea,select")].map(el=>el.type==="checkbox"?(el.checked?"Completed: "+el.parentElement.textContent.trim():""):el.value).filter(Boolean);const summary="H-009 — "+"Housing Assistance and Counseling Pathways"+"\n\n"+fields.join("\n");try{await navigator.clipboard.writeText(summary);alert("Summary copied.");}catch{alert("Copy was blocked. Use Print / Save PDF instead.");}});
+const terms={"voucher": "A form of rental assistance that may help eligible households pay rent in qualifying housing, subject to program rules and availability.", "publichousing": "Housing owned or operated through a public housing agency or related public system.", "subsidizedhousing": "Housing where public funding or restrictions help reduce eligible residents' housing costs.", "housingauthority": "A local public agency administering certain housing programs and properties.", "counseling": "Professional housing guidance provided through qualified or approved organizations.", "waitlist": "A list used when demand exceeds current program or housing availability."};
+document.querySelectorAll("[data-term]").forEach(btn=>btn.addEventListener("click",()=>{const item=terms[btn.dataset.term];g("modal-root").innerHTML=`<div class="modal open"><div class="modal-window"><div class="modal-head"><h2>${btn.textContent}</h2><button class="modal-close">×</button></div><div class="modal-body"><p>${item}</p><p><a href="living-atlas.html"><strong>Open related Living Atlas resources →</strong></a></p></div></div></div>`;document.body.style.overflow="hidden";}));
+document.addEventListener("click",e=>{if(e.target.classList.contains("modal")||e.target.closest(".modal-close")){g("modal-root").innerHTML="";document.body.style.overflow="";}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){g("modal-root").innerHTML="";document.body.style.overflow="";}});
+load();runTool();
+</script></body></html>
