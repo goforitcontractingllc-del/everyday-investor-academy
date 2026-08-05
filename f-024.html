@@ -1,13 +1,66 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>F-024</title><style>
-body{margin:0;font-family:Arial,sans-serif;background:#F7F1E7;color:#2D302F;line-height:1.7}
-header{background:#102F55;color:#fff;padding:20px}
-main{max-width:920px;margin:auto;background:#FFFDF8;padding:30px}
-h1,h2{color:#102F55}.lead{color:#6D755B;font-size:1.15em}
-.box{background:#EEF1E8;border-left:5px solid #6D755B;padding:14px;margin:18px 0}
-.call{background:#FBF6EB;border-left:5px solid #C69A42;padding:14px;margin:18px 0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{border:1px solid #B7AA96;padding:12px;border-radius:8px;background:#fafafa}
-nav{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:28px}
-.btn{text-decoration:none;border:1px solid #102F55;padding:12px;border-radius:8px;text-align:center;color:#102F55;font-weight:bold}
-@media(max-width:700px){.grid,nav{grid-template-columns:1fr}}
-</style></head><body><header><h1>Foundation • F-024</h1></header><main><h1>Welcome to the Everyday Investor Academy</h1><p class='lead'>You now have the map. The next step is exploring it.</p><h2>Congratulations!</h2><p>You have completed the Foundation district. From here you can move into Housing, Money, Credit, Construction, Property Management, Business, Investing, Land, Rights, and the Living Atlas.</p><div class='grid'><div class='card'><b>Learn</b><p>Understand the system.</p></div><div class='card'><b>Practice</b><p>Apply what you learn.</p></div><div class='card'><b>Research</b><p>Verify information.</p></div><div class='card'><b>Grow</b><p>Keep building your Atlas.</p></div></div><div class='box'><b>The goal isn't memorizing facts.</b> It's learning how to confidently navigate real estate for the rest of your life.</div><div class='box'><b>Living Atlas:</b> Continue using the Living Atlas for current regulations, programs, forms, and market updates.</div><nav><a class='btn' href='f-023.html'>← Previous</a><a class='btn' href='foundation.html'>Foundation Map</a><a class='btn' href='index.html'>Academy Home</a></nav></main></body></html>
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F-024 - Foundation Capstone</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:980px;margin:auto;padding:24px;background:#f7f1e7;line-height:1.7}
+.hero{background:#0f3157;color:white;padding:28px;border-radius:16px}
+.box{background:white;border:1px solid #ddd;border-radius:14px;padding:18px;margin:18px 0}
+textarea,input{width:100%;padding:10px;margin-top:6px}
+button{padding:10px 16px;margin:6px}
+@media print{button{display:none}body{background:white}}
+</style></head><body>
+<div class="hero">
+<h1>F-024 · Foundation Capstone</h1>
+<p>Bring the entire Foundation district together into one printable project workbook that prepares you for the next Academy district.</p>
+<button onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="box">
+<h2>Why this lesson matters</h2>
+<p>This lesson completes the Foundation district by helping you organize knowledge into repeatable decisions and practical action. The goal is to move from learning concepts to building systems you can actually use.</p>
+</div>
+
+<div class="box">
+<h2>Interactive Workbook</h2>
+<label>Main objective<textarea id="a"></textarea></label>
+<label>Important facts<textarea id="b"></textarea></label>
+<label>Questions to verify<textarea id="c"></textarea></label>
+<label>Next three actions<textarea id="d"></textarea></label>
+<button onclick="save()">Save in Browser</button>
+<button onclick="copySummary()">Copy Summary</button>
+</div>
+
+<div class="box">
+<h2>Foundation Challenge</h2>
+<p>Complete this worksheet using a real project. Save a PDF when finished and keep it with your project records.</p>
+</div>
+
+<div class="box">
+<h2>Living Atlas Connections</h2>
+<ul>
+<li><a href="living-atlas.html">Living Atlas</a></li>
+<li><a href="knowledge-map.html">Knowledge Map</a></li>
+<li><a href="foundation.html">Foundation District</a></li>
+<li><a href="index.html#tools">Academy Tools</a></li>
+</ul>
+<p><strong>Blue Edition</strong> · Reviewed August 2026</p>
+</div>
+
+<script>
+const key="F-024";
+function save(){
+ let o={};
+ ["a","b","c","d"].forEach(id=>o[id]=document.getElementById(id).value);
+ localStorage.setItem(key,JSON.stringify(o));
+ alert("Saved in browser.");
+}
+(function(){
+ let o=JSON.parse(localStorage.getItem(key)||"{}");
+ ["a","b","c","d"].forEach(id=>{if(o[id])document.getElementById(id).value=o[id];});
+})();
+async function copySummary(){
+ let txt=["a","b","c","d"].map(id=>document.getElementById(id).value).join("\n");
+ try{await navigator.clipboard.writeText(txt);alert("Copied.");}catch(e){}
+}
+</script>
+</body></html>
