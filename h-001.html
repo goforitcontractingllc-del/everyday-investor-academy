@@ -1,102 +1,343 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>H-001 · What Is Housing? | The Everyday Investor Academy</title><style>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>H-001 · What Housing Really Is | The Everyday Investor Academy</title>
+<meta name="description" content="Understand housing as a system that affects safety, health, money, work, family, transportation, and opportunity.">
+<style>
 :root{
-  --navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;
-  --gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;
-  --soft:#EEF1E8;--green:#52705A;--gray:#ECEFF3
+  --blue:#0f3157;--blue2:#1d5f96;--orange:#ec7c05;--cream:#f7f1e7;
+  --paper:#fffdf8;--olive:#70795f;--line:#d8d5cb;--ink:#29302f;
+  --muted:#6e726f;--soft:#eef2e9;--red:#813a2c
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.68}
-a{color:inherit}
-.wrap{width:min(1120px,calc(100% - 28px));margin:auto}
-header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe);backdrop-filter:blur(10px)}
-.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0}
-.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:900}
-.navlinks{display:flex;gap:14px;flex-wrap:wrap}
-.hero{padding:68px 0 48px;background:linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}
-.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}
-h1{font-size:clamp(3rem,8vw,6rem);line-height:.96;margin:.2em 0 .25em;max-width:940px}
-.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.23rem;max-width:860px}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
-.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:12px 17px;border:2px solid var(--navy);border-radius:10px;font-weight:900;min-height:48px}
-.btn.primary{background:var(--navy);color:#fff}
-section{padding:48px 0}
-.section-title{font-size:2.3rem;margin:0 0 8px}
-.section-copy{max-width:850px;color:var(--muted)}
-.module-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
-.module{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:20px;box-shadow:0 8px 22px rgba(16,47,85,.05)}
-.module h3{margin:0;font-size:1.55rem}
-.module p{color:var(--muted);margin:.45em 0 1em}
-.lesson-list{display:grid;gap:9px}
-.lesson{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;background:#F7F8F5;border:1px solid #D9DDCF;border-radius:11px;padding:11px 12px;text-decoration:none}
-.lesson .code{color:var(--olive);font-weight:950;font-size:.78rem;letter-spacing:.08em}
-.lesson .title{color:var(--navy);font-weight:850}
-.lesson .state{font-size:.68rem;font-weight:900;text-transform:uppercase;border-radius:999px;padding:6px 9px;background:var(--gray);color:#6D7580;white-space:nowrap}
-.lesson.live{border-color:var(--olive);background:#FBFCF9}
-.lesson.live .state{background:var(--soft);color:var(--green)}
-.lesson.disabled{pointer-events:none}
-.search-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin:22px 0}
-.search-row input,.search-row button{padding:13px 14px;border:1px solid var(--taupe);background:var(--paper);border-radius:10px;font:inherit}
-.search-row button{font-weight:900;cursor:pointer}
-.progress{background:var(--navy);color:#fff;border-radius:17px;padding:22px;margin-top:24px}
-.progress h2{color:#fff;margin-top:0}
-.progress-bar{height:12px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden}
-.progress-fill{height:100%;width:0;background:#D6DEC9;transition:width .25s ease}
-.progress-text{margin-top:10px;color:#E6EBF0}
-.stairs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.stair{background:var(--paper);border:1px solid var(--taupe);border-radius:14px;padding:18px;text-decoration:none}
-.stair h3{margin-top:0}
-.stair strong{color:var(--olive)}
-.live-atlas{background:var(--navy);color:#fff;border-radius:18px;padding:25px}
-.live-atlas h2{color:#fff;margin-top:0}
-.live-atlas a{display:inline-flex;margin-top:10px;background:#fff;color:var(--navy);text-decoration:none;border-radius:10px;padding:11px 14px;font-weight:900}
-.notice{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin-top:22px}
-.article{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:28px;box-shadow:0 8px 22px rgba(16,47,85,.05);max-width:900px;margin:auto}
-.article h2{font-size:2rem;margin-top:1.5em}
-.article h3{font-size:1.3rem;margin-top:1.3em}
-.callout{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin:18px 0}
-.olivebox{background:var(--soft);border-left:5px solid var(--olive);padding:15px 17px;border-radius:8px;margin:18px 0}
-.term-grid,.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.term,.choice{background:#F8FAFC;border:1px solid var(--taupe);border-radius:10px;padding:15px}
-.term strong,.choice strong{display:block;color:var(--navy);margin-bottom:5px}
-.quiz{background:var(--navy);color:#fff;border-radius:14px;padding:22px;margin-top:26px}
-.quiz h2,.quiz h3{color:#fff}
-.quiz details{background:rgba(255,255,255,.1);border-radius:8px;padding:12px;margin-top:10px}
-.navdoors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
-.navdoor{background:var(--paper);border:1px solid var(--taupe);border-radius:12px;padding:17px;text-decoration:none}
-.navdoor strong{display:block;color:var(--navy);margin-bottom:5px}
-footer{border-top:1px solid var(--taupe);padding:28px 0 42px;color:var(--muted);font-size:.9rem}
-@media(max-width:800px){.module-grid,.term-grid,.choice-grid{grid-template-columns:1fr}.stairs,.navdoors{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.stairs,.navdoors{grid-template-columns:1fr}.navlinks{display:none}.lesson{grid-template-columns:auto 1fr}.lesson .state{grid-column:1/-1;width:max-content}.search-row{grid-template-columns:1fr}}
-</style></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="housing.html">Housing</a><a href="index.html#choose">Choose Your Path</a><a href="living-atlas.html">Live Atlas</a></div></div></header>
-<section class="hero"><div class="wrap"><div class="eyebrow">Housing District · H-001</div><h1>What Is Housing?</h1><p class="lead">Housing is more than a building. It is the place, cost, legal arrangement, services, location, and daily system that make a home usable.</p><div class="actions"><a class="btn primary" href="#lesson">Start reading</a><a class="btn" href="living-atlas.html">Check current information</a></div></div></section>
-<section id="lesson"><div class="wrap"><article class="article"><h2>Housing is the whole arrangement</h2>
-<p>When people hear the word <em>housing</em>, they often picture a house. But housing includes apartments, manufactured homes, duplexes, condos, rooms, ADUs, cottage clusters, shelters, co-housing, and many other ways people live.</p>
-<p>The physical structure is only one layer. Housing also includes the agreement that gives someone the right to live there, the money required to keep it, the utilities and services that make it usable, and the rules that shape what can happen.</p>
-<div class="callout"><strong>Core idea:</strong> A home is the lived experience. Housing is the system that makes that experience possible—or difficult.</div>
-<h2>The five layers of housing</h2>
-<div class="term-grid">
-<div class="term"><strong>Physical</strong>The building, room, unit, land, utilities, access, safety, and condition.</div>
-<div class="term"><strong>Financial</strong>Rent, mortgage, taxes, insurance, utilities, repairs, fees, and transportation costs.</div>
-<div class="term"><strong>Legal</strong>Lease, deed, title, zoning, occupancy, fair housing, contracts, and property rights.</div>
-<div class="term"><strong>Operational</strong>Maintenance, property management, trash, parking, repairs, communication, and shared spaces.</div>
-<div class="term"><strong>Community</strong>Schools, jobs, transit, health care, safety, family support, parks, and neighborhood access.</div>
-</div>
-<h2>Why housing matters so much</h2>
-<p>Housing affects health, school stability, employment, transportation, credit, savings, family life, and the ability to plan ahead. A housing choice that looks cheap on paper may become expensive when utilities, commuting, repairs, fees, or instability are added.</p>
-<h2>Real-life example</h2>
-<p>Two homes both cost $1,200 per month. One includes water, is close to work, and has dependable maintenance. The other requires a long commute, high heating costs, and frequent repairs. The rent is the same, but the housing cost and daily experience are not.</p>
-<h2>Questions to ask about any housing option</h2>
-<ul><li>What exactly am I paying for?</li><li>What costs are separate?</li><li>Who is responsible for repairs?</li><li>How stable is the arrangement?</li><li>What rules limit how the space can be used?</li><li>Does the location support everyday life?</li></ul>
-<div class="quiz"><h2>Quick knowledge check</h2><p><strong>Question:</strong> What is the biggest idea to remember from this lesson?</p><details><summary>Open answer</summary><p>Housing is more than a building. It is the place, cost, legal arrangement, services, location, and daily system that make a home usable.</p></details></div>
-<h2>Choose your next door</h2><div class="navdoors">
-<a class="navdoor" href="housing.html"><strong>← Previous</strong><span>Move back one step.</span></a>
-<a class="navdoor" href="housing.html"><strong>Housing Map</strong><span>Choose another housing path.</span></a>
-<a class="navdoor" href="h-002.html"><strong>Next →</strong><span>Continue the housing path.</span></a>
-</div>
-</article></div></section>
-<footer><div class="wrap">© 2026 The Everyday Investor Academy. Educational information only.</div></footer>
-</body></html>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.72 Arial,sans-serif}
+.wrap{width:min(1120px,calc(100% - 28px));margin:auto}a{color:inherit}
+header{position:sticky;top:0;z-index:50;background:#fffdf8f2;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0}.nav a{text-decoration:none;color:var(--blue);font-weight:900}.navlinks{display:flex;gap:12px;flex-wrap:wrap}
+.hero{padding:58px 0 36px;background:radial-gradient(circle at 88% 12%,rgba(236,124,5,.18),transparent 25%),linear-gradient(135deg,var(--paper),var(--soft))}
+.eyebrow{font-size:.76rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--olive)}
+h1,h2,h3{font-family:Georgia,serif;color:var(--blue)}h1{font-size:clamp(3.2rem,8vw,6rem);line-height:.95;margin:.2em 0}.lead{font:1.22rem/1.62 Georgia,serif;color:var(--olive);max-width:900px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.badge{padding:7px 10px;border-radius:999px;background:white;border:1px solid var(--line);font-size:.82rem;font-weight:900;color:var(--blue)}
+.hero-image{margin-top:26px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#dfe6dc}.hero-image img{width:100%;display:block;max-height:470px;object-fit:cover}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.actions button,.actions a{padding:11px 14px;border:2px solid var(--blue);border-radius:11px;background:transparent;color:var(--blue);font-weight:900;text-decoration:none;cursor:pointer}.actions .primary{background:var(--blue);color:white}
+section{padding:44px 0}.section-title{font-size:clamp(2.2rem,5vw,3.9rem);margin:.1em 0 10px}.section-lead{max-width:840px;color:var(--muted)}
+.story{padding:22px;background:#fff7e9;border-left:5px solid var(--orange);border-radius:12px}
+.quick{padding:20px;background:var(--blue);color:white;border-radius:20px}.quick h2{color:white}
+.field-note,.warning,.remember{padding:14px 16px;border-left:5px solid var(--orange);border-radius:10px;margin-top:14px}.field-note{background:var(--soft)}.warning{background:#f8ece7;border-color:var(--red)}.remember{background:#edf4fb;border-color:var(--blue)}
+.diagram{display:grid;grid-template-columns:1fr 2fr;gap:18px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px}
+.diagram-core{display:grid;place-items:center;min-height:220px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;font:700 2rem/1.1 Georgia,serif;text-align:center;padding:20px}
+.diagram-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.diagram-item{background:white;border:1px solid var(--line);border-radius:13px;padding:14px}.diagram-item strong{display:block;color:var(--blue)}
+.accordion{display:grid;gap:10px}.acc{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}.acc button{width:100%;border:0;background:white;padding:14px 16px;text-align:left;display:flex;justify-content:space-between;color:var(--blue);font-weight:900;font-size:1rem;cursor:pointer}.acc-panel{display:none;padding:0 16px 16px;color:var(--muted)}.acc.open .acc-panel{display:block}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px}.card h3{margin:.1em 0 .45em}.card p{margin:.2em 0;color:var(--muted)}
+.tool{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;border-radius:22px;padding:22px}.tool h2,.tool h3{color:white}.tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tool label{display:block;font-weight:900}.tool input,.tool textarea,.tool select{width:100%;margin-top:5px;padding:11px;border:0;border-radius:10px;font:inherit}.tool textarea{min-height:95px}.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.score-card{background:#ffffff18;border:1px solid #ffffff35;border-radius:12px;padding:13px}.score-card span{display:block;font-size:.85rem}.score-card strong{display:block;font-size:1.3rem;margin-top:3px}
+.term-row{display:flex;gap:8px;flex-wrap:wrap}.term-btn{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 11px;color:var(--blue);font-weight:900;cursor:pointer}
+.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.resource{display:block;background:white;border:1px solid var(--line);border-radius:13px;padding:14px;text-decoration:none}.resource strong{display:block;color:var(--blue)}.resource span{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
+.checks{display:grid;gap:8px}.check{display:flex;gap:10px;align-items:flex-start;padding:11px;border:1px solid var(--line);border-radius:11px;background:white}.check input{margin-top:4px;transform:scale(1.15)}
+.footer-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.footer-nav a{background:white;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;text-decoration:none;color:var(--blue);font-weight:900}
+.version{margin-top:18px;padding:13px;border-radius:11px;background:#edf4fb;color:var(--blue);font-size:.9rem}
+.modal{position:fixed;inset:0;background:rgba(8,22,38,.74);display:none;z-index:1000;padding:18px;overflow:auto}.modal.open{display:block}.modal-window{width:min(760px,100%);margin:5vh auto;background:var(--paper);border-radius:22px;overflow:hidden}.modal-head{display:flex;justify-content:space-between;gap:14px;padding:20px 22px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:white}.modal-head h2{color:white;margin:0}.modal-close{border:1px solid #ffffff66;background:#ffffff18;color:white;width:42px;height:42px;border-radius:50%;font-size:1.4rem;cursor:pointer}.modal-body{padding:22px}
+footer{padding:30px 0 46px;color:var(--muted);border-top:1px solid var(--line)}
+@media print{header,.actions,.navlinks,.footer-nav,.term-row,.modal{display:none!important}body{background:white}.hero{padding-top:0}.tool{background:white;color:black;border:1px solid #aaa}.tool h2,.tool h3{color:#0f3157}.score-card{background:white;border:1px solid #aaa}}
+@media(max-width:760px){.navlinks{display:none}.grid,.grid3,.tool-grid,.resource-grid,.footer-nav,.diagram,.diagram-grid,.score-grid{grid-template-columns:1fr}.diagram-core{min-height:170px;border-radius:24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html">✦ The Everyday Investor Academy</a>
+    <div class="navlinks">
+      <a href="housing.html">Housing</a>
+      <a href="knowledge-map.html">Knowledge Map</a>
+      <a href="living-atlas.html">Living Atlas</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Housing · Blue Edition · H-001</div>
+    <h1>What Housing Really Is</h1>
+    <p class="lead">Housing is not only a roof. It is a system that shapes safety, money, health, work, family stability, transportation, education, and future opportunity.</p>
+    <div class="badges">
+      <span class="badge">ADHD-friendly</span>
+      <span class="badge">Practical</span>
+      <span class="badge">20–30 minutes</span>
+      <span class="badge">Printable workbook</span>
+    </div>
+    <div class="actions">
+      <button class="primary" onclick="window.print()">Print / Save PDF</button>
+      <button id="copy-summary">Copy summary</button>
+      <button id="reset-tool">Reset tool</button>
+    </div>
+    <div class="hero-image" id="image-shell"><img id="lesson-image" alt="Housing lesson 1 graphic"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="story">
+      <div class="eyebrow">Real-life opening</div>
+      <h2 class="section-title">Two people can earn the same income and live completely different financial lives.</h2>
+      <p>Imagine two households earning the same amount. One has stable housing, predictable bills, safe parking, a short commute, working heat, and enough room to rest. The other moves often, pays repeated application fees, has unreliable transportation, loses work time dealing with repairs, and never knows whether the next rent increase will force another move.</p>
+      <p>On paper, the income is equal. In real life, the housing systems are not. One household has a platform. The other spends energy recovering from instability.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="quick">
+      <div class="eyebrow" style="color:#dce8f3">Quick answer</div>
+      <h2>Housing is the place, cost structure, legal arrangement, physical condition, location, and support system that shapes how daily life functions.</h2>
+    </div>
+    <div class="field-note"><strong>Real-world tip:</strong> Compare the whole housing system—not only rent, mortgage, or square footage.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">See the connection</div>
+    <h2 class="section-title">Housing touches almost everything.</h2>
+    <div class="diagram">
+      <div class="diagram-core">HOUSING</div>
+      <div class="diagram-grid">
+        <div class="diagram-item"><strong>Safety</strong><span>Condition, neighborhood, utilities, emergency access.</span></div>
+        <div class="diagram-item"><strong>Money</strong><span>Rent or mortgage, utilities, transportation, repairs, fees.</span></div>
+        <div class="diagram-item"><strong>Work</strong><span>Commute, internet, storage, reliability, recovery time.</span></div>
+        <div class="diagram-item"><strong>Health</strong><span>Air quality, pests, mold, heat, stress, sleep, accessibility.</span></div>
+        <div class="diagram-item"><strong>Family</strong><span>School, childcare, privacy, routines, stability, support.</span></div>
+        <div class="diagram-item"><strong>Opportunity</strong><span>Credit, savings, education, business, equity, flexibility.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Deep dive</div>
+    <h2 class="section-title">Open only what you need.</h2>
+    <p class="section-lead">The full lesson is here, but it is broken into short sections so you can learn without wading through a wall of text.</p>
+    <div class="accordion">
+      <div class="acc"><button><span>1. Housing provides more than shelter</span><span>⌄</span></button><div class="acc-panel"><p>A housing arrangement also provides legal rights, privacy, access, utilities, storage, location, and a level of predictability. Two units with the same rent can offer very different real value depending on safety, maintenance, commute, fees, and stability.</p></div></div>
+      <div class="acc"><button><span>2. Housing creates a cost system</span><span>⌄</span></button><div class="acc-panel"><p>The true cost may include rent or mortgage, deposits, application fees, utilities, parking, insurance, transportation, repairs, maintenance, moving, storage, and lost time. Comparing only the advertised monthly payment can hide the actual burden.</p></div></div>
+      <div class="acc"><button><span>3. Housing affects health</span><span>⌄</span></button><div class="acc-panel"><p>Moisture, mold, pests, temperature, smoke, noise, accessibility, crowding, and neighborhood safety can affect physical and mental health. Housing stress also affects sleep, concentration, relationships, and work performance.</p></div></div>
+      <div class="acc"><button><span>4. Housing affects work and transportation</span><span>⌄</span></button><div class="acc-panel"><p>A lower rent can become more expensive when it creates a long commute, higher fuel use, unreliable childcare, or less access to customers and jobs. Location is part of the housing cost.</p></div></div>
+      <div class="acc"><button><span>5. Housing affects children and routines</span><span>⌄</span></button><div class="acc-panel"><p>School continuity, sleep, privacy, transportation, play space, and predictable routines can all change when housing changes. Stability does not require a perfect home, but repeated disruption carries real cost.</p></div></div>
+      <div class="acc"><button><span>6. Housing can build or consume wealth</span><span>⌄</span></button><div class="acc-panel"><p>Renting can protect flexibility and reduce repair risk. Ownership can build equity but also creates financing, maintenance, tax, insurance, and market exposure. Neither option is automatically superior; the fit depends on the household, location, timeline, and total cost.</p></div></div>
+      <div class="acc"><button><span>7. Housing is a legal arrangement</span><span>⌄</span></button><div class="acc-panel"><p>Lease terms, title, mortgage documents, community rules, zoning, occupancy limits, and local law shape what people may do and what they must maintain. Verbal assumptions are not a substitute for reading the actual agreement and current rules.</p></div></div>
+      <div class="acc"><button><span>8. Good housing decisions are resilient</span><span>⌄</span></button><div class="acc-panel"><p>A resilient choice still works when income changes, transportation fails, repairs appear, or family needs shift. The best decision is not always the fanciest or cheapest option today—it is the one that remains workable under realistic pressure.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap tool">
+    <div class="eyebrow" style="color:#dce8f3">Interactive workspace</div>
+    <h2 class="section-title">Housing Stability Score</h2>
+    <p>Rate the current or proposed housing situation from 0 to 10. This is not a diagnosis or approval tool; it helps reveal strengths, pressure points, and what to investigate next.</p>
+
+    <div class="tool-grid">
+      <label>Safety and physical condition<input id="safety" type="number" min="0" max="10" value="7"></label>
+      <label>Total cost fit<input id="cost" type="number" min="0" max="10" value="6"></label>
+      <label>Stability and predictability<input id="stability" type="number" min="0" max="10" value="6"></label>
+      <label>Work / school / commute fit<input id="location" type="number" min="0" max="10" value="7"></label>
+      <label>Space and accessibility<input id="space" type="number" min="0" max="10" value="7"></label>
+      <label>Maintenance and responsiveness<input id="maintenance" type="number" min="0" max="10" value="6"></label>
+      <label>Utilities and connectivity<input id="utilities" type="number" min="0" max="10" value="7"></label>
+      <label>Future flexibility<input id="future" type="number" min="0" max="10" value="6"></label>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-card"><span>Total score</span><strong id="total">0 / 80</strong></div>
+      <div class="score-card"><span>Average</span><strong id="average">0</strong></div>
+      <div class="score-card"><span>Strongest area</span><strong id="strong">—</strong></div>
+      <div class="score-card"><span>Priority area</span><strong id="weak">—</strong></div>
+    </div>
+
+    <label style="display:block;margin-top:14px">What is working well?<textarea id="working"></textarea></label>
+    <label style="display:block">What needs attention?<textarea id="attention"></textarea></label>
+    <label style="display:block">One next action<textarea id="next"></textarea></label>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Atlas terms</div>
+    <h2 class="section-title">Tap a term without leaving the lesson.</h2>
+    <div class="term-row">
+      <button class="term-btn" data-term="housing">Housing</button>
+      <button class="term-btn" data-term="tenant">Tenant</button>
+      <button class="term-btn" data-term="landlord">Landlord</button>
+      <button class="term-btn" data-term="lease">Lease</button>
+      <button class="term-btn" data-term="mortgage">Mortgage</button>
+      <button class="term-btn" data-term="equity">Equity</button>
+      <button class="term-btn" data-term="adu">ADU</button>
+      <button class="term-btn" data-term="cluster">Cottage Cluster</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Common mistakes</div>
+    <h2 class="section-title">What people often miss</h2>
+    <div class="grid">
+      <article class="card"><h3>Comparing only the monthly payment</h3><p>Total cost includes utilities, transportation, fees, repairs, insurance, and time.</p></article>
+      <article class="card"><h3>Choosing appearance before function</h3><p>A beautiful place can still fail the commute, budget, safety, or maintenance test.</p></article>
+      <article class="card"><h3>Assuming ownership always wins</h3><p>Ownership can build equity, but it also creates debt, repair, tax, insurance, and market risk.</p></article>
+      <article class="card"><h3>Ignoring documentation</h3><p>Applications, leases, condition photos, notices, payments, and repair requests need records.</p></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Oregon resource layer</div>
+    <h2 class="section-title">Use the official starting point that matches the problem.</h2>
+    <div class="resource-grid">
+      <a class="resource" href="https://www.oregon.gov/ohcs/housing-assistance/pages/housing-assistance.aspx" target="_blank" rel="noopener"><strong>Oregon Housing and Community Services</strong><span>Statewide housing-assistance and homeownership starting points. OHCS generally connects people through local partners rather than providing most direct services.</span></a>
+      <a class="resource" href="https://www.211info.org/" target="_blank" rel="noopener"><strong>211info</strong><span>Search current local housing, rent, utility, shelter, food, and community resources.</span></a>
+      <a class="resource" href="https://www.oregon.gov/ohcs/homeownership/pages/housing-counseling.aspx" target="_blank" rel="noopener"><strong>Oregon Housing Counselors</strong><span>Find nonprofit housing counseling for buying, affordability, and changing financial circumstances.</span></a>
+      <a class="resource" href="https://oregonlawhelp.org/" target="_blank" rel="noopener"><strong>Oregon Law Help</strong><span>Plain-language legal information and pathways to legal assistance.</span></a>
+      <a class="resource" href="https://fhco.org/" target="_blank" rel="noopener"><strong>Fair Housing Council of Oregon</strong><span>Fair-housing education and help assessing possible discrimination.</span></a>
+      <a class="resource" href="https://www.hud.gov/states/oregon" target="_blank" rel="noopener"><strong>HUD Oregon</strong><span>Federal housing information, counseling, fair housing, and program resources.</span></a>
+    </div>
+    <div class="remember"><strong>Remember:</strong> programs, eligibility, forms, and availability change. Verify current information through the official source before relying on it.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Real-life challenge</div>
+    <h2 class="section-title">Use this today</h2>
+    <div class="story">
+      <p>Score your current housing or one housing option you are considering. Circle the lowest category. Then choose one next action: verify a cost, inspect a condition, ask a written question, compare transportation, contact a housing counselor, or save a document.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Connected learning</div>
+    <h2 class="section-title">Where this lesson leads next</h2>
+    <div class="resource-grid">
+      <a class="resource" href="housing.html"><strong>Housing District</strong><span>Return to the full 24-lesson Housing roadmap.</span></a>
+      <a class="resource" href="h-002.html"><strong>Next: Housing Types</strong><span>Compare different housing forms and how they function.</span></a>
+      <a class="resource" href="money.html"><strong>Money District</strong><span>Understand total cost, cash flow, and affordability.</span></a>
+      <a class="resource" href="credit.html"><strong>Credit District</strong><span>See how reports, scores, debt, and lending affect housing options.</span></a>
+      <a class="resource" href="know-your-rights.html"><strong>Know Your Rights</strong><span>Learn about agreements, notices, evidence, fair housing, and legal help.</span></a>
+      <a class="resource" href="living-atlas.html"><strong>Living Atlas</strong><span>Search housing terms, Oregon resources, agencies, tools, and local branches.</span></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="version"><strong>Everyday Investor Academy — Blue Edition</strong><br>Version 1.0 · Core concepts and Oregon resource links reviewed August 2026 · Browser-only tool · Print or save a PDF for permanent records.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap footer-nav">
+    <a href="housing.html">← Housing Home</a>
+    <a href="knowledge-map.html">Knowledge Map</a>
+    <a href="h-002.html">Next Lesson →</a>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 The Everyday Investor Academy · Educational use only.</div></footer>
+
+<div id="modal-root"></div>
+
+<script>
+const imageCandidates=[
+"housing-01.webp","housing-01.png","housing-01.jpg","housing-01.jpeg",
+"images/housing-01.webp","images/housing-01.png","images/housing-01.jpg",
+"images/housing/housing-01.webp","images/housing/housing-01.png","images/housing/housing-01.jpg"
+];
+const image=document.getElementById("lesson-image"),shell=document.getElementById("image-shell");
+let imageIndex=0;
+function tryImage(){if(imageIndex>=imageCandidates.length){shell.style.display="none";return;}image.src=imageCandidates[imageIndex++];}
+image.addEventListener("error",tryImage);tryImage();
+
+document.querySelectorAll(".acc > button").forEach(btn=>btn.addEventListener("click",()=>btn.closest(".acc").classList.toggle("open")));
+
+const labels={
+safety:"Safety",cost:"Cost",stability:"Stability",location:"Location",
+space:"Space",maintenance:"Maintenance",utilities:"Utilities",future:"Future flexibility"
+};
+function g(id){return document.getElementById(id);}
+function runScore(){
+  const ids=Object.keys(labels), vals=ids.map(id=>Math.max(0,Math.min(10,+g(id).value||0)));
+  const total=vals.reduce((a,b)=>a+b,0), avg=total/vals.length;
+  let max=0,min=0;
+  vals.forEach((v,i)=>{if(v>vals[max])max=i;if(v<vals[min])min=i;});
+  g("total").textContent=total+" / 80";
+  g("average").textContent=avg.toFixed(1);
+  g("strong").textContent=labels[ids[max]];
+  g("weak").textContent=labels[ids[min]];
+}
+function save(){
+  const state={};
+  document.querySelectorAll("input,textarea").forEach(el=>state[el.id]=el.value);
+  localStorage.setItem("eia-h-001",JSON.stringify(state));
+}
+function load(){
+  const state=JSON.parse(localStorage.getItem("eia-h-001")||"{}");
+  Object.entries(state).forEach(([id,val])=>{if(g(id))g(id).value=val;});
+}
+document.addEventListener("input",()=>{runScore();save();});
+g("reset-tool").addEventListener("click",()=>{
+  if(!confirm("Reset the saved Housing Stability Score?"))return;
+  localStorage.removeItem("eia-h-001");
+  ["safety","cost","stability","location","space","maintenance","utilities","future"].forEach(id=>g(id).value=5);
+  ["working","attention","next"].forEach(id=>g(id).value="");
+  runScore();
+});
+g("copy-summary").addEventListener("click",async()=>{
+  const summary=`H-001 — What Housing Really Is
+
+Housing Stability Score: ${g("total").textContent}
+Average: ${g("average").textContent}
+Strongest area: ${g("strong").textContent}
+Priority area: ${g("weak").textContent}
+
+What is working:
+${g("working").value}
+
+What needs attention:
+${g("attention").value}
+
+Next action:
+${g("next").value}`;
+  try{await navigator.clipboard.writeText(summary);alert("Summary copied.");}
+  catch{alert("Copy was blocked. Use Print / Save PDF instead.");}
+});
+
+const terms={
+housing:["Housing","The place, legal arrangement, cost structure, physical condition, location, and services that shape how daily life functions."],
+tenant:["Tenant","A person who occupies housing under a rental agreement or other lawful arrangement."],
+landlord:["Landlord","A person or entity that rents housing and has duties defined by the agreement and applicable law."],
+lease:["Lease","A contract describing the right to occupy property, payment, duration, rules, duties, and remedies."],
+mortgage:["Mortgage","A loan secured by real property, usually repaid over time with interest and other housing costs."],
+equity:["Equity","The portion of a property's value remaining after subtracting debts secured by it."],
+adu:["ADU","An accessory dwelling unit: an additional dwelling on the same property as a primary home, subject to local rules."],
+cluster:["Cottage Cluster","A group of smaller detached homes arranged around a shared common area, subject to local planning standards."]
+};
+document.querySelectorAll("[data-term]").forEach(btn=>btn.addEventListener("click",()=>{
+  const item=terms[btn.dataset.term];
+  g("modal-root").innerHTML=`<div class="modal open"><div class="modal-window"><div class="modal-head"><h2>${item[0]}</h2><button class="modal-close">×</button></div><div class="modal-body"><p>${item[1]}</p><p><a href="living-atlas.html"><strong>Open related Living Atlas resources →</strong></a></p></div></div></div>`;
+  document.body.style.overflow="hidden";
+}));
+document.addEventListener("click",e=>{
+  if(e.target.classList.contains("modal")||e.target.closest(".modal-close")){
+    g("modal-root").innerHTML="";document.body.style.overflow="";
+  }
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){g("modal-root").innerHTML="";document.body.style.overflow="";}});
+load();runScore();
+</script>
+</body>
+</html>
