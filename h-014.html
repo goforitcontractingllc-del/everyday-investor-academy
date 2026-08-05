@@ -1,301 +1,40 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Learn how mobile home parks work, including home ownership, rented land, park rules, costs, maintenance, resale, relocation, and due diligence.">
-<title>H-014 · Mobile Home Parks | The Everyday Investor Academy</title>
-<style>
-:root{
-  --navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;
-  --gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;
-  --soft:#EEF1E8;--line:#D9DDCF;--danger:#7A3D2B
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.68}
-a{color:inherit}
-.wrap{width:min(1080px,calc(100% - 28px));margin:auto}
-header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe);backdrop-filter:blur(10px)}
-.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0}
-.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:900}
-.navlinks{display:flex;gap:14px;flex-wrap:wrap}
-.hero{padding:64px 0 42px;background:radial-gradient(circle at 88% 15%,rgba(198,154,66,.18),transparent 30%),linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}
-.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}
-h1{font-size:clamp(3rem,8vw,5.8rem);line-height:.96;margin:.2em 0 .25em}
-.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.22rem;max-width:850px}
-.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.pill{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:.78rem;font-weight:900;color:var(--navy)}
-.progress{margin-top:18px;height:10px;background:#E7E9E0;border-radius:999px;overflow:hidden}
-.progress span{display:block;height:100%;width:58.33%;background:var(--olive)}
-section{padding:42px 0}
-.shell{background:var(--paper);border:1px solid var(--taupe);border-radius:18px;padding:28px;box-shadow:0 10px 26px rgba(16,47,85,.05)}
-.callout{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin:18px 0}
-.warning{background:#F9EEE9;border-left:5px solid var(--danger);padding:15px 17px;border-radius:8px;margin:18px 0}
-.olive{background:var(--soft);border-left:5px solid var(--olive);padding:15px 17px;border-radius:8px;margin:18px 0}
-details{background:#FAFBF8;border:1px solid var(--line);border-radius:14px;margin:16px 0;overflow:hidden}
-summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:900;color:var(--navy)}
-summary::-webkit-details-marker{display:none}
-.body{padding:0 20px 20px}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.card{background:#F8FAFC;border:1px solid var(--taupe);border-radius:14px;padding:17px}
-.card h3{margin-top:0}
-.number{background:var(--navy);color:#fff;border-radius:16px;padding:20px}
-.number h2,.number h3{color:#fff}
-.number-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.number-grid div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:13px;border-radius:10px}
-.checklist{list-style:none;padding:0}
-.checklist li{position:relative;padding-left:28px;margin:10px 0}
-.checklist li:before{content:"□";position:absolute;left:0;color:var(--olive);font-weight:900}
-.quiz{background:var(--navy);color:#fff;border-radius:16px;padding:20px}
-.quiz h3{color:#fff}
-.quiz label{display:block;padding:10px;border:1px solid rgba(255,255,255,.2);border-radius:9px;margin:7px 0;background:rgba(255,255,255,.06)}
-.quiz button{padding:10px 14px;font-weight:900;border:0;border-radius:8px;cursor:pointer}
-.result{margin-top:12px;font-weight:900}
-.field{background:var(--olive);color:#fff;border-radius:16px;padding:20px}
-.field h2{color:#fff}
-.atlas{background:linear-gradient(135deg,var(--navy),#173B67);color:#fff;border-radius:18px;padding:20px}
-.atlas h2,.atlas h3{color:#fff}
-.atlas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.atlas a{color:#DCE5D2;font-weight:900}
-.continue{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.continue a{background:#F8FAFC;border:1px solid var(--taupe);border-radius:14px;padding:16px;text-decoration:none}
-.atlas-term{font-weight:900;color:var(--navy);text-decoration:underline dotted 2px;text-underline-offset:3px;cursor:pointer}
-footer{padding:28px 0 42px;color:var(--muted);border-top:1px solid var(--taupe)}
-@media(max-width:800px){.grid-4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:650px){.navlinks{display:none}.grid-2,.grid-4,.number-grid,.atlas-grid,.continue{grid-template-columns:1fr}.shell{padding:20px}}
-</style>
-<link rel="stylesheet" href="atlas-terms.css">
-</head>
-<body>
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="index.html">✦ The Everyday Investor Academy</a>
-    <div class="navlinks">
-      <a href="housing.html">Housing</a>
-      <a href="knowledge-map.html">Knowledge Map</a>
-      <a href="living-atlas.html">Living Atlas</a>
-    </div>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Housing District · H-014</div>
-    <h1>Mobile Home Parks</h1>
-    <p class="lead">Understand what it means to own a manufactured home while renting the land beneath it—and why the park agreement matters as much as the home itself.</p>
-    <div class="meta">
-      <span class="pill">20–30 minutes</span>
-      <span class="pill">Beginner friendly</span>
-      <span class="pill">Housing systems</span>
-      <span class="pill">Living Atlas connected</span>
-    </div>
-    <div class="progress"><span></span></div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <article class="shell">
-
-      <div class="callout">
-        <strong>Why this matters:</strong> In many mobile home parks, the resident owns the home but rents the space. That creates a hybrid situation: part homeownership, part tenancy, and part community-rule system.
-      </div>
-
-      <div class="warning">
-        <strong>Important:</strong> Park rules, rent increases, sale requirements, relocation rights, notices, and resident protections can change by state and local law. Use the Living Atlas and official sources before acting.
-      </div>
-
-      <details open>
-        <summary>📖 The Lesson</summary>
-        <div class="body">
-          <h2>Two separate things may be involved</h2>
-          <p>A resident may own the manufactured home itself while leasing the land, utility connections, parking, and shared facilities from the park owner.</p>
-
-          <div class="grid-2">
-            <div class="card">
-              <h3>The home</h3>
-              <p>The structure may be owned, financed, insured, maintained, improved, sold, or inherited by the resident.</p>
-            </div>
-            <div class="card">
-              <h3>The space</h3>
-              <p>The land is typically controlled through a rental agreement, park rules, and applicable landlord-tenant law.</p>
-            </div>
-          </div>
-
-          <h2>The park agreement matters</h2>
-          <p>Before buying a home inside a park, review the space rent, utilities, fees, rules, age restrictions if any, guest policies, parking, pets, exterior standards, maintenance duties, sale approval procedures, and notice requirements.</p>
-
-          <h2>Buying the home is not the same as buying the land</h2>
-          <p>A low purchase price can still come with meaningful monthly costs. Space rent, utilities, insurance, taxes, repairs, financing, and park fees all affect affordability.</p>
-
-          <h2>Selling can involve two approvals</h2>
-          <p>The resident may need to find a buyer for the home while the buyer separately qualifies to rent the space. A sale can therefore depend on financing, condition, title, park approval, and current rules.</p>
-
-          <h2>Relocation is possible—but often difficult</h2>
-          <p>Moving a manufactured home can require permits, transportation, utility disconnection, setup, foundation work, a suitable destination, and a home that can safely be transported. Older homes may be especially difficult or expensive to move.</p>
-
-          <div class="olive">
-            <strong>Plain-English rule:</strong> Never evaluate only the home. Evaluate the home, the park, the agreement, the monthly costs, the resale path, and the relocation risk together.
-          </div>
-        </div>
-      </details>
-
-      <details open>
-        <summary>🧠 Key Terms</summary>
-        <div class="body">
-          <div class="grid-2">
-            <div class="card">
-              <h3>Space Rent</h3>
-              <p>The recurring payment for the land or lot where the home is located.</p>
-            </div>
-            <div class="card">
-              <h3>Park Rules</h3>
-              <p>Written community standards governing use, appearance, conduct, parking, pets, guests, and other matters.</p>
-            </div>
-            <div class="card">
-              <h3>Manufactured Home Title</h3>
-              <p>The ownership record for the home, which may be handled differently from land title.</p>
-            </div>
-            <div class="card">
-              <h3>Relocation Cost</h3>
-              <p>The full cost of disconnecting, moving, setting up, permitting, and reconnecting the home elsewhere.</p>
-            </div>
-          </div>
-        </div>
-      </details>
-
-      <details>
-        <summary>🏠 Perspective Lenses</summary>
-        <div class="body">
-          <div class="grid-4">
-            <div class="card"><h3>Resident</h3><p>Monthly affordability, rule stability, repairs, resale, and long-term security.</p></div>
-            <div class="card"><h3>Buyer</h3><p>Home condition, title, financing, park approval, and full monthly costs.</p></div>
-            <div class="card"><h3>Park Owner</h3><p>Infrastructure, rules, maintenance, compliance, collections, and resident communication.</p></div>
-            <div class="card"><h3>Investor</h3><p>Whether the investment is the home, the park, or both—and which risks belong to each.</p></div>
-          </div>
-        </div>
-      </details>
-
-      <details open>
-        <summary>💵 Numbers in Action</summary>
-        <div class="body">
-          <div class="number">
-            <h2>Monthly housing cost</h2>
-            <div class="number-grid">
-              <div><strong>Home payment</strong><br>Loan or purchase cost</div>
-              <div><strong>Space rent</strong><br>Lot or park rent</div>
-              <div><strong>Utilities and fees</strong><br>Water, sewer, garbage, park charges</div>
-              <div><strong>Insurance and repairs</strong><br>Protection and maintenance</div>
-            </div>
-          </div>
-          <p><strong>Example:</strong> A home payment of $550, space rent of $725, utilities and fees of $210, insurance of $95, and a repair reserve of $150 creates an estimated monthly housing cost of <strong>$1,730</strong>.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>⚠️ Common Mistakes</summary>
-        <div class="body">
-          <div class="warning">
-            <ul>
-              <li>Looking only at the home's sale price.</li>
-              <li>Failing to read the park rules before buying.</li>
-              <li>Assuming the buyer can automatically remain in the park.</li>
-              <li>Ignoring future space-rent changes.</li>
-              <li>Assuming the home can easily be moved.</li>
-              <li>Skipping title, inspection, utility, and financing checks.</li>
-            </ul>
-          </div>
-        </div>
-      </details>
-
-      <details>
-        <summary>📝 Try It Yourself</summary>
-        <div class="body">
-          <ul class="checklist">
-            <li>Write the purchase price and every monthly cost separately.</li>
-            <li>Request the full rental agreement and park rules.</li>
-            <li>Check how a future buyer must qualify.</li>
-            <li>Identify who maintains the home, lot, utilities, roads, and shared areas.</li>
-            <li>Ask what would happen if the park closed or the home had to move.</li>
-            <li>Verify the home's title and legal status.</li>
-          </ul>
-        </div>
-      </details>
-
-      <details>
-        <summary>✅ Knowledge Check</summary>
-        <div class="body">
-          <div class="quiz" data-quiz>
-            <div data-question>
-              <h3>1. In many parks, what does the resident own?</h3>
-              <label><input type="radio" name="q1" data-correct="true"> The home, while renting the space</label>
-              <label><input type="radio" name="q1"> The entire park</label>
-            </div>
-            <div data-question>
-              <h3>2. Is the purchase price the full housing cost?</h3>
-              <label><input type="radio" name="q2"> Yes</label>
-              <label><input type="radio" name="q2" data-correct="true"> No</label>
-            </div>
-            <div data-question>
-              <h3>3. Can park approval matter when the home is sold?</h3>
-              <label><input type="radio" name="q3" data-correct="true"> Yes</label>
-              <label><input type="radio" name="q3"> Never</label>
-            </div>
-            <button type="button" data-check>Check answers</button>
-            <div class="result"></div>
-          </div>
-        </div>
-      </details>
-
-      <div class="field">
-        <h2>⭐ Field Note</h2>
-        <p>A mobile home inside a park should be analyzed as a package: structure, space lease, rules, infrastructure, monthly costs, resale restrictions, and relocation risk.</p>
-      </div>
-
-      <div class="atlas">
-        <h2>🌎 Living Atlas Connection</h2>
-        <p>Use the current Oregon and local branches to verify park-specific law, notices, resident protections, ownership records, and local requirements.</p>
-        <div class="atlas-grid">
-          <div><h3>Oregon</h3><a href="oregon.html">Open Oregon →</a></div>
-          <div><h3>Jackson County</h3><a href="jackson-county.html">Open Jackson County →</a></div>
-          <div><h3>Josephine County</h3><a href="josephine-county.html">Open Josephine County →</a></div>
-        </div>
-      </div>
-
-      <h2>➡ Continue Learning</h2>
-      <div class="continue">
-        <a href="h-013.html"><h3>Previous</h3><p>Manufactured Homes</p></a>
-        <a href="housing.html"><h3>Housing District</h3><p>Return to all 24 lessons</p></a>
-        <a href="h-015.html"><h3>Next</h3><p>ADUs</p></a>
-      </div>
-
-    </article>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">© 2026 The Everyday Investor Academy · H-014</div>
-</footer>
-
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>H-014 · Home Maintenance Basics for Renters and Owners</title><style>
+:root{--blue:#0f3157;--blue2:#1d5f96;--orange:#ec7c05;--cream:#f7f1e7;--paper:#fffdf8;--olive:#70795f;--line:#d8d5cb;--ink:#29302f;--muted:#6e726f;--soft:#eef2e9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.72 Arial,sans-serif}.wrap{width:min(1120px,calc(100% - 28px));margin:auto}a{color:inherit}
+header{position:sticky;top:0;z-index:50;background:#fffdf8f2;border-bottom:1px solid var(--line)}.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}.nav a{text-decoration:none;color:var(--blue);font-weight:900}.navlinks{display:flex;gap:12px}
+.hero{padding:58px 0 36px;background:linear-gradient(135deg,var(--paper),var(--soft))}.eyebrow{font-size:.76rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--olive)}
+h1,h2,h3{font-family:Georgia,serif;color:var(--blue)}h1{font-size:clamp(3.2rem,8vw,6rem);line-height:.95}.lead{font:1.22rem/1.62 Georgia,serif;color:var(--olive)}
+.badges,.term-row{display:flex;gap:8px;flex-wrap:wrap}.badge,.term-btn{padding:7px 10px;border-radius:999px;background:white;border:1px solid var(--line);font-size:.82rem;font-weight:900;color:var(--blue)}
+.hero-image{margin-top:26px;border-radius:22px;overflow:hidden;border:1px solid var(--line)}.hero-image img{width:100%;display:block;max-height:470px;object-fit:cover}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.actions button{padding:11px 14px;border:2px solid var(--blue);border-radius:11px;background:transparent;color:var(--blue);font-weight:900}.actions .primary{background:var(--blue);color:white}
+section{padding:44px 0}.section-title{font-size:clamp(2.2rem,5vw,3.9rem)}.story{padding:22px;background:#fff7e9;border-left:5px solid var(--orange);border-radius:12px}.quick{padding:20px;background:var(--blue);color:white;border-radius:20px}.quick h2{color:white}
+.accordion{display:grid;gap:10px}.acc{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}.acc button{width:100%;border:0;background:white;padding:14px 16px;text-align:left;display:flex;justify-content:space-between;color:var(--blue);font-weight:900}.acc-panel{display:none;padding:0 16px 16px;color:var(--muted)}.acc.open .acc-panel{display:block}
+.tool{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;border-radius:22px;padding:22px}.tool h2{color:white}.tool-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.tool label{display:block;font-weight:900}.tool input,.tool textarea,.tool select{width:100%;margin-top:5px;padding:11px;border:0;border-radius:10px;font:inherit}.tool textarea{min-height:95px}
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.score-card{background:#ffffff18;border:1px solid #ffffff35;border-radius:12px;padding:13px}.score-card span{display:block;font-size:.85rem}.score-card strong{display:block;font-size:1.25rem}
+.grid,.resource-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card,.resource{background:white;border:1px solid var(--line);border-radius:14px;padding:14px}.resource{text-decoration:none}.resource strong{display:block;color:var(--blue)}.resource span{display:block;color:var(--muted);font-size:.9rem}
+.version{padding:13px;border-radius:11px;background:#edf4fb;color:var(--blue)}.footer-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.footer-nav a{background:white;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;text-decoration:none;color:var(--blue);font-weight:900}
+.modal{position:fixed;inset:0;background:#081626bd;display:none;z-index:1000;padding:18px}.modal.open{display:block}.modal-window{width:min(760px,100%);margin:5vh auto;background:white;border-radius:22px;overflow:hidden}.modal-head{display:flex;justify-content:space-between;padding:20px;background:var(--blue);color:white}.modal-head h2{color:white}.modal-body{padding:22px}
+@media print{header,.actions,.navlinks,.footer-nav,.term-row,.modal{display:none!important}.tool{background:white;color:black;border:1px solid #aaa}.tool h2{color:var(--blue)}}@media(max-width:760px){.navlinks{display:none}.tool-grid,.grid,.resource-grid,.score-grid,.footer-nav{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="wrap nav"><a href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="housing.html">Housing</a><a href="knowledge-map.html">Knowledge Map</a><a href="living-atlas.html">Living Atlas</a></div></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Housing · Blue Edition · H-014</div><h1>Home Maintenance Basics for Renters and Owners</h1><p class="lead">Understand routine care, warning signs, emergency response, documentation, and when a professional is needed.</p><div class="badges"><span class="badge">Beginner friendly</span><span class="badge">Interactive</span><span class="badge">20–30 minutes</span><span class="badge">Printable workbook</span></div><div class="actions"><button class="primary" onclick="window.print()">Print / Save PDF</button><button id="copy-summary">Copy summary</button><button id="reset-tool">Reset tool</button></div><div class="hero-image" id="image-shell"><img id="lesson-image"></div></div></section>
+<section><div class="wrap"><div class="story"><div class="eyebrow">Real-life opening</div><h2 class="section-title">Why this matters</h2><p>A small leak, blocked drain, or dirty filter can become a much larger problem when nobody notices the pattern.</p></div></div></section>
+<section><div class="wrap"><div class="quick"><div class="eyebrow" style="color:#dce8f3">Quick answer</div><h2>Understand routine care, warning signs, emergency response, documentation, and when a professional is needed.</h2></div></div></section>
+<section><div class="wrap"><div class="eyebrow">Deep dive</div><h2 class="section-title">Open only what you need.</h2><div class="accordion"><div class="acc"><button><span>1. Know the systems</span><span>⌄</span></button><div class="acc-panel"><p>Learn the basics of roof, drainage, plumbing, electrical, heating, ventilation, and safety.</p></div></div><div class="acc"><button><span>2. Watch early signals</span><span>⌄</span></button><div class="acc-panel"><p>Water stains, smells, heat, noise, cracks, pests, and condensation are information.</p></div></div><div class="acc"><button><span>3. Separate routine from emergency</span><span>⌄</span></button><div class="acc-panel"><p>Flooding, fire, gas odor, sewage, and structural danger require faster action.</p></div></div><div class="acc"><button><span>4. Do not exceed your role</span><span>⌄</span></button><div class="acc-panel"><p>Renters should follow the reporting process; owners should use qualified professionals where required.</p></div></div><div class="acc"><button><span>5. Prevent water damage</span><span>⌄</span></button><div class="acc-panel"><p>Check leaks, drainage, gutters, and seals.</p></div></div><div class="acc"><button><span>6. Maintain safety devices</span><span>⌄</span></button><div class="acc-panel"><p>Test alarms and follow manufacturer and legal guidance.</p></div></div><div class="acc"><button><span>7. Keep a record</span><span>⌄</span></button><div class="acc-panel"><p>Track date, condition, photos, work, cost, and next service.</p></div></div><div class="acc"><button><span>8. Plan seasonally</span><span>⌄</span></button><div class="acc-panel"><p>Prepare for heat, cold, smoke, rain, pests, and freezing.</p></div></div></div></div></section>
+<section><div class="wrap tool"><div class="eyebrow" style="color:#dce8f3">Interactive workspace</div><h2 class="section-title">Maintenance and Warning-Sign Log</h2><div class="tool-grid"><label>Property / area<input id="property"></label><label>Date<input id="date" type="date"></label><label>Condition<textarea id="condition"></textarea></label><label>Urgency<select id="urgency"><option>Routine</option><option>Watch closely</option><option>Prompt repair</option><option>Potential emergency</option></select></label><label>Photos / evidence<textarea id="photos"></textarea></label><label>Action taken<textarea id="action"></textarea></label><label>Next check date<input id="next-date" type="date"></label></div><div class="score-grid"><div class="score-card"><span>Condition</span><strong id="condition-status">No</strong></div><div class="score-card"><span>Action</span><strong id="action-status">No</strong></div><div class="score-card"><span>Follow-up</span><strong id="follow-status">No</strong></div></div></div></section>
+<section><div class="wrap"><div class="eyebrow">Atlas terms</div><h2 class="section-title">Tap a term without leaving the lesson.</h2><div class="term-row"><button class="term-btn" data-term="preventivemaintenance">Preventive Maintenance</button><button class="term-btn" data-term="deferredmaintenance">Deferred Maintenance</button><button class="term-btn" data-term="ventilation">Ventilation</button><button class="term-btn" data-term="drainage">Drainage</button><button class="term-btn" data-term="licensedtrade">Licensed Trade</button><button class="term-btn" data-term="emergencyrepair">Emergency Repair</button></div></div></section>
+<section><div class="wrap"><div class="eyebrow">Official resource layer</div><h2 class="section-title">Verify current information at the source.</h2><div class="resource-grid"><a class="resource" href="https://www.oregon.gov/bcd/" target=_blank rel=noopener><strong>Oregon Building Codes Division</strong><span>Building-code and safety resources.</span></a><a class="resource" href="https://www.oregon.gov/ccb/" target=_blank rel=noopener><strong>Oregon CCB</strong><span>Contractor licensing resources.</span></a><a class="resource" href="https://www.oregon.gov/osfm/" target=_blank rel=noopener><strong>Oregon State Fire Marshal</strong><span>Fire-safety information.</span></a><a class="resource" href="construction.html" ><strong>Construction District</strong><span>Building systems lessons.</span></a></div></div></section>
+<section><div class="wrap"><div class="version"><strong>Everyday Investor Academy — Blue Edition</strong><br>Version 1.0 · Reviewed August 2026 · Browser-only tool · Print or save a PDF for permanent records.</div></div></section>
+<section><div class="wrap footer-nav"><a href="h-013.html">← Previous</a><a href="housing.html">Housing Home</a><a href="h-015.html">Next →</a></div></section><div id="modal-root"></div>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{
-  const quiz=document.querySelector('[data-quiz]');
-  if(!quiz)return;
-  quiz.querySelector('[data-check]').addEventListener('click',()=>{
-    const groups=[...quiz.querySelectorAll('[data-question]')];
-    let score=0;
-    groups.forEach(group=>{
-      const selected=group.querySelector('input:checked');
-      if(selected&&selected.dataset.correct==='true')score++;
-    });
-    quiz.querySelector('.result').textContent=`You got ${score} of ${groups.length} correct.`;
-  });
-});
-</script>
-<script src="atlas-terms.js" defer></script>
-</body>
-</html>
+const imgs=["housing-14.webp", "housing-14.png", "housing-14.jpg", "housing-14.jpeg", "images/housing-14.webp", "images/housing-14.png", "images/housing/housing-14.webp", "images/housing/housing-14.png"],image=document.getElementById("lesson-image"),shell=document.getElementById("image-shell");let ii=0;function tryImage(){if(ii>=imgs.length){shell.style.display="none";return;}image.src=imgs[ii++];}image.addEventListener("error",tryImage);tryImage();
+document.querySelectorAll(".acc > button").forEach(b=>b.addEventListener("click",()=>b.closest(".acc").classList.toggle("open")));
+function g(id){return document.getElementById(id);}function currency(n){return new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n||0);}
+function save(){const s={};document.querySelectorAll("input,textarea,select").forEach((el,i)=>s[el.id||("f"+i)]=el.type==="checkbox"?el.checked:el.value);localStorage.setItem("eia-h-014",JSON.stringify(s));}
+function load(){const s=JSON.parse(localStorage.getItem("eia-h-014")||"{}");document.querySelectorAll("input,textarea,select").forEach((el,i)=>{const k=el.id||("f"+i);if(k in s){if(el.type==="checkbox")el.checked=s[k];else el.value=s[k];}});}
+function runTool(){g("condition-status").textContent=g("condition").value.trim()?"Yes":"No";g("action-status").textContent=g("action").value.trim()?"Yes":"No";g("follow-status").textContent=g("next-date").value?"Set":"No";}
+document.addEventListener("input",()=>{runTool();save();});document.addEventListener("change",()=>{runTool();save();});
+g("reset-tool").addEventListener("click",()=>{if(confirm("Reset this tool?")){localStorage.removeItem("eia-h-014");location.reload();}});
+g("copy-summary").addEventListener("click",async()=>{const vals=[...document.querySelectorAll("input,textarea,select")].map(x=>x.value).filter(Boolean);try{await navigator.clipboard.writeText("H-014 — "+"Home Maintenance Basics for Renters and Owners"+"\n\n"+vals.join("\n"));alert("Summary copied.");}catch{alert("Use Print / Save PDF instead.");}});
+const termData={"preventivemaintenance": "Planned care intended to reduce failure and damage.", "deferredmaintenance": "Maintenance postponed until the problem may become larger.", "ventilation": "Movement of air used to manage moisture and comfort.", "drainage": "Systems that move water away from structures.", "licensedtrade": "Work requiring a specific professional license.", "emergencyrepair": "Work needed promptly to address danger or damage."};document.querySelectorAll("[data-term]").forEach(btn=>btn.addEventListener("click",()=>{g("modal-root").innerHTML=`<div class="modal open"><div class="modal-window"><div class="modal-head"><h2>${btn.textContent}</h2><button class="modal-close">×</button></div><div class="modal-body"><p>${termData[btn.dataset.term]}</p></div></div></div>`;}));document.addEventListener("click",e=>{if(e.target.classList.contains("modal")||e.target.closest(".modal-close"))g("modal-root").innerHTML="";});load();runTool();
+</script></body></html>
