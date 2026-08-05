@@ -1,101 +1,82 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>H-002 · Housing Looks Different | The Everyday Investor Academy</title><style>
-:root{
-  --navy:#102F55;--olive:#6D755B;--cream:#F7F1E7;--paper:#FFFDF8;
-  --gold:#C69A42;--taupe:#B7AA96;--ink:#2D302F;--muted:#6E716E;
-  --soft:#EEF1E8;--green:#52705A;--gray:#ECEFF3
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.68}
-a{color:inherit}
-.wrap{width:min(1120px,calc(100% - 28px));margin:auto}
-header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.97);border-bottom:1px solid var(--taupe);backdrop-filter:blur(10px)}
-.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0}
-.brand,.nav a{text-decoration:none;color:var(--navy);font-weight:900}
-.navlinks{display:flex;gap:14px;flex-wrap:wrap}
-.hero{padding:68px 0 48px;background:linear-gradient(135deg,var(--paper),var(--soft));border-bottom:1px solid var(--taupe)}
-.eyebrow{color:var(--olive);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}
-h1{font-size:clamp(3rem,8vw,6rem);line-height:.96;margin:.2em 0 .25em;max-width:940px}
-.lead{font-family:Georgia,serif;color:var(--olive);font-size:1.23rem;max-width:860px}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
-.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:12px 17px;border:2px solid var(--navy);border-radius:10px;font-weight:900;min-height:48px}
-.btn.primary{background:var(--navy);color:#fff}
-section{padding:48px 0}
-.section-title{font-size:2.3rem;margin:0 0 8px}
-.section-copy{max-width:850px;color:var(--muted)}
-.module-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
-.module{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:20px;box-shadow:0 8px 22px rgba(16,47,85,.05)}
-.module h3{margin:0;font-size:1.55rem}
-.module p{color:var(--muted);margin:.45em 0 1em}
-.lesson-list{display:grid;gap:9px}
-.lesson{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;background:#F7F8F5;border:1px solid #D9DDCF;border-radius:11px;padding:11px 12px;text-decoration:none}
-.lesson .code{color:var(--olive);font-weight:950;font-size:.78rem;letter-spacing:.08em}
-.lesson .title{color:var(--navy);font-weight:850}
-.lesson .state{font-size:.68rem;font-weight:900;text-transform:uppercase;border-radius:999px;padding:6px 9px;background:var(--gray);color:#6D7580;white-space:nowrap}
-.lesson.live{border-color:var(--olive);background:#FBFCF9}
-.lesson.live .state{background:var(--soft);color:var(--green)}
-.lesson.disabled{pointer-events:none}
-.search-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin:22px 0}
-.search-row input,.search-row button{padding:13px 14px;border:1px solid var(--taupe);background:var(--paper);border-radius:10px;font:inherit}
-.search-row button{font-weight:900;cursor:pointer}
-.progress{background:var(--navy);color:#fff;border-radius:17px;padding:22px;margin-top:24px}
-.progress h2{color:#fff;margin-top:0}
-.progress-bar{height:12px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden}
-.progress-fill{height:100%;width:0;background:#D6DEC9;transition:width .25s ease}
-.progress-text{margin-top:10px;color:#E6EBF0}
-.stairs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.stair{background:var(--paper);border:1px solid var(--taupe);border-radius:14px;padding:18px;text-decoration:none}
-.stair h3{margin-top:0}
-.stair strong{color:var(--olive)}
-.live-atlas{background:var(--navy);color:#fff;border-radius:18px;padding:25px}
-.live-atlas h2{color:#fff;margin-top:0}
-.live-atlas a{display:inline-flex;margin-top:10px;background:#fff;color:var(--navy);text-decoration:none;border-radius:10px;padding:11px 14px;font-weight:900}
-.notice{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin-top:22px}
-.article{background:var(--paper);border:1px solid var(--taupe);border-radius:16px;padding:28px;box-shadow:0 8px 22px rgba(16,47,85,.05);max-width:900px;margin:auto}
-.article h2{font-size:2rem;margin-top:1.5em}
-.article h3{font-size:1.3rem;margin-top:1.3em}
-.callout{background:#FBF6EB;border-left:5px solid var(--gold);padding:15px 17px;border-radius:8px;margin:18px 0}
-.olivebox{background:var(--soft);border-left:5px solid var(--olive);padding:15px 17px;border-radius:8px;margin:18px 0}
-.term-grid,.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.term,.choice{background:#F8FAFC;border:1px solid var(--taupe);border-radius:10px;padding:15px}
-.term strong,.choice strong{display:block;color:var(--navy);margin-bottom:5px}
-.quiz{background:var(--navy);color:#fff;border-radius:14px;padding:22px;margin-top:26px}
-.quiz h2,.quiz h3{color:#fff}
-.quiz details{background:rgba(255,255,255,.1);border-radius:8px;padding:12px;margin-top:10px}
-.navdoors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
-.navdoor{background:var(--paper);border:1px solid var(--taupe);border-radius:12px;padding:17px;text-decoration:none}
-.navdoor strong{display:block;color:var(--navy);margin-bottom:5px}
-footer{border-top:1px solid var(--taupe);padding:28px 0 42px;color:var(--muted);font-size:.9rem}
-@media(max-width:800px){.module-grid,.term-grid,.choice-grid{grid-template-columns:1fr}.stairs,.navdoors{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.stairs,.navdoors{grid-template-columns:1fr}.navlinks{display:none}.lesson{grid-template-columns:auto 1fr}.lesson .state{grid-column:1/-1;width:max-content}.search-row{grid-template-columns:1fr}}
+<title>H-002 · Housing Types and How They Actually Work</title><meta name="description" content="Compare apartments, houses, condos, manufactured homes, ADUs, cottage clusters, duplexes, rural property, and shared housing by how they function—not just how they look."><style>
+:root{--blue:#0f3157;--blue2:#1d5f96;--orange:#ec7c05;--cream:#f7f1e7;--paper:#fffdf8;--olive:#70795f;--line:#d8d5cb;--ink:#29302f;--muted:#6e726f;--soft:#eef2e9;--red:#813a2c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.72 Arial,sans-serif}.wrap{width:min(1120px,calc(100% - 28px));margin:auto}a{color:inherit}
+header{position:sticky;top:0;z-index:50;background:#fffdf8f2;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0}.nav a{text-decoration:none;color:var(--blue);font-weight:900}.navlinks{display:flex;gap:12px;flex-wrap:wrap}
+.hero{padding:58px 0 36px;background:radial-gradient(circle at 88% 12%,rgba(236,124,5,.18),transparent 25%),linear-gradient(135deg,var(--paper),var(--soft))}.eyebrow{font-size:.76rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--olive)}
+h1,h2,h3{font-family:Georgia,serif;color:var(--blue)}h1{font-size:clamp(3.2rem,8vw,6rem);line-height:.95;margin:.2em 0}.lead{font:1.22rem/1.62 Georgia,serif;color:var(--olive);max-width:900px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.badge{padding:7px 10px;border-radius:999px;background:white;border:1px solid var(--line);font-size:.82rem;font-weight:900;color:var(--blue)}
+.hero-image{margin-top:26px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#dfe6dc}.hero-image img{width:100%;display:block;max-height:470px;object-fit:cover}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.actions button,.actions a{padding:11px 14px;border:2px solid var(--blue);border-radius:11px;background:transparent;color:var(--blue);font-weight:900;text-decoration:none;cursor:pointer}.actions .primary{background:var(--blue);color:white}
+section{padding:44px 0}.section-title{font-size:clamp(2.2rem,5vw,3.9rem);margin:.1em 0 10px}.section-lead{max-width:840px;color:var(--muted)}
+.story{padding:22px;background:#fff7e9;border-left:5px solid var(--orange);border-radius:12px}.quick{padding:20px;background:var(--blue);color:white;border-radius:20px}.quick h2{color:white}.field-note,.warning,.remember{padding:14px 16px;border-left:5px solid var(--orange);border-radius:10px;margin-top:14px}.field-note{background:var(--soft)}.warning{background:#f8ece7;border-color:var(--red)}.remember{background:#edf4fb;border-color:var(--blue)}
+.accordion{display:grid;gap:10px}.acc{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}.acc button{width:100%;border:0;background:white;padding:14px 16px;text-align:left;display:flex;justify-content:space-between;color:var(--blue);font-weight:900;font-size:1rem;cursor:pointer}.acc-panel{display:none;padding:0 16px 16px;color:var(--muted)}.acc.open .acc-panel{display:block}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px}.card h3{margin:.1em 0 .45em}.card p{margin:.2em 0;color:var(--muted)}
+.tool{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;border-radius:22px;padding:22px}.tool h2,.tool h3{color:white}.tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tool label{display:block;font-weight:900}.tool input,.tool textarea,.tool select{width:100%;margin-top:5px;padding:11px;border:0;border-radius:10px;font:inherit}.tool textarea{min-height:95px}.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.score-card{background:#ffffff18;border:1px solid #ffffff35;border-radius:12px;padding:13px}.score-card span{display:block;font-size:.85rem}.score-card strong{display:block;font-size:1.25rem;margin-top:3px}
+.term-row{display:flex;gap:8px;flex-wrap:wrap}.term-btn{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 11px;color:var(--blue);font-weight:900;cursor:pointer}
+.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.resource{display:block;background:white;border:1px solid var(--line);border-radius:13px;padding:14px;text-decoration:none}.resource strong{display:block;color:var(--blue)}.resource span{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
+.checks{display:grid;gap:8px}.check{display:flex;gap:10px;align-items:flex-start;padding:11px;border:1px solid var(--line);border-radius:11px;background:white;color:var(--ink)}.check input{margin-top:4px;transform:scale(1.15)}
+.footer-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.footer-nav a{background:white;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;text-decoration:none;color:var(--blue);font-weight:900}
+.version{margin-top:18px;padding:13px;border-radius:11px;background:#edf4fb;color:var(--blue);font-size:.9rem}
+.modal{position:fixed;inset:0;background:rgba(8,22,38,.74);display:none;z-index:1000;padding:18px;overflow:auto}.modal.open{display:block}.modal-window{width:min(760px,100%);margin:5vh auto;background:var(--paper);border-radius:22px;overflow:hidden}.modal-head{display:flex;justify-content:space-between;gap:14px;padding:20px 22px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:white}.modal-head h2{color:white;margin:0}.modal-close{border:1px solid #ffffff66;background:#ffffff18;color:white;width:42px;height:42px;border-radius:50%;font-size:1.4rem;cursor:pointer}.modal-body{padding:22px}
+footer{padding:30px 0 46px;color:var(--muted);border-top:1px solid var(--line)}
+@media print{header,.actions,.navlinks,.footer-nav,.term-row,.modal{display:none!important}body{background:white}.hero{padding-top:0}.tool{background:white;color:black;border:1px solid #aaa}.tool h2,.tool h3{color:#0f3157}.score-card{background:white;border:1px solid #aaa}}
+@media(max-width:760px){.navlinks{display:none}.grid,.grid3,.tool-grid,.resource-grid,.footer-nav,.score-grid{grid-template-columns:1fr}}
 </style></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="housing.html">Housing</a><a href="index.html#choose">Choose Your Path</a><a href="living-atlas.html">Live Atlas</a></div></div></header>
-<section class="hero"><div class="wrap"><div class="eyebrow">Housing District · H-002</div><h1>Housing Looks Different</h1><p class="lead">There is no single correct housing type. Different homes solve different needs, costs, locations, and stages of life.</p><div class="actions"><a class="btn primary" href="#lesson">Start reading</a><a class="btn" href="living-atlas.html">Check current information</a></div></div></section>
-<section id="lesson"><div class="wrap"><article class="article"><h2>Housing is not one shape</h2>
-<p>A detached house is only one housing form. Some people need privacy and land. Others need lower maintenance, smaller spaces, shared services, accessible design, or a location close to work and transit.</p>
-<div class="choice-grid">
-<div class="choice"><strong>Detached home</strong>More separation and control, usually more maintenance and land responsibility.</div>
-<div class="choice"><strong>Apartment</strong>Shared building and management, often lower personal maintenance responsibility.</div>
-<div class="choice"><strong>Condo</strong>Individual ownership inside a shared community with association rules and fees.</div>
-<div class="choice"><strong>Manufactured home</strong>Factory-built housing that may sit on owned land or rented space.</div>
-<div class="choice"><strong>ADU</strong>A smaller secondary home on the same property as a primary dwelling.</div>
-<div class="choice"><strong>Cottage cluster</strong>Several compact homes organized as a coordinated community, often around shared open space.</div>
-</div>
-<h2>The best housing type depends on the goal</h2>
-<p>A first-time renter, single parent, retiree, contractor, investor, disabled resident, and multigenerational family may all evaluate the same property differently.</p>
-<h2>Tradeoffs matter</h2>
-<ul><li>Privacy versus shared responsibility</li><li>Lower purchase price versus association fees</li><li>More land versus more maintenance</li><li>Smaller space versus better location</li><li>Ownership control versus flexibility</li></ul>
-<div class="olivebox"><strong>Better question:</strong> Not “Which housing type is best?” Ask “Which housing type fits the person, budget, responsibilities, location, and next stage?”</div>
-<h2>How to compare housing types</h2>
-<p>Compare total monthly cost, maintenance, rules, accessibility, privacy, parking, storage, outdoor space, location, resale or rental flexibility, and the amount of control the resident or owner actually has.</p>
-<div class="quiz"><h2>Quick knowledge check</h2><p><strong>Question:</strong> What is the biggest idea to remember from this lesson?</p><details><summary>Open answer</summary><p>There is no single correct housing type. Different homes solve different needs, costs, locations, and stages of life.</p></details></div>
-<h2>Choose your next door</h2><div class="navdoors">
-<a class="navdoor" href="h-001.html"><strong>← Previous</strong><span>Move back one step.</span></a>
-<a class="navdoor" href="housing.html"><strong>Housing Map</strong><span>Choose another housing path.</span></a>
-<a class="navdoor" href="h-003.html"><strong>Next →</strong><span>Continue the housing path.</span></a>
-</div>
-</article></div></section>
-<footer><div class="wrap">© 2026 The Everyday Investor Academy. Educational information only.</div></footer>
-</body></html>
+<header><div class="wrap nav"><a href="index.html">✦ The Everyday Investor Academy</a><div class="navlinks"><a href="housing.html">Housing</a><a href="knowledge-map.html">Knowledge Map</a><a href="living-atlas.html">Living Atlas</a></div></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Housing · Blue Edition · H-002</div><h1>Housing Types and How They Actually Work</h1><p class="lead">Compare apartments, houses, condos, manufactured homes, ADUs, cottage clusters, duplexes, rural property, and shared housing by how they function—not just how they look.</p>
+<div class="badges"><span class="badge">Beginner friendly</span><span class="badge">Interactive</span><span class="badge">20–30 minutes</span><span class="badge">Printable workbook</span></div>
+<div class="actions"><button class="primary" onclick="window.print()">Print / Save PDF</button><button id="copy-summary">Copy summary</button><button id="reset-tool">Reset tool</button></div>
+<div class="hero-image" id="image-shell"><img id="lesson-image" alt="Housing lesson 2 graphic"></div></div></section>
+<section><div class="wrap"><div class="story"><div class="eyebrow">Real-life opening</div><h2 class="section-title">Why this matters</h2><p>Two homes can have the same number of bedrooms and completely different rules, costs, responsibilities, privacy, maintenance, and financing. The structure is only one part of the housing system.</p></div></div></section>
+<section><div class="wrap"><div class="quick"><div class="eyebrow" style="color:#dce8f3">Quick answer</div><h2>Choose housing by matching the legal setup, total cost, maintenance load, location, space, and future flexibility to the life you actually live.</h2></div><div class="field-note"><strong>Real-world tip:</strong> compare how the housing operates on a hard Tuesday—not how it photographs on a good Saturday.</div></div></section>
+<section><div class="wrap"><div class="eyebrow">Deep dive</div><h2 class="section-title">Open only what you need.</h2><p class="section-lead">The complete lesson is divided into short, expandable sections.</p><div class="accordion"><div class="acc"><button><span>1. Apartments</span><span>⌄</span></button><div class="acc-panel"><p>Apartments usually trade private control for lower maintenance responsibility and shared systems. Ask about utilities, parking, laundry, guests, pets, noise, renewals, and management responsiveness.</p></div></div><div class="acc"><button><span>2. Detached houses</span><span>⌄</span></button><div class="acc-panel"><p>A detached house may offer privacy, yard space, storage, and control, but often comes with higher utility, transportation, repair, and upkeep costs.</p></div></div><div class="acc"><button><span>3. Condos and townhomes</span><span>⌄</span></button><div class="acc-panel"><p>Ownership may include shared walls, common areas, dues, rules, insurance layers, and association responsibilities. Review governing documents and current costs.</p></div></div><div class="acc"><button><span>4. Manufactured homes</span><span>⌄</span></button><div class="acc-panel"><p>The home and the land may be owned together or separately. Space rent, park rules, financing, title, installation, and resale can change the economics.</p></div></div><div class="acc"><button><span>5. ADUs and small secondary homes</span><span>⌄</span></button><div class="acc-panel"><p>An accessory dwelling unit can create flexibility for family, rental income, or smaller living, but local rules, utilities, access, parking, and privacy matter.</p></div></div><div class="acc"><button><span>6. Cottage clusters and small-home communities</span><span>⌄</span></button><div class="acc-panel"><p>These arrangements can create smaller detached homes with shared common space. Ownership, maintenance, parking, affordability, and local planning standards vary.</p></div></div><div class="acc"><button><span>7. Duplexes and small multifamily</span><span>⌄</span></button><div class="acc-panel"><p>Sharing a structure can reduce land cost per household and create income options, but noise, utilities, maintenance, and management become more connected.</p></div></div><div class="acc"><button><span>8. Rural and shared housing</span><span>⌄</span></button><div class="acc-panel"><p>Rural housing may offer land and privacy but create access, well, septic, wildfire, transportation, internet, and maintenance demands. Roommates and co-housing require clear agreements.</p></div></div></div></div></section>
+<section><div class="wrap tool"><div class="eyebrow" style="color:#dce8f3">Interactive workspace</div><h2 class="section-title">Housing Type Fit Comparator</h2><div class="tool-grid">
+<label>Housing option A<input id="a-name" value="Apartment"></label>
+<label>Housing option B<input id="b-name" value="House"></label>
+<label>A total-cost fit (0–10)<input id="a-cost" type="number" min="0" max="10" value="7"></label>
+<label>B total-cost fit (0–10)<input id="b-cost" type="number" min="0" max="10" value="6"></label>
+<label>A maintenance fit (0–10)<input id="a-maint" type="number" min="0" max="10" value="8"></label>
+<label>B maintenance fit (0–10)<input id="b-maint" type="number" min="0" max="10" value="5"></label>
+<label>A privacy / space fit (0–10)<input id="a-space" type="number" min="0" max="10" value="5"></label>
+<label>B privacy / space fit (0–10)<input id="b-space" type="number" min="0" max="10" value="8"></label>
+<label>A location fit (0–10)<input id="a-location" type="number" min="0" max="10" value="8"></label>
+<label>B location fit (0–10)<input id="b-location" type="number" min="0" max="10" value="6"></label>
+<label>A flexibility fit (0–10)<input id="a-flex" type="number" min="0" max="10" value="8"></label>
+<label>B flexibility fit (0–10)<input id="b-flex" type="number" min="0" max="10" value="5"></label>
+</div><div class="score-grid"><div class="score-card"><span>Option A</span><strong id="a-score">0 / 50</strong></div><div class="score-card"><span>Option B</span><strong id="b-score">0 / 50</strong></div><div class="score-card"><span>Current signal</span><strong id="fit-signal">Compare details</strong></div></div>
+<label style="display:block;margin-top:14px">Rules, costs, or risks to verify<textarea id="verify"></textarea></label></div></section>
+<section><div class="wrap"><div class="eyebrow">Atlas terms</div><h2 class="section-title">Tap a term without leaving the lesson.</h2><div class="term-row"><button class="term-btn" data-term="apartment">Apartment</button><button class="term-btn" data-term="condo">Condo</button><button class="term-btn" data-term="adu">Adu</button><button class="term-btn" data-term="manufactured">Manufactured</button><button class="term-btn" data-term="cluster">Cluster</button><button class="term-btn" data-term="hoa">Hoa</button></div></div></section>
+<section><div class="wrap"><div class="eyebrow">Common mistakes</div><h2 class="section-title">What people often miss</h2><div class="grid">
+<article class="card"><h3>Comparing only one number</h3><p>Total cost, risk, time, rules, and responsibilities can matter more than the advertised price.</p></article>
+<article class="card"><h3>Assuming the setup is standard</h3><p>Ownership, rental terms, services, utilities, and local rules vary.</p></article>
+<article class="card"><h3>Relying on verbal promises</h3><p>Important terms, repairs, payments, and conditions need a written record.</p></article>
+<article class="card"><h3>Waiting to document</h3><p>Records are strongest when created close to the event.</p></article>
+</div></div></section>
+<section><div class="wrap"><div class="eyebrow">Official resource layer</div><h2 class="section-title">Verify current information at the source.</h2><div class="resource-grid"><a class="resource" href="https://www.oregon.gov/ohcs/" target=_blank rel=noopener><strong>Oregon Housing and Community Services</strong><span>State housing programs and housing-system resources.</span></a><a class="resource" href="https://www.oregon.gov/lcd/" target=_blank rel=noopener><strong>Oregon Department of Land Conservation and Development</strong><span>State land-use planning information relevant to housing forms.</span></a><a class="resource" href="https://www.hud.gov/" target=_blank rel=noopener><strong>HUD Housing</strong><span>Federal housing, fair-housing, counseling, and program resources.</span></a><a class="resource" href="living-atlas.html" ><strong>Living Atlas</strong><span>Search local planning, housing, and property resources.</span></a></div><div class="remember"><strong>Remember:</strong> laws, programs, forms, and local procedures can change. Verify the current rule before relying on it.</div></div></section>
+<section><div class="wrap"><div class="eyebrow">Connected learning</div><h2 class="section-title">Keep moving</h2><div class="resource-grid">
+<a class="resource" href="h-001.html"><strong>Previous lesson</strong><span>Return to H-001.</span></a>
+<a class="resource" href="h-003.html"><strong>Next lesson</strong><span>Continue to H-003.</span></a>
+<a class="resource" href="housing.html"><strong>Housing District</strong><span>Return to the complete 24-lesson roadmap.</span></a>
+<a class="resource" href="living-atlas.html"><strong>Living Atlas</strong><span>Open terms, Oregon resources, agencies, and connected tools.</span></a>
+</div></div></section>
+<section><div class="wrap"><div class="version"><strong>Everyday Investor Academy — Blue Edition</strong><br>Version 1.0 · Core concepts and resource links reviewed August 2026 · Browser-only tool · Print or save a PDF for permanent records.</div></div></section>
+<section><div class="wrap footer-nav"><a href="h-001.html">← Previous</a><a href="housing.html">Housing Home</a><a href="h-003.html">Next →</a></div></section>
+<footer><div class="wrap">© 2026 The Everyday Investor Academy · Educational use only.</div></footer><div id="modal-root"></div>
+<script>
+const imageCandidates=["housing-02.webp", "housing-02.png", "housing-02.jpg", "housing-02.jpeg", "images/housing-02.webp", "images/housing-02.png", "images/housing-02.jpg", "images/housing/housing-02.webp", "images/housing/housing-02.png", "images/housing/housing-02.jpg"],image=document.getElementById("lesson-image"),shell=document.getElementById("image-shell");let imageIndex=0;
+function tryImage(){if(imageIndex>=imageCandidates.length){shell.style.display="none";return;}image.src=imageCandidates[imageIndex++];}image.addEventListener("error",tryImage);tryImage();
+document.querySelectorAll(".acc > button").forEach(btn=>btn.addEventListener("click",()=>btn.closest(".acc").classList.toggle("open")));
+function g(id){return document.getElementById(id);}function currency(n){return new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n||0);}
+function save(){const state={};document.querySelectorAll("input,textarea,select").forEach((el,i)=>state[el.id||("field-"+i)]=el.type==="checkbox"?el.checked:el.value);localStorage.setItem("eia-h-002",JSON.stringify(state));}
+function load(){const state=JSON.parse(localStorage.getItem("eia-h-002")||"{}");document.querySelectorAll("input,textarea,select").forEach((el,i)=>{const k=el.id||("field-"+i);if(!(k in state))return;if(el.type==="checkbox")el.checked=state[k];else el.value=state[k];});}
+function runTool(){const aIds=["a-cost","a-maint","a-space","a-location","a-flex"],bIds=["b-cost","b-maint","b-space","b-location","b-flex"];const a=aIds.reduce((s,id)=>s+(+g(id).value||0),0),b=bIds.reduce((s,id)=>s+(+g(id).value||0),0);g("a-score").textContent=a+" / 50";g("b-score").textContent=b+" / 50";const an=g("a-name").value||"Option A",bn=g("b-name").value||"Option B";g("fit-signal").textContent=a===b?"Verify rules":a>b?an:bn;}
+document.addEventListener("input",()=>{runTool();save();});document.addEventListener("change",()=>{runTool();save();});
+g("reset-tool").addEventListener("click",()=>{if(!confirm("Reset the saved tool for this lesson?"))return;localStorage.removeItem("eia-h-002");location.reload();});
+g("copy-summary").addEventListener("click",async()=>{const fields=[...document.querySelectorAll("input,textarea,select")].map(el=>el.type==="checkbox"?(el.checked?"Completed: "+el.parentElement.textContent.trim():""):el.value).filter(Boolean);const summary="H-002 — "+"Housing Types and How They Actually Work"+"\n\n"+fields.join("\n");try{await navigator.clipboard.writeText(summary);alert("Summary copied.");}catch{alert("Copy was blocked. Use Print / Save PDF instead.");}});
+const terms={"apartment": "A dwelling unit in a larger rental or ownership structure with shared systems or common areas.", "condo": "A form of ownership where a person owns a unit and shares ownership or responsibility for common areas.", "adu": "An accessory dwelling unit located on the same property as a primary dwelling, subject to local rules.", "manufactured": "A factory-built home constructed under federal standards and installed on a site.", "cluster": "A group of smaller detached homes arranged around shared common space.", "hoa": "A homeowners association that manages shared rules, property, or services."};
+document.querySelectorAll("[data-term]").forEach(btn=>btn.addEventListener("click",()=>{const key=btn.dataset.term,item=terms[key];g("modal-root").innerHTML=`<div class="modal open"><div class="modal-window"><div class="modal-head"><h2>${btn.textContent}</h2><button class="modal-close">×</button></div><div class="modal-body"><p>${item}</p><p><a href="living-atlas.html"><strong>Open related Living Atlas resources →</strong></a></p></div></div></div>`;document.body.style.overflow="hidden";}));
+document.addEventListener("click",e=>{if(e.target.classList.contains("modal")||e.target.closest(".modal-close")){g("modal-root").innerHTML="";document.body.style.overflow="";}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){g("modal-root").innerHTML="";document.body.style.overflow="";}});
+load();runTool();
+</script></body></html>
